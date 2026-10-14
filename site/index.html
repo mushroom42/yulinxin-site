@@ -1,0 +1,1346 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>辛禹林 Yulin Xin</title>
+<meta name="description" content="辛禹林（Yulin Xin），巴黎的全栈工程师。3 年全栈开发，1 年 AI 工程实践：Coding Agent、本地模型与 Agent Skills。Full-stack engineer in Paris working on reliable AI engineering.">
+<meta name="author" content="Yulin Xin">
+<meta name="theme-color" content="#2a2724">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="__SITE_URL__/">
+<link rel="alternate" hreflang="zh-CN" href="__SITE_URL__/?lang=zh">
+<link rel="alternate" hreflang="en" href="__SITE_URL__/?lang=en">
+<link rel="alternate" hreflang="fr" href="__SITE_URL__/?lang=fr">
+<link rel="alternate" hreflang="x-default" href="__SITE_URL__/">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="__SITE_URL__/">
+<meta property="og:title" content="辛禹林 Yulin Xin · Full-stack engineer, Paris">
+<meta property="og:description" content="Bringing AI into real engineering. Projects, Agent Skills and dated decisions, in 中文 / English / Français.">
+<meta property="og:image" content="__SITE_URL__/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+html,body{margin:0}
+[hidden]{display:none!important}
+img{max-width:100%}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;900&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Long+Cang&text=%E5%B7%B2%E8%90%BD%E5%9C%B0%E6%94%BE%E5%BC%83%E4%BF%AE%E6%AD%A3%E5%BE%85%E6%A3%80%E9%AA%8C&display=swap">
+<style>
+/* Palette: warm charcoal with frosted grain + metallic glints, ochre accent, ivory paper. Layout: dark hero with grain → ivory paper sections in a 1120px column; serif display, sans body; dated entries carry the structure. */
+:root{
+  --ink:#1c1b19; --ink-2:#46423d; --muted:#76716a;
+  --paper:#f2f0ec; --paper-2:#f8f7f4; --sand:#e6e3dd; --line:#d9d5ce;
+  --green:#a0622a; --green-text:#864f1d;
+  --forest:#2a2724; --forest-2:#1d1b19; --on-forest:#f1ede6; --on-forest-2:rgba(241,237,230,.72); --forest-line:rgba(241,237,230,.14);
+  --glow:rgba(255,240,220,.07); --warn:#9b3b4b; --ph-bg:#fff3c9; --ph-ink:#6b5310;
+  --tex:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='2' seed='23' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  14 0 0 0 -9.3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23g%29'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='s'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.8' numOctaves='2' seed='5' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23s%29'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23n%29'/%3E%3C/svg%3E");
+  --tex-size:220px 220px,160px 160px,180px 180px;
+  --tex-op:.45; --tex-blend:overlay;
+  --paper-tex:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='2' seed='9' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23p%29' opacity='.07'/%3E%3C/svg%3E");
+  --serif:"Noto Serif SC","Songti SC","STSong",serif;
+  --num:"Source Serif 4",Georgia,serif;
+  --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  --wrap:1120px; --gut:clamp(18px,4vw,44px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --ink:#ece9e3; --ink-2:#c7c2ba; --muted:#958f87;
+  --paper:#151413; --paper-2:#1b1a18; --sand:#252320; --line:#322f2b;
+  --green:#d9a066; --green-text:#e4b07a;
+  --forest:#23201d; --forest-2:#171513;
+  --warn:#e3909b; --ph-bg:#3b3210; --ph-ink:#f1d98a;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ink:#ece9e3; --ink-2:#c7c2ba; --muted:#958f87;
+  --paper:#151413; --paper-2:#1b1a18; --sand:#252320; --line:#322f2b;
+  --green:#d9a066; --green-text:#e4b07a;
+  --forest:#23201d; --forest-2:#171513;
+  --warn:#e3909b; --ph-bg:#3b3210; --ph-ink:#f1d98a;
+
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper) var(--paper-tex);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased;line-break:strict}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--serif);font-weight:900;margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut)}
+[id]{scroll-margin-top:72px}
+
+/* placeholder marker */
+.ph{background:var(--ph-bg);color:var(--ph-ink);border-radius:4px;padding:0 .3em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero .ph{background:rgba(255,225,130,.18);color:#ffe7a3}
+.draft-note{background:var(--ph-bg);color:var(--ph-ink);font-size:13px;text-align:center;padding:8px var(--gut);line-height:1.5}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--forest-2);color:var(--on-forest);border-bottom:1px solid var(--forest-line)}
+.top .bar{position:relative;display:flex;align-items:center;gap:24px;height:60px}
+.brand{display:flex;align-items:baseline;gap:10px;font-family:var(--num);font-weight:600;font-size:19px;letter-spacing:.01em}
+.brand small{font-family:var(--sans);font-size:12px;color:var(--on-forest-2);font-weight:400}
+.nav{display:flex;gap:22px;margin-left:auto;font-size:14.5px;color:var(--on-forest-2)}
+.nav a:hover{color:var(--on-forest)}
+.top .cta{font-size:14px;border:1px solid var(--forest-line);padding:6px 14px;border-radius:8px}
+.top .cta:hover{background:var(--forest)}
+@media (max-width:820px){.nav{display:none}.top .cta{margin-left:auto}}
+
+/* hero */
+.hero{position:relative;background:var(--forest);color:var(--on-forest);overflow:hidden;padding-block:clamp(64px,10vw,120px) clamp(56px,8vw,96px)}
+.hero::before,.close::before,.top::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:var(--tex-op);mix-blend-mode:var(--tex-blend);background-image:var(--tex);background-size:var(--tex-size)}
+.hero::after{content:"";position:absolute;right:-12%;top:-30%;width:60%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--glow),transparent 65%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(32px,6vw,80px);align-items:end}
+.hero h1{font-size:clamp(40px,6.4vw,76px);line-height:1.12;letter-spacing:.01em}
+.lede{margin-top:28px;max-width:34em;font-size:clamp(16px,1.6vw,18px);color:var(--on-forest-2)}
+.lede b{color:var(--on-forest);font-weight:600}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:10px;font-size:15px;font-weight:500;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-ivory{background:var(--on-forest);color:var(--forest-2)}
+.btn-ivory:hover{box-shadow:0 10px 28px -12px rgba(0,0,0,.6)}
+.btn-line{box-shadow:inset 0 0 0 1px var(--forest-line);color:var(--on-forest)}
+.social{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:28px;font-size:14px;color:var(--on-forest-2)}
+.social a{border-bottom:1px solid var(--forest-line)}
+.social a:hover{color:var(--on-forest)}
+@media (max-width:760px){.hero .wrap{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:no-preference){
+  .rise{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+  .d2{animation-delay:.08s}.d3{animation-delay:.16s}.d4{animation-delay:.24s}
+  @keyframes rise{from{transform:translateY(14px)}to{transform:none}}
+}
+
+/* sections */
+section.blk{padding-block:clamp(64px,9vw,112px);border-bottom:1px solid var(--line)}
+section.blk.alt{background:var(--paper-2) var(--paper-tex)}
+.eyebrow{font-size:13px;letter-spacing:.14em;color:var(--green-text);font-weight:600;margin-bottom:14px}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 56px;align-items:end;margin-bottom:clamp(36px,5vw,56px)}
+.sec-head h2{font-size:clamp(30px,4vw,46px);line-height:1.2}
+.sec-head p{color:var(--ink-2);max-width:32em}
+@media (max-width:760px){.sec-head{grid-template-columns:1fr}}
+.more{display:inline-flex;gap:8px;color:var(--green-text);font-weight:500;font-size:15px}
+.more i{font-style:normal;transition:transform .25s}
+.more:hover i{transform:translateX(4px)}
+
+/* timeline */
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));border-top:2px solid var(--ink)}
+.tl li{padding:18px 18px 0 0;position:relative}
+.tl li::before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--ink)}
+.tl li:last-child::before{background:var(--green);border-color:var(--green)}
+.tl .yr{font-family:var(--num);font-variant-numeric:tabular-nums;font-size:14px;color:var(--muted)}
+.tl .role{font-weight:600;margin-top:4px;line-height:1.5}
+.tl .org{font-size:14px;color:var(--ink-2)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;margin-top:clamp(48px,6vw,72px);padding-top:32px;border-top:1px solid var(--line)}
+.stat b{display:block;font-family:var(--num);font-weight:600;font-size:clamp(36px,4.4vw,52px);line-height:1;font-variant-numeric:tabular-nums}
+.stat span{display:block;margin-top:10px;color:var(--ink-2);font-size:14.5px}
+
+/* now / feature */
+.feature{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(32px,6vw,72px);align-items:start}
+.feature h3{font-size:clamp(24px,3vw,32px);line-height:1.3}
+.feature .body{color:var(--ink-2);margin-top:18px;display:grid;gap:14px}
+.points{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.points li{display:grid;grid-template-columns:auto 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.points .k{font-family:var(--num);color:var(--green-text);font-weight:600;font-variant-numeric:tabular-nums}
+.points b{display:block;font-weight:600}
+.points span{color:var(--ink-2);font-size:15px}
+@media (max-width:760px){.feature{grid-template-columns:1fr}}
+
+/* projects */
+.proj{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s,transform .2s}
+.alt .card{background:var(--paper-2)}
+.card:hover{border-color:var(--green);transform:translateY(-2px)}
+.card .tag{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+.card h3{font-size:21px;line-height:1.35}
+.card p{color:var(--ink-2);font-size:15px;flex:1}
+
+/* judgments */
+.jl{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.jl li{display:grid;grid-template-columns:120px minmax(0,1fr) 120px;gap:12px 32px;padding:28px 0;border-bottom:1px solid var(--line)}
+.jl .date{font-family:var(--num);font-weight:600;font-size:18px;font-variant-numeric:tabular-nums}
+.jl h3{font-size:21px;line-height:1.4}
+.jl p{color:var(--ink-2);margin-top:8px;max-width:40em}
+.verdict{justify-self:end;align-self:start;font-size:12.5px;font-weight:600;padding:3px 10px;border-radius:999px;border:1px solid currentColor;white-space:nowrap}
+.v-right{color:var(--green-text)}
+.v-open{color:var(--muted)}
+@media (max-width:700px){.jl li{grid-template-columns:1fr auto}.jl .main{grid-column:1/-1;grid-row:2}}
+
+/* writing */
+.wl{list-style:none;margin:0;padding:0}
+.wl a{display:grid;grid-template-columns:120px minmax(0,1fr) auto;gap:8px 32px;padding:22px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.wl a:hover h3{color:var(--green-text)}
+.wl .date{font-family:var(--num);color:var(--muted);font-variant-numeric:tabular-nums}
+.wl h3{font-size:19px;line-height:1.45;transition:color .2s}
+.wl p{color:var(--ink-2);font-size:15px;margin-top:4px}
+.wl i{font-style:normal;color:var(--green-text)}
+@media (max-width:640px){.wl a{grid-template-columns:1fr}.wl i{display:none}}
+
+/* closing */
+.close{position:relative;overflow:hidden;background:var(--forest);color:var(--on-forest);padding-block:clamp(72px,10vw,120px);text-align:left}
+.close .wrap,footer .wrap{position:relative}
+.close h2{font-size:clamp(32px,5vw,56px);line-height:1.2}
+.close p{margin-top:18px;color:var(--on-forest-2);max-width:32em}
+.mail{display:inline-block;margin-top:28px;font-family:var(--num);font-size:clamp(20px,2.6vw,28px);border-bottom:1px solid var(--forest-line);user-select:all}
+footer{position:relative;background:var(--forest-2);color:var(--on-forest-2);font-size:13.5px;padding-block:28px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.kicker{font-size:14px;letter-spacing:.14em;color:var(--on-forest-2);margin-bottom:18px}
+.chips{list-style:none;margin:24px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{font-size:13px;padding:3px 10px;border-radius:999px;background:var(--sand);color:var(--ink-2)}
+.card .stack{font-size:13px;color:var(--green-text);padding-top:10px;border-top:1px solid var(--line)}
+.card:hover{transform:none}
+.v-closed{color:var(--warn)}
+.wl .row{display:grid;grid-template-columns:120px minmax(0,1fr);gap:8px 32px;padding:22px 0;border-bottom:1px solid var(--line);align-items:baseline}
+@media (max-width:640px){.wl .row{grid-template-columns:1fr}}
+.cases{display:grid;gap:0;border-top:2px solid var(--ink)}
+.case{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:24px clamp(32px,5vw,64px);padding-block:clamp(36px,5vw,56px);border-bottom:1px solid var(--line)}
+.case-meta{display:flex;flex-direction:column;gap:12px;align-items:flex-start;position:sticky;top:84px;align-self:start}
+.case-meta .tag{font-size:12.5px;color:var(--muted);letter-spacing:.08em}
+.case-meta h3{font-size:clamp(26px,3vw,34px);line-height:1.25}
+.case-meta dl{margin:8px 0 0;display:grid;gap:10px;font-size:14px}
+.case-meta dt{color:var(--muted);font-size:12.5px}
+.case-meta dd{margin:0;color:var(--ink-2)}
+.status{font-size:12.5px;font-weight:600;padding:3px 10px;border-radius:999px;border:1px solid currentColor}
+.s-wip{color:var(--green-text)}
+.s-pivot{color:var(--warn)}
+.case-body{display:grid;gap:14px;max-width:44em;color:var(--ink-2)}
+.case-body .one{font-family:var(--serif);font-weight:600;font-size:clamp(18px,2vw,21px);line-height:1.6;color:var(--ink)}
+.case-body h4{margin:10px 0 0;font-size:13px;letter-spacing:.14em;color:var(--green-text)}
+.dec{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.dec li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:12px;font-size:15px}
+.dec time{font-family:var(--num);font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+.facts{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.facts li{font-size:14.5px;background:var(--sand);border-radius:10px;padding:14px 16px}
+.facts b{display:block;font-family:var(--num);font-weight:600;font-size:28px;line-height:1.1;color:var(--ink);margin-bottom:6px}
+.gap{font-size:14.5px;color:var(--muted);border-left:2px solid var(--line);padding-left:12px}
+@media (max-width:820px){.case{grid-template-columns:1fr}.case-meta{position:static}}
+.sub{font-size:22px;margin:clamp(48px,6vw,72px) 0 24px}
+.v-fixed{color:var(--warn)}
+.v-done{color:var(--green-text);background:var(--sand)}
+.method{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:32px 40px;counter-reset:m}
+.method li{counter-increment:m;border-top:1px solid var(--ink);padding-top:16px}
+.method li::before{content:counter(m,decimal-leading-zero);font-family:var(--num);font-weight:600;color:var(--green-text);font-size:14px}
+.method h3{font-size:19px;line-height:1.45;margin-top:6px}
+.method p{color:var(--ink-2);font-size:15px;margin-top:8px}
+.flow{margin:0 0 clamp(40px,5vw,56px);display:flex;flex-wrap:wrap;align-items:stretch;gap:10px}
+.flow .node{flex:1 1 180px;display:flex;flex-direction:column;gap:6px;padding:16px;border-radius:10px;border:1px solid var(--line);background:var(--paper);font-size:13.5px;color:var(--ink-2);line-height:1.55}
+.flow .node b{color:var(--ink);font-size:15px}
+.flow code,.skill code{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:.92em}
+.flow .n-skill{border-color:var(--green);background:var(--paper-2)}
+.flow .n-skill code{color:var(--green-text);font-weight:600;font-size:13.5px}
+.flow .n-out{background:var(--sand);border-color:var(--sand)}
+.flow .arrow{flex:0 0 28px;display:grid;place-items:center;position:relative}
+.flow .arrow::before{content:"→";color:var(--muted);font-size:20px}
+.flow .arrow-label{flex-basis:84px}
+.flow .arrow-label em{position:absolute;top:calc(50% + 14px);font-style:normal;font-size:11.5px;color:var(--muted);text-align:center;line-height:1.3}
+.flow figcaption{flex-basis:100%;font-size:14px;color:var(--muted);margin-top:8px;max-width:48em}
+@media (max-width:900px){.flow{flex-direction:column}.flow .node{flex-basis:auto}.flow .arrow{flex-basis:28px}.flow .arrow::before{content:"↓"}.flow .arrow-label em{position:static;margin-left:8px}.flow .arrow-label{display:flex;justify-content:flex-start;padding-left:16px}}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px}
+.skill{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.skill header{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 12px;align-items:baseline}
+.skill header code{color:var(--green-text);font-weight:600;font-size:13px;overflow-wrap:anywhere}
+.skill .tag{font-size:12.5px;color:var(--muted)}
+.skill h3{font-size:22px;line-height:1.35}
+.skill>p{color:var(--ink-2);font-size:15px}
+.skill ul{margin:0;padding:12px 0 0;border-top:1px solid var(--line);list-style:none;display:grid;gap:8px}
+.skill li{font-size:14.5px;color:var(--ink-2);padding-left:16px;position:relative}
+.skill li::before{content:"";position:absolute;left:0;top:.75em;width:6px;height:1.5px;background:var(--green)}
+/* charcoal band mid-page: components re-themed through tokens */
+section.blk.inverse{position:relative;overflow:hidden;background:var(--forest);border-bottom:0;
+  --ink:#f1ede6;--ink-2:rgba(241,237,230,.74);--muted:rgba(241,237,230,.52);--line:rgba(241,237,230,.13);--sand:rgba(241,237,230,.07);
+  --green-text:#dba673;--warn:#e7a2a8;color:var(--ink)}
+section.blk.inverse::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:var(--tex-op);mix-blend-mode:var(--tex-blend);background-image:var(--tex);background-size:var(--tex-size)}
+section.blk.inverse>.wrap{position:relative}
+.eyebrow{display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:18px;height:1px;background:currentColor}
+.card,.skill,.flow .node{box-shadow:0 1px 0 rgba(255,255,255,.6) inset}
+.btn-ivory{background:linear-gradient(180deg,#f6f3ee,#e4dfd7)}
+footer{border-top:1px solid var(--forest-line)}
+footer::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:var(--tex-op);mix-blend-mode:var(--tex-blend);background-image:var(--tex);background-size:var(--tex-size)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) :is(.card,.skill,.flow .node){box-shadow:none}}
+:root[data-theme="dark"] :is(.card,.skill,.flow .node){box-shadow:none}
+
+/* A · waist-level finder */
+.wlf{margin:0;display:grid;gap:14px;justify-items:center;width:100%;max-width:400px;justify-self:end}
+.wlf-hood{position:relative;width:100%;aspect-ratio:1;padding:clamp(14px,2.4vw,22px);border-radius:8px;cursor:pointer;
+  background:linear-gradient(160deg,#25221f,#141312 70%);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.07),inset 0 14px 22px -14px rgba(0,0,0,.9),0 40px 70px -36px rgba(0,0,0,.85)}
+.wlf-hood:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+.wlf-mark{position:absolute;top:4px;left:50%;transform:translateX(-50%);font:600 10px/1 ui-monospace,"SF Mono",Menlo,monospace;letter-spacing:.2em;color:rgba(241,237,230,.38)}
+.wlf-glass{position:relative;width:100%;height:100%;overflow:hidden;border-radius:2px;
+  background:radial-gradient(circle at 50% 46%,#5a554f,#3a3632 55%,#252220);
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.6)}
+.wlf-image{position:absolute;inset:0;display:grid;place-items:center;transform:scaleX(-1);transition:transform .7s cubic-bezier(.65,0,.35,1)}
+.wlf-image img{width:100%;height:100%;object-fit:cover}
+.wlf-mono{font-family:var(--serif);font-weight:900;font-size:clamp(96px,12vw,150px);line-height:1;color:rgba(241,237,230,.82);filter:blur(.3px)}
+.wlf-screen{position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse at center,transparent 52%,rgba(0,0,0,.5) 100%),
+    linear-gradient(to right,transparent calc(33.333% - .5px),rgba(241,237,230,.2) calc(33.333% - .5px) calc(33.333% + .5px),transparent calc(33.333% + .5px) calc(66.666% - .5px),rgba(241,237,230,.2) calc(66.666% - .5px) calc(66.666% + .5px),transparent calc(66.666% + .5px)),
+    linear-gradient(to bottom,transparent calc(33.333% - .5px),rgba(241,237,230,.2) calc(33.333% - .5px) calc(33.333% + .5px),transparent calc(33.333% + .5px) calc(66.666% - .5px),rgba(241,237,230,.2) calc(66.666% - .5px) calc(66.666% + .5px),transparent calc(66.666% + .5px)),
+    repeating-radial-gradient(circle at 50% 50%,rgba(255,255,255,.035) 0 1px,transparent 1px 6px)}
+.wlf-screen::after{content:"";position:absolute;inset:0;opacity:.35;mix-blend-mode:overlay;background-image:var(--paper-tex),var(--paper-tex);background-size:120px,200px}
+.wlf-prism{position:absolute;left:50%;top:50%;width:24%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;
+  box-shadow:0 0 0 1px rgba(241,237,230,.34),0 0 0 7px rgba(241,237,230,.05),0 0 0 8px rgba(241,237,230,.22);
+  background:repeating-conic-gradient(rgba(255,255,255,.07) 0 9deg,transparent 9deg 18deg)}
+.wlf-prism::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(241,237,230,.4)}
+.wlf figcaption{font-size:13px;color:var(--on-forest-2);text-align:center}
+.wlf .hint-tap{display:none}
+@media (hover:hover){.wlf-hood:hover .wlf-image{transform:scaleX(1)}}
+@media (hover:none){.wlf .hint-hover{display:none}.wlf .hint-tap{display:inline}}
+.wlf-hood.is-flipped .wlf-image{transform:scaleX(1)}
+@media (max-width:760px){.wlf{justify-self:center;max-width:300px}}
+
+/* B · contact sheet on a light box, marked with grease pencil */
+.jl.sheet{--rail:30px;position:relative;border-top:0;padding-inline:var(--rail);background:#0e0d0c;border-radius:3px;
+  box-shadow:0 0 0 1px rgba(241,237,230,.06),0 30px 60px -40px rgba(0,0,0,.9)}
+.jl.sheet::before,.jl.sheet::after{content:"";position:absolute;top:0;bottom:0;width:var(--rail);
+  background:linear-gradient(to bottom,rgba(241,237,230,.2) 0 13px,transparent 13px) center 9px/11px 26px repeat-y}
+.jl.sheet::before{left:0}.jl.sheet::after{right:0}
+.jl.sheet li{position:relative;padding:28px clamp(18px,2.6vw,30px);border-bottom:6px solid var(--forest);
+  background:linear-gradient(180deg,rgba(241,237,230,.035),rgba(241,237,230,.015))}
+.jl.sheet li:last-child{border-bottom:0}
+.jl .edge{display:block;font:600 11px/1 ui-monospace,"SF Mono",Menlo,monospace;letter-spacing:.14em;color:#c99a52;opacity:.8;margin-bottom:8px}
+.verdict{position:relative;border:0;border-radius:0;padding:4px 2px;display:inline-flex;align-items:center;gap:6px;
+  font-family:"Long Cang",var(--serif);font-size:22px;font-weight:400;line-height:1;letter-spacing:.02em;justify-self:end;align-self:start}
+.gp{fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+.gp-x{width:24px;height:24px}
+.gp-strike{width:30px;height:27px}
+.gp-q{width:18px;height:24px}
+.gp-ring{position:absolute;left:-16px;top:-12px;width:calc(100% + 30px);height:calc(100% + 24px)}
+.v-done .gp-label{padding:0 4px}
+.verdict.v-done{color:var(--green-text)}
+.verdict.v-open{color:var(--muted)}
+.verdict.v-closed,.verdict.v-fixed{color:var(--warn)}
+section.blk.inverse .verdict.v-done{background:none}
+@media (max-width:700px){.jl.sheet{--rail:20px}.jl.sheet::before,.jl.sheet::after{background-size:8px 22px}.verdict{justify-self:end}}
+
+/* frame counter */
+.counter{display:inline-flex;align-items:baseline;gap:2px;padding:4px 9px 4px 7px;border-radius:5px;background:#0d0c0b;
+  box-shadow:inset 0 1px 3px rgba(0,0,0,.8),0 0 0 1px rgba(241,237,230,.1);font-family:ui-monospace,"SF Mono",Menlo,monospace;font-variant-numeric:tabular-nums;color:#e9c48a}
+.counter i{font-style:normal;font-size:9px;color:var(--green);margin-right:3px;transform:translateY(-1px)}
+.counter b{font-size:14px;font-weight:600;min-width:2ch;text-align:right}
+.counter small{font-size:10.5px;color:rgba(241,237,230,.45)}
+@media (max-width:820px){.counter{margin-left:auto}.top .cta{margin-left:10px}}
+
+/* languages */
+.L[data-l="en"],.L[data-l="fr"]{--serif:"Source Serif 4",Georgia,"Noto Serif SC",serif}
+.L[data-l="en"] :is(h1,h2,h3),.L[data-l="fr"] :is(h1,h2,h3){font-weight:600;letter-spacing:-.01em}
+.L[data-l="en"] .hero h1,.L[data-l="fr"] .hero h1{font-size:clamp(38px,5.6vw,68px);line-height:1.08}
+.L[data-l="en"] .eyebrow,.L[data-l="fr"] .eyebrow{letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+.L[data-l="en"] .verdict,.L[data-l="fr"] .verdict{font-family:"Caveat",cursive;font-weight:600;font-size:23px}
+.L[data-l="en"] .wlf-mono,.L[data-l="fr"] .wlf-mono{font-family:"Noto Serif SC",serif;font-weight:900}
+.langs{display:inline-flex;padding:2px;border-radius:7px;box-shadow:0 0 0 1px var(--forest-line);margin-left:auto}
+.langs+.counter{margin-left:0}
+.lang-btn{font:500 12.5px/1 var(--sans);color:var(--on-forest-2);background:none;border:0;padding:6px 8px;border-radius:5px;cursor:pointer;min-width:30px}
+.lang-btn:hover{color:var(--on-forest)}
+.lang-btn[aria-pressed="true"]{background:rgba(241,237,230,.12);color:var(--on-forest)}
+.nav{margin-left:0}
+.top .bar{gap:18px}
+.brand{margin-right:auto}
+@media (max-width:820px){.counter{margin-left:0}.top .cta{margin-left:0}.top .bar{gap:10px}}
+@media (max-width:520px){.brand small{display:none}}
+@media (max-width:400px){.counter{display:none}}
+</style>
+</head>
+<body>
+<div class="L" data-l="zh" lang="zh-CN">
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#hero">辛禹林 <small>Yulin Xin</small></a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#path">履历</a>
+      <a href="#now">工作</a>
+      <a href="#work">作品</a>
+      <a href="#skills">Skills</a>
+      <a href="#calls">判断</a>
+      <a href="#notes">方法</a>
+    </nav>
+    <div class="langs" role="group" aria-label="切换语言"><button type="button" class="lang-btn" data-lang="zh" lang="zh-CN">中</button><button type="button" class="lang-btn" data-lang="en" lang="en">EN</button><button type="button" class="lang-btn" data-lang="fr" lang="fr">FR</button></div>
+    <span class="counter" aria-hidden="true" title="胶片张数"><i>▾</i><b class="frame-count">01</b><small>/36</small></span>
+    <a class="cta" href="#contact">联系我</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="hero">
+    <div class="wrap">
+      <div>
+        <p class="kicker rise">全栈工程师 · 巴黎</p>
+        <h1 class="rise d2">把 AI 带进<br>真实的工程里。</h1>
+        <p class="lede rise d3">我是<b>辛禹林</b>，在巴黎做了 3 年全栈开发，负责过内部 CRM、核心系统的 DevOps 和客户 App 的整体重构。最近一年，我把大部分业余时间花在 AI 上：研究怎么让 Coding Agent 可靠地干活，用本地模型整理照片和视频，也给内容创作写 Agent Skill。</p>
+        <div class="btns rise d4">
+          <a class="btn btn-ivory" href="#work">看我做的东西</a>
+          <a class="btn btn-line" href="#contact">联系我</a>
+        </div>
+        <div class="social rise d4">
+          <span>找到我</span>
+          <a href="https://github.com/mushroom42" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/yulin-xin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <figure class="wlf rise d3">
+        <div class="wlf-hood" tabindex="0" role="button" aria-pressed="false" aria-label="腰平取景器，画面左右相反。按下可以翻正">
+          <span class="wlf-mark" aria-hidden="true">6 × 6</span>
+          <div class="wlf-glass">
+            <div class="wlf-image"><span class="wlf-mono">辛</span></div>
+            <div class="wlf-screen" aria-hidden="true"><i class="wlf-prism"></i></div>
+          </div>
+        </div>
+        <figcaption>腰平取景器里的画面是左右相反的。<span class="hint-hover">把鼠标移上去，就能翻正。</span><span class="hint-tap">点一下，就能翻正。</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="blk" id="path">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eyebrow">履历</div><h2>从上海到巴黎，从写页面到管整条交付链路。</h2></div>
+        <p>工程师学位读的是信息工程。实习时重构旧系统，工作后从前端一路做到后端、云和 CI/CD，现在把 AI 当成下一门要真正学会的手艺。</p>
+      </div>
+      <ol class="tl">
+        <li><div class="yr">2021.09 – 2024.02</div><div class="role">信息工程 · 工程师学位</div><div class="org">贝尔福-蒙贝利亚尔技术大学（UTBM）</div></li>
+        <li><div class="yr">2022.09 – 2023.02</div><div class="role">技术支持实习生</div><div class="org">Capgemini Consulting · 上海</div></li>
+        <li><div class="yr">2023.08 – 今</div><div class="role">全栈工程师</div><div class="org">保险科技公司 · 巴黎</div></li>
+        <li><div class="yr">2025 – 今</div><div class="role">AI 工程实践</div><div class="org">Agent、本地模型、Skill</div></li>
+      </ol>
+      <div class="stats">
+        <div class="stat"><b>3 年</b><span>全栈开发经验</span></div>
+        <div class="stat"><b>1 年</b><span>AI 工程实践</span></div>
+        <div class="stat"><b>3 条</b><span>独立负责过的产品线</span></div>
+        <div class="stat"><b>3 种</b><span>工作语言：中文、英语（C1+）、法语（B2）</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk alt" id="now">
+    <div class="wrap feature">
+      <div>
+        <div class="eyebrow">工作 · 保险科技</div>
+        <h3>在一家法国保险科技公司，同时管着前端、后端、云和交付。</h3>
+        <div class="body">
+          <p>团队不大，一个人往往要负责一条产品线从设计到上线的全过程。我在 Scrum 团队里工作，用 Jira 管理迭代，也经常先做原型，拿给同事试用，再根据反馈改。</p>
+          <p>三条线做下来，我最在意的是交付链路：环境一致、部署自动、权限清楚，这样代码才能放心地快速迭代。</p>
+        </div>
+        <ul class="chips" aria-label="常用技术">
+          <li>AWS Lambda</li><li>DynamoDB</li><li>Cognito</li><li>Serverless</li><li>Docker</li><li>GitHub Actions</li><li>Python · FastAPI</li><li>TypeScript</li><li>Vue</li><li>React</li><li>Flutter</li><li>Java</li><li>Salesforce</li>
+        </ul>
+      </div>
+      <ol class="points">
+        <li><span class="k">1</span><div><b>内部 CRM</b><span>给公司同事用的 Web 应用。Vue + TypeScript 前端，Python Lambda 后端，搭了完整的认证和权限体系，按模块化架构设计，方便后续扩展。</span></div></li>
+        <li><span class="k">2</span><div><b>核心业务系统的 DevOps</b><span>Java / Tomcat / Redis 系统。用 Docker Compose 统一各环境，用 GitHub Actions 自动部署到 AWS EC2。</span></div></li>
+        <li><span class="k">3</span><div><b>客户 App 重构</b><span>独立主导核心内容向新架构的迁移，前端用 React 重写，性能、可扩展性和代码质量都有明显提升；同时在 AWS 上搭起完整的 CI/CD。</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="blk" id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eyebrow">作品</div><h2>业余时间做的东西</h2></div>
+        <p>大多围绕摄影和短视频，这是我熟悉、也真的在用的领域，适合拿来检验 AI 到底能做好什么。问题定义、取舍和验收由我负责，实现、文档和检查有 AI 辅助。</p>
+      </div>
+
+      <div class="cases">
+        <article class="case">
+          <aside class="case-meta">
+            <span class="tag">移动 Web 产品</span>
+            <h3>取景练习</h3>
+            <span class="status s-wip">V1.2 本地验证完成 · 待实机私测</span>
+            <dl>
+              <div><dt>时间</dt><dd>2026.07 – 至今</dd></div>
+              <div><dt>技术</dt><dd>TypeScript · Vite · IndexedDB · Vitest</dd></div>
+            </dl>
+          </aside>
+          <div class="case-body">
+            <p class="one">给有一点摄影基础、出门后却不知道拍什么的人，一项能带到现场执行的观察练习，什么时候算完成由自己判断。</p>
+            <p>起点是一个随机题材生成器，目的是让人出门时有个目标，不用纠结。做下来它变成了一个有边界的练习：告诉你这次看什么、画面上守什么规则，但不替你判断现场条件，也不评价你的作品。</p>
+            <h4>关键取舍</h4>
+            <ol class="dec">
+              <li><time>08.18</time><span>完成的标准是认真探索过这个主题，不要求交出“最好的一张”。不限定器材、焦段和曝光参数，胶片和数码都能参加。</span></li>
+              <li><time>09.30</time><span>光影选项改为“你想观察哪种明暗关系”，现场有没有光交给摄影者判断，不再按设备时间去推断能不能拍。</span></li>
+              <li><time>10.05</time><span>把“寻找红色锚点”拓宽成“寻找色彩锚点”。具体的颜色、光源和材料不该成为一类练习的必要条件。</span></li>
+              <li><time>10.08</time><span>拍摄先只做 1:1 固定竖向，分享最多三张，暂不测光。当天讨论过横竖屏自动切换，后来主动收缩了范围。</span></li>
+            </ol>
+            <h4>结果</h4>
+            <ul class="facts">
+              <li><b>7 / 14</b>七类练习侧重、十四个任务家族，每个任务都能追溯到生成它的字段和版本</li>
+              <li><b>45</b>项自动化测试通过（10.08）；也在浏览器里验证了照片导入、草稿恢复和分享图导出</li>
+            </ul>
+            <p class="gap">还没完成：iPhone 实机验收、云端部署，以及真实测试者的使用数据。</p>
+          </div>
+        </article>
+
+        <article class="case">
+          <aside class="case-meta">
+            <span class="tag">本地 AI 实验</span>
+            <h3>AI 摄影方向发现</h3>
+            <span class="status s-pivot">实验后调整了架构</span>
+            <dl>
+              <div><dt>时间</dt><dd>2026.07</dd></div>
+              <div><dt>技术</dt><dd>Python · PhotoKit · Apple Vision · Ollama · Qwen2.5-VL</dd></div>
+            </dl>
+          </aside>
+          <div class="case-body">
+            <p class="one">帮照片很多、却看不清自己创作方向的摄影爱好者，从图库里整理出一张可以质疑、可以纠正、每个结论都有照片作证据的方向地图。</p>
+            <p>真实图库里混着旅行、家庭、截图和资料，作品只占一小部分。我不想让用户先手动挑几十张才能开始，所以先在自己的图库上做了实验：照片只在本机处理，只生成 512px 的预览。</p>
+            <h4>关键取舍</h4>
+            <ol class="dec">
+              <li><time>07.27</time><span>输出几个可以纠正的方向假设，附上代表照片、反例和其他可能的解释。不给作品打分，也不贴“你像哪位大师”这类标签。</span></li>
+              <li><time>07.27</time><span>同一批 20 张照片跑了三版 Prompt。格式问题解决了，但模型仍会过度解读：普通生活照也被标成作品候选。于是停止逐张判断，改为先找多张照片之间重复的选择。</span></li>
+            </ol>
+            <h4>结果</h4>
+            <ul class="facts">
+              <li><b>3 轮</b>同一批样本的对照实验，失败记录完整保留，没有用继续调 Prompt 来掩盖问题</li>
+              <li><b>≈3.3 秒</b>本地模型处理一张照片的时间（20 张小样本，只代表速度，不代表准确率）</li>
+            </ul>
+            <p class="gap">下一步：跨照片分组、完整的方向地图，以及外部用户验证。</p>
+          </div>
+        </article>
+
+        <article class="case">
+          <aside class="case-meta">
+            <span class="tag">AI 工程学习</span>
+            <h3>Agentic Photo Lab</h3>
+            <span class="status s-wip">学习实验进行中</span>
+            <dl>
+              <div><dt>时间</dt><dd>2026.07 – 08</dd></div>
+              <div><dt>技术</dt><dd>TypeScript · TDD · Eval · Rubric</dd></div>
+            </dl>
+          </aside>
+          <div class="case-body">
+            <p class="one">以摄影训练为受控领域，观察和评估 Coding Agent 在复杂约束下怎样工作、在哪里失败。</p>
+            <p>我想学的是 Prompt、Context、Skill 的管理，以及 Agent 的能力边界和失败模式，而不是让 AI 替我写完前后端。所以采用结对方式：我写实现、做判断，AI 负责解释、提示和审查。</p>
+            <h4>关键取舍</h4>
+            <ol class="dec">
+              <li><time>07.28</time><span>冻结 Prompt 和起始 commit，在隔离环境里运行，结束前不做人工纠正，保留原始结果。</span></li>
+              <li><time>07.28</time><span>第一次真实运行功能全部通过，但运行中自动用上了 Skill 和审查子任务，配置被改变了。我把它标为“结果有混杂”，不当作纯 Prompt 的基线。</span></li>
+              <li><time>08.03</time><span>写下一个可以被 0/3 推翻的假设，把“任务成功”和“实验有效”分开判断。</span></li>
+            </ol>
+            <h4>结果</h4>
+            <ul class="facts">
+              <li><b>17/17</b>那次运行的测试全部通过，只改了允许改的两个文件，人工纠正 0 分钟</li>
+              <li><b>13</b>篇编号学习记录，配有 Prompt、Context 模板、评分标准和失败模式文档</li>
+            </ul>
+            <p class="gap">还没证明：有效的重复试验、Context 和 Skill 的 A/B 对比、稳定的成功率。</p>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="sub">其他作品</h3>
+      <div class="proj">
+        <article class="card"><span class="tag">命令行工具 · 2026.07</span><h3>video-to-md</h3><p>用本地 whisper.cpp 把视频或整个文件夹转成 Markdown，只保留原始转录，不总结也不润色。已有文件不会被覆盖，同名不同格式的视频分开输出，GPU 崩溃时退回 CPU。</p><span class="stack">Python · whisper.cpp · ffmpeg</span></article>
+        <article class="card"><span class="tag">流程设计 · 2026.09</span><h3>AI 视频制作规范</h3><p>把故事、参考、生成、剪辑和验收连成一套规范：先做带声音的分镜预演和高难镜头小样，再批量生成。另外配了一份法语漫剧 Demo 的创作讨论稿，还没有进入生产。</p><span class="stack">流程规范 · 8 个粗分镜</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk alt" id="skills">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eyebrow">自建 SKILLS</div><h2>把反复做的判断，写成 Agent 能执行的协议。</h2></div>
+        <p>同一类工作我做到第三、第四次，就会考虑把它封装成 Skill：入口负责共同原则，细节按需读取，有版本，有校验，可以跨项目调用。这四个 Skill 由我提出问题、定约束、做取舍，AI 辅助写协议、脚本和测试。</p>
+      </div>
+
+      <figure class="flow" aria-label="两个 Skill 之间的交接关系">
+        <div class="node n-src"><b>收藏的原稿</b><span>文章、视频转录。只读，保留哈希</span></div>
+        <div class="arrow" aria-hidden="true"></div>
+        <div class="node n-skill"><code>content-to-action</code><span>管收件箱、使用卡和生命周期：处理、等待、归档、已实践</span></div>
+        <div class="arrow arrow-label" aria-hidden="true"><em>用户确认后升级</em></div>
+        <div class="node n-skill"><code>evidence-to-project-decision</code><span>建项目基线、给证据分层，只返回一个决策包</span></div>
+        <div class="arrow" aria-hidden="true"></div>
+        <div class="node n-out"><b>采用 · 实验 · 延后 · 拒绝</b><span>结果回填到使用卡，不接管它的状态</span></div>
+        <figcaption>两个 Skill 刚建好时职责有重叠。我追问之后，把它们的边界重新划分：状态只归上游所有，下游只做判断，交接时只传必要的信息。</figcaption>
+      </figure>
+
+      <div class="skills">
+        <article class="skill">
+          <header><code>short-video-growth-director</code><span class="tag">2026.08 · 已迭代 3 次</span></header>
+          <h3>短视频增长编导</h3>
+          <p>从用户问题出发，经过增长路径、内容组合、系列设计和脚本，一直到发布后的复盘，整套流程都能跨项目调用。</p>
+          <ul>
+            <li>新知识分成三类：通用方法、有时效的平台信息、某个项目专属。只有通用方法进入全局规则。</li>
+            <li>平台窗口、扶持政策、粉丝门槛都当作带日期、待验证的假设，不写成绝对规律。</li>
+            <li>更新要先 <code>--check</code> 再 <code>--apply</code>，工作区有改动或版本分叉时直接拒绝。已接入五种 Agent 工具。</li>
+          </ul>
+        </article>
+        <article class="skill">
+          <header><code>content-to-action</code><span class="tag">2026.08 创建 · 10 月试用</span></header>
+          <h3>从收藏到实践</h3>
+          <p>收藏了很多内容却从来不用？它把每篇原稿变成一张使用卡，判断这篇值不值得做、能用在哪、做完了有没有证据。</p>
+          <ul>
+            <li>每周的优先候选最多三个，也可以一个都没有。不自动制造待办。</li>
+            <li>价值判断交给 Agent，脚本只做扫描、哈希、索引和结构检查。</li>
+            <li>拿最早的 5 篇做了真实试用：生成 5 张卡，原稿的 SHA-256 全部没变，最后只有 1 篇成为练习候选。</li>
+          </ul>
+        </article>
+        <article class="skill">
+          <header><code>evidence-to-project-decision</code><span class="tag">2026.08</span></header>
+          <h3>证据转项目决策</h3>
+          <p>把一本书、一个趋势或一个竞品，落实到“我们的项目该不该改”。先看项目自身的约束，再看外部证据。</p>
+          <ul>
+            <li>处置只有四种：立即采用、最小实验、延后、拒绝。最小实验必须写清成功门槛和停止条件。</li>
+            <li>不做第二个普通的研究工具，只回答一个问题：这条证据会改变哪个具体决定。</li>
+            <li>机会成本也算证据。有价值的资料同样可以被延后或拒绝。</li>
+          </ul>
+        </article>
+        <article class="skill">
+          <header><code>authentic-communication-coach</code><span class="tag">2026.08 创建 · 10 月更新</span></header>
+          <h3>真实沟通教练</h3>
+          <p>练习倾听、回应、表达自己和设定边界。训练、真实对话和关系修复三种场景分开处理，不教套路，不教操控。</p>
+          <ul>
+            <li>训练流程是：自己先写回复，逐句反馈，重写，再到现实里练习，最后复盘。不直接生成漂亮话术。</li>
+            <li>想优化表达之前，先判断问题是不是真能靠表达解决。原话、推断和未知分开写。</li>
+            <li>更新时只吸收与目标相符的新材料，拒绝颜值评分、关系等级这类框架。发现来源没有独立核对，就如实写进限制里。</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+<section class="blk inverse" id="calls">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eyebrow">判断与取舍</div><h2>先把判断写下来，再让时间检验。</h2></div>
+        <p>做什么、不做什么，都标上当时的日期。判断错了、改过的，也留在这里。</p>
+      </div>
+      <ol class="jl sheet">
+        <li><div class="date"><span class="edge">01A ▸</span>2026.06</div><div class="main"><h3>不做 BossDirect</h3><p>想做一个让法国技术人才直接对接创业公司创始人的招聘 App，技术方案都设计好了。调研后发现 swipe 匹配模式市场上已经有了，差异不够，于是停下。</p></div><span class="verdict v-closed"><svg class="gp gp-x" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M7 6 C15 15 25 27 34 35"/><path d="M33 5 C25 14 14 25 6 34"/></svg><span class="gp-label">已放弃</span></span></li>
+        <li><div class="date"><span class="edge">02A ▸</span>2026.07</div><div class="main"><h3>“蓝调时刻可以算夜间”</h3><p>这是我最初的建模判断。按这个做下去，例外越加越多。当天改为独立的时间段，不再给“夜间”继续打补丁。</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">已修正</span></span></li>
+        <li><div class="date"><span class="edge">03A ▸</span>2026.07</div><div class="main"><h3>先逐张识别作品，再找创作方向</h3><p>三轮实验下来，模型总是把生活照过度解读成作品。当天放弃了全量逐张分类，转向分析多张照片之间的关系。</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">已修正</span></span></li>
+        <li><div class="date"><span class="edge">04A ▸</span>2026.08</div><div class="main"><h3>不暴露 Skill、禁止子任务时，Prompt v1 三次有效试验里至少成功一次</h3><p>一个可以被 0/3 直接推翻的可行性假设。目前还没有跑完三次有效试验。</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">待检验</span></span></li>
+        <li><div class="date"><span class="edge">05A ▸</span>2026.08</div><div class="main"><h3>完成一项练习，靠的是认真探索，不是选出一张好照片</h3><p>这条已经成为取景练习的完成标准。它能不能带来更高的留存，要等真实用户来回答。</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">待检验</span></span></li>
+        <li><div class="date"><span class="edge">06A ▸</span>2026.08</div><div class="main"><h3>两个 Skill 职责重叠时，保留两个，但收窄各自的职责</h3><p>content-to-action 管收件箱和状态，evidence-to-project-decision 只负责项目判断，交接需要用户确认。不合并，也不让两边同时拥有同一份状态。</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">已落地</span></span></li>
+        <li><div class="date"><span class="edge">07A ▸</span>2026.10</div><div class="main"><h3>Skill 吸收新知识前，先审查兼容性</h3><p>沟通 Skill 更新时，只吸收与目标兼容的部分，拒绝操控和未经证实的人群概括。更新后三个文件通过了检查，已经推送。</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">已落地</span></span></li>
+        <li><div class="date"><span class="edge">08A ▸</span>2026.10</div><div class="main"><h3>不是每个任务都撑得起一整场外拍</h3><p>改成一次出门可以连续练习，但每次只关注一个任务，什么时候结束由用户决定。</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">已落地</span></span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="blk alt" id="notes">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eyebrow">工作方法</div><h2>我怎样和 AI 一起做工程</h2></div>
+        <p>用真实领域问题建立约束，让 AI 的输出变成可以检查的产物，再分别验证行为、过程和适用边界。遇到失败时，先保留证据，修正模型或流程，再决定要不要继续扩大。</p>
+      </div>
+      <ol class="method">
+        <li><h3>先写能判断对错的任务，再交给 Agent</h3><p>目标、已有上下文、硬约束、允许修改的范围和验收证据，分开写清楚。</p></li>
+        <li><h3>用领域模型消除歧义</h3><p>常见做法不等于必要条件。例外太多时，重新划分类别，而不是继续加规则。</p></li>
+        <li><h3>证明非法输入会被拒绝</h3><p>正向示例能编译还不够。TDD 的“红”必须是目标断言失败，环境报错不算。</p></li>
+        <li><h3>冻结起点，保留失败</h3><p>同一个 commit、Prompt、模型和权限。先记录原始运行结果，再做人工修正。</p></li>
+        <li><h3>任务结果和实验有效性分开判断</h3><p>功能通过了，归因仍可能无效。一个分数代替不了这两个判断。</p></li>
+        <li><h3>让环境落实边界</h3><p>Prompt 里写了禁止，不等于环境真的禁止。能力边界要靠工具层控制，完成与否由独立的验证来判断。</p></li>
+        <li><h3>让每个生成结果都能追溯来源</h3><p>保留字段编号、版本、原文和哈希。恢复时不悄悄重新生成历史结果。</p></li>
+        <li><h3>分层验证，分层报告</h3><p>单元测试、真实模型、浏览器、实机、云端、用户反馈各说各的。本地成功不等于已经部署。</p></li>
+      <li><h3>先判断值不值得封装，再建 Skill</h3><p>同样的输入、判断和验收反复出现，才值得封装。已有的 Skill 能扩展，就不再新建一个。</p></li>
+        <li><h3>多个 Skill 协作时，先定状态归谁</h3><p>上游负责生命周期，下游只返回判断结果。交接只传必要信息，不自动扩大写入权限。</p></li>
+      </ol>
+    </div>
+  </section>
+
+<section class="close" id="contact">
+    <div class="wrap">
+      <h2>想一起做点东西？</h2>
+      <p>工作机会、项目合作，或者想聊聊 AI 工程、摄影和短视频，都欢迎写信。我可以用中文、英语或法语交流。</p>
+      <div class="mail" data-u="hugo.xinyulin" data-d="gmail.com">hugo.xinyulin [at] gmail.com</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>© 2026 辛禹林 · Yulin Xin</span><span>巴黎</span></div>
+</footer>
+</div>
+<div class="L" data-l="en" lang="en" hidden>
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#hero-en">Yulin Xin <small>辛禹林</small></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#path-en">Path</a>
+      <a href="#now-en">Work</a>
+      <a href="#work-en">Projects</a>
+      <a href="#skills-en">Skills</a>
+      <a href="#calls-en">Calls</a>
+      <a href="#notes-en">Method</a>
+    </nav>
+    <div class="langs" role="group" aria-label="Language"><button type="button" class="lang-btn" data-lang="zh" lang="zh-CN">中</button><button type="button" class="lang-btn" data-lang="en" lang="en">EN</button><button type="button" class="lang-btn" data-lang="fr" lang="fr">FR</button></div>
+    <span class="counter" aria-hidden="true" title="Frame count"><i>▾</i><b class="frame-count">01</b><small>/36</small></span>
+    <a class="cta" href="#contact-en">Contact</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="hero-en">
+    <div class="wrap">
+      <div>
+        <p class="kicker rise">Full-stack engineer · Paris</p>
+        <h1 class="rise d2">Bringing AI into<br>real engineering.</h1>
+        <p class="lede rise d3">I'm <b>Yulin Xin</b>. I've been a full-stack developer in Paris for 3 years. I've built an internal CRM, run DevOps for a core system and led a full rebuild of a client app. Over the past year I've spent most of my free time on AI: getting coding agents to work reliably, sorting photos and videos with local models, and writing agent skills for content creation.</p>
+        <div class="btns rise d4">
+          <a class="btn btn-ivory" href="#work-en">See my work</a>
+          <a class="btn btn-line" href="#contact-en">Contact me</a>
+        </div>
+        <div class="social rise d4">
+          <span>Find me</span>
+          <a href="https://github.com/mushroom42" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/yulin-xin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <figure class="wlf rise d3">
+        <div class="wlf-hood" tabindex="0" role="button" aria-pressed="false" aria-label="Waist-level finder. The image is mirrored left to right. Press to flip it back">
+          <span class="wlf-mark" aria-hidden="true">6 × 6</span>
+          <div class="wlf-glass">
+            <div class="wlf-image"><span class="wlf-mono">辛</span></div>
+            <div class="wlf-screen" aria-hidden="true"><i class="wlf-prism"></i></div>
+          </div>
+        </div>
+        <figcaption>A waist-level finder shows the scene mirrored left to right. <span class="hint-hover">Hover to flip it back.</span><span class="hint-tap">Tap to flip it back.</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="blk" id="path-en">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eyebrow">Path</div><h2>From Shanghai to Paris, from building pages to owning the whole delivery chain.</h2></div>
+        <p>I studied computer science for my engineering degree. As an intern I rebuilt a legacy system. At work I moved from front end to back end, cloud and CI/CD. Now AI is the next craft I want to learn properly.</p>
+      </div>
+      <ol class="tl">
+        <li><div class="yr">2021.09 – 2024.02</div><div class="role">Computer science · Engineering degree (Titre d'ingénieur)</div><div class="org">Université de technologie de Belfort-Montbéliard (UTBM)</div></li>
+        <li><div class="yr">2022.09 – 2023.02</div><div class="role">Technical support intern</div><div class="org">Capgemini Consulting · Shanghai</div></li>
+        <li><div class="yr">2023.08 – now</div><div class="role">Full-stack engineer</div><div class="org">An insurtech company · Paris</div></li>
+        <li><div class="yr">2025 – now</div><div class="role">AI engineering practice</div><div class="org">Agents, local models, skills</div></li>
+      </ol>
+      <div class="stats">
+        <div class="stat"><b>3 yrs</b><span>of full-stack development</span></div>
+        <div class="stat"><b>1 yr</b><span>of AI engineering practice</span></div>
+        <div class="stat"><b>3</b><span>product lines I've owned end to end</span></div>
+        <div class="stat"><b>3</b><span>working languages: Chinese (native), English (C1+), French (B2)</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk alt" id="now-en">
+    <div class="wrap feature">
+      <div>
+        <div class="eyebrow">Work · Insurtech</div>
+        <h3>At a French insurtech company, I cover front end, back end, cloud and delivery.</h3>
+        <div class="body">
+          <p>The team is small, so one person often owns a product line from design to release. I work in a Scrum team and run sprints in Jira. I often build a prototype first, let colleagues try it, and then iterate on their feedback.</p>
+          <p>After three product lines, what I care about most is the delivery chain: consistent environments, automated deploys and clear permissions. That is what lets code change fast and safely.</p>
+        </div>
+        <ul class="chips" aria-label="Main tech stack">
+          <li>AWS Lambda</li><li>DynamoDB</li><li>Cognito</li><li>Serverless</li><li>Docker</li><li>GitHub Actions</li><li>Python · FastAPI</li><li>TypeScript</li><li>Vue</li><li>React</li><li>Flutter</li><li>Java</li><li>Salesforce</li>
+        </ul>
+      </div>
+      <ol class="points">
+        <li><span class="k">1</span><div><b>Internal CRM</b><span>A web app for colleagues. Vue + TypeScript front end, Python Lambda back end, with full authentication and permissions. Modular architecture so it is easy to extend.</span></div></li>
+        <li><span class="k">2</span><div><b>DevOps for the core business system</b><span>A Java / Tomcat / Redis system. I unified the environments with Docker Compose and automated deploys to AWS EC2 with GitHub Actions.</span></div></li>
+        <li><span class="k">3</span><div><b>Client app rebuild</b><span>I led the move of the core content to a new architecture on my own and rewrote the front end in React, with clear gains in performance, scalability and code quality. I also set up full CI/CD on AWS.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="blk" id="work-en">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eyebrow">Projects</div><h2>What I build in my free time</h2></div>
+        <p>Most of it is about photography and short video. I know these fields and use them myself, so they are a good test of what AI can really do well. I own the problem, the trade-offs and the acceptance checks. AI helps with code, docs and reviews.</p>
+      </div>
+
+      <div class="cases">
+        <article class="case">
+          <aside class="case-meta">
+            <span class="tag">Mobile web product</span>
+            <h3>Viewfinder Drills</h3>
+            <span class="status s-wip">V1.2 verified locally · device beta next</span>
+            <dl>
+              <div><dt>Period</dt><dd>2026.07 – now</dd></div>
+              <div><dt>Stack</dt><dd>TypeScript · Vite · IndexedDB · Vitest</dd></div>
+            </dl>
+          </aside>
+          <div class="case-body">
+            <p class="one">For people with some photography basics who go out and don't know what to shoot: an observation drill they can run on location, and decide for themselves when it's done.</p>
+            <p>It started as a random subject generator, so people would have a goal when they went out. It grew into a bounded drill: it tells you what to look for and which framing rule to keep. It does not judge conditions on site for you, and it does not rate your photos.</p>
+            <h4>Key trade-offs</h4>
+            <ol class="dec">
+              <li><time>08.18</time><span>A drill is done when you have explored the theme seriously. You don't have to hand in “the best shot”. No limits on gear, focal length or exposure. Film and digital both work.</span></li>
+              <li><time>09.30</time><span>The light option became “which light-and-shadow relation do you want to observe”. The photographer decides whether the light is there. The app no longer guesses from the device clock.</span></li>
+              <li><time>10.05</time><span>“Find a red anchor” became “find a colour anchor”. A specific colour, light source or material should not be required for a whole type of drill.</span></li>
+              <li><time>10.08</time><span>Capture is 1:1 and portrait-locked for now, with up to three photos per share and no metering yet. We discussed auto-switching orientation that day, then I chose to cut the scope.</span></li>
+            </ol>
+            <h4>Results</h4>
+            <ul class="facts">
+              <li><b>7 / 14</b>seven drill focuses and fourteen task families. Every task traces back to the fields and version that generated it</li>
+              <li><b>45</b>automated tests passing (10.08). Photo import, draft recovery and share-image export also checked in the browser</li>
+            </ul>
+            <p class="gap">Not done yet: testing on a real iPhone, cloud deployment, and usage data from real testers.</p>
+          </div>
+        </article>
+
+        <article class="case">
+          <aside class="case-meta">
+            <span class="tag">Local AI experiment</span>
+            <h3>Photo Direction Finder</h3>
+            <span class="status s-pivot">Architecture changed after tests</span>
+            <dl>
+              <div><dt>Period</dt><dd>2026.07</dd></div>
+              <div><dt>Stack</dt><dd>Python · PhotoKit · Apple Vision · Ollama · Qwen2.5-VL</dd></div>
+            </dl>
+          </aside>
+          <div class="case-body">
+            <p class="one">For hobby photographers with many photos but no clear sense of their own direction: it turns the library into a direction map you can question and correct, with photos as evidence for every claim.</p>
+            <p>A real library mixes travel, family, screenshots and reference images. Actual work is a small share. I didn't want users to hand-pick dozens of photos before starting, so I first ran the experiment on my own library. Photos stay on the device, and only 512px previews are generated.</p>
+            <h4>Key trade-offs</h4>
+            <ol class="dec">
+              <li><time>07.27</time><span>It outputs a few direction hypotheses you can correct, each with sample photos, counter-examples and other possible readings. No scores for your work, and no “you shoot like this master” labels.</span></li>
+              <li><time>07.27</time><span>I ran three prompt versions on the same 20 photos. The format issues went away, but the model still over-read: ordinary snapshots were flagged as candidate work. So I stopped judging photo by photo and looked for choices that repeat across many photos.</span></li>
+            </ol>
+            <h4>Results</h4>
+            <ul class="facts">
+              <li><b>3 rounds</b>of controlled tests on the same sample. All failures are logged. I didn't hide the problem with more prompt tuning</li>
+              <li><b>≈3.3 s</b>per photo with the local model (small sample of 20; this shows speed, not accuracy)</li>
+            </ul>
+            <p class="gap">Next: grouping across photos, a full direction map, and testing with outside users.</p>
+          </div>
+        </article>
+
+        <article class="case">
+          <aside class="case-meta">
+            <span class="tag">AI engineering study</span>
+            <h3>Agentic Photo Lab</h3>
+            <span class="status s-wip">Study in progress</span>
+            <dl>
+              <div><dt>Period</dt><dd>2026.07 – 08</dd></div>
+              <div><dt>Stack</dt><dd>TypeScript · TDD · Eval · Rubric</dd></div>
+            </dl>
+          </aside>
+          <div class="case-body">
+            <p class="one">Using photo training as a controlled domain to observe and evaluate how coding agents work under complex constraints, and where they fail.</p>
+            <p>I wanted to learn how to manage prompts, context and skills, and where an agent's limits and failure modes are. I didn't want AI to write the whole stack for me. So we work as a pair: I write the code and make the calls, and AI explains, hints and reviews.</p>
+            <h4>Key trade-offs</h4>
+            <ol class="dec">
+              <li><time>07.28</time><span>Freeze the prompt and the starting commit, run in an isolated environment, make no manual fixes before the end, and keep the raw output.</span></li>
+              <li><time>07.28</time><span>The first real run passed every feature, but it pulled in a skill and review subtasks on its own, which changed the setup. I marked the result “confounded” and did not use it as a pure-prompt baseline.</span></li>
+              <li><time>08.03</time><span>I wrote down a hypothesis that a 0/3 result would disprove, and judged “task succeeded” and “experiment valid” separately.</span></li>
+            </ol>
+            <h4>Results</h4>
+            <ul class="facts">
+              <li><b>17/17</b>tests passed in that run. Only the two allowed files changed. 0 minutes of manual fixes</li>
+              <li><b>13</b>numbered study notes, with prompts, context templates, a scoring rubric and failure-mode docs</li>
+            </ul>
+            <p class="gap">Not proven yet: valid repeated trials, A/B tests on context and skills, a stable success rate.</p>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="sub">Other projects</h3>
+      <div class="proj">
+        <article class="card"><span class="tag">CLI tool · 2026.07</span><h3>video-to-md</h3><p>Turns a video or a whole folder into Markdown with a local whisper.cpp. It keeps the raw transcript, with no summary and no polish. Existing files are never overwritten, videos with the same name in different formats get separate outputs, and it falls back to CPU if the GPU crashes.</p><span class="stack">Python · whisper.cpp · ffmpeg</span></article>
+        <article class="card"><span class="tag">Workflow design · 2026.09</span><h3>AI Video Production Spec</h3><p>One spec that links story, references, generation, editing and review: first an animatic with sound and test clips for hard shots, then batch generation. It comes with a discussion draft for a French animated-drama demo, not yet in production.</p><span class="stack">Workflow spec · 8 rough storyboards</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk alt" id="skills-en">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eyebrow">MY OWN SKILLS</div><h2>Turning calls I make again and again into protocols an agent can run.</h2></div>
+        <p>When I do the same kind of work a third or fourth time, I consider packaging it as a skill: the entry point holds shared principles, details load on demand, and it has versions, checks and works across projects. For these four skills I framed the problem, set the constraints and made the trade-offs. AI helped write the protocols, scripts and tests.</p>
+      </div>
+
+      <figure class="flow" aria-label="Handoff between two skills">
+        <div class="node n-src"><b>Saved originals</b><span>Articles, video transcripts. Read-only, hashes kept</span></div>
+        <div class="arrow" aria-hidden="true"></div>
+        <div class="node n-skill"><code>content-to-action</code><span>Owns the inbox, use cards and lifecycle: process, wait, archive, practised</span></div>
+        <div class="arrow arrow-label" aria-hidden="true"><em>Escalated after user confirms</em></div>
+        <div class="node n-skill"><code>evidence-to-project-decision</code><span>Sets a project baseline, ranks evidence, returns one decision pack</span></div>
+        <div class="arrow" aria-hidden="true"></div>
+        <div class="node n-out"><b>Adopt · Test · Defer · Reject</b><span>Result written back to the use card, without taking over its state</span></div>
+        <figcaption>When I first built these two skills, their roles overlapped. After pushing on it, I redrew the boundary: only the upstream skill owns state, the downstream one only makes calls, and the handoff carries only what is needed.</figcaption>
+      </figure>
+
+      <div class="skills">
+        <article class="skill">
+          <header><code>short-video-growth-director</code><span class="tag">2026.08 · 3 iterations</span></header>
+          <h3>Short-Video Growth Director</h3>
+          <p>Starts from the audience's problem and goes through growth path, content mix, series design and scripts, up to the post-release review. The whole flow works across projects.</p>
+          <ul>
+            <li>New knowledge falls into three types: general methods, time-bound platform info, and project-specific notes. Only general methods go into the global rules.</li>
+            <li>Platform windows, creator programmes and follower thresholds are dated hypotheses to verify, never fixed rules.</li>
+            <li>Updates run <code>--check</code> before <code>--apply</code>, and refuse to run on a dirty workspace or a forked version. Connected to five agent tools.</li>
+          </ul>
+        </article>
+        <article class="skill">
+          <header><code>content-to-action</code><span class="tag">Built 2026.08 · trial in Oct</span></header>
+          <h3>From Saved to Practised</h3>
+          <p>Saved lots of content but never used it? This turns each original into a use card: is it worth doing, where does it apply, and is there evidence once it's done.</p>
+          <ul>
+            <li>At most three priority picks per week, and zero is fine. It never invents to-dos.</li>
+            <li>The agent makes the value calls. Scripts only scan, hash, index and check structure.</li>
+            <li>A real trial on the 5 oldest items: 5 cards created, every original's SHA-256 unchanged, and only 1 became a practice candidate.</li>
+          </ul>
+        </article>
+        <article class="skill">
+          <header><code>evidence-to-project-decision</code><span class="tag">2026.08</span></header>
+          <h3>Evidence to Project Decision</h3>
+          <p>Takes a book, a trend or a competitor down to one question: should our project change? It looks at the project's own constraints first, then at outside evidence.</p>
+          <ul>
+            <li>Only four outcomes: adopt now, minimal test, defer, reject. A minimal test must state its success bar and stop condition.</li>
+            <li>It is not one more research tool. It answers one question: which specific decision would this evidence change.</li>
+            <li>Opportunity cost counts as evidence. Useful material can still be deferred or rejected.</li>
+          </ul>
+        </article>
+        <article class="skill">
+          <header><code>authentic-communication-coach</code><span class="tag">Built 2026.08 · updated Oct</span></header>
+          <h3>Authentic Communication Coach</h3>
+          <p>Practise listening, responding, speaking for yourself and setting boundaries. Training, real conversations and repairing relationships are handled separately. No scripts, no manipulation.</p>
+          <ul>
+            <li>The training loop: write your own reply, get line-by-line feedback, rewrite, practise in real life, then review. It doesn't hand you polished lines.</li>
+            <li>Before polishing the wording, it checks whether wording can solve the problem at all. Quotes, inferences and unknowns are kept apart.</li>
+            <li>Updates only take in material that fits the goal and reject frameworks like looks scores or relationship tiers. Sources not checked independently are listed as a limitation.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+<section class="blk inverse" id="calls-en">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eyebrow">Calls and trade-offs</div><h2>Write the call down first. Let time test it.</h2></div>
+        <p>What I chose to build or skip, each with the date I decided. Calls I got wrong and changed stay here too.</p>
+      </div>
+      <ol class="jl sheet">
+        <li><div class="date"><span class="edge">01A ▸</span>2026.06</div><div class="main"><h3>Not building BossDirect</h3><p>A hiring app linking tech talent in France directly with startup founders. The technical design was done. Research showed the swipe-matching model already existed and mine wasn't different enough, so I stopped.</p></div><span class="verdict v-closed"><svg class="gp gp-x" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M7 6 C15 15 25 27 34 35"/><path d="M33 5 C25 14 14 25 6 34"/></svg><span class="gp-label">Dropped</span></span></li>
+        <li><div class="date"><span class="edge">02A ▸</span>2026.07</div><div class="main"><h3>“Blue hour can count as night”</h3><p>This was my first modelling call. As I built on it, the exceptions kept piling up. The same day I made it a separate time slot and stopped patching “night”.</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">Revised</span></span></li>
+        <li><div class="date"><span class="edge">03A ▸</span>2026.07</div><div class="main"><h3>Classify each photo as work first, then find the direction</h3><p>Over three rounds, the model kept reading snapshots as serious work. The same day I dropped photo-by-photo classification and moved to analysing relations across photos.</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">Revised</span></span></li>
+        <li><div class="date"><span class="edge">04A ▸</span>2026.08</div><div class="main"><h3>With skills hidden and subtasks blocked, Prompt v1 succeeds at least once in three valid trials</h3><p>A feasibility hypothesis that a 0/3 result would disprove outright. The three valid trials have not all run yet.</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">Untested</span></span></li>
+        <li><div class="date"><span class="edge">05A ▸</span>2026.08</div><div class="main"><h3>A drill is done when you explore seriously, not when you pick one good photo</h3><p>This is now the completion rule in Viewfinder Drills. Whether it improves retention is a question for real users.</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">Untested</span></span></li>
+        <li><div class="date"><span class="edge">06A ▸</span>2026.08</div><div class="main"><h3>When two skills overlap, keep both and narrow each one's role</h3><p>content-to-action owns the inbox and state. evidence-to-project-decision only makes project calls, and the handoff needs user confirmation. No merge, and no state owned by both.</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">Shipped</span></span></li>
+        <li><div class="date"><span class="edge">07A ▸</span>2026.10</div><div class="main"><h3>Check compatibility before a skill takes in new knowledge</h3><p>When updating the communication skill, I kept only the parts that fit its goal and rejected manipulation and unproven claims about groups of people. After the update, three files passed checks and were pushed.</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">Shipped</span></span></li>
+        <li><div class="date"><span class="edge">08A ▸</span>2026.10</div><div class="main"><h3>Not every task can fill a whole photo walk</h3><p>Now one outing can chain several drills, with one task in focus at a time. The user decides when to stop.</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">Shipped</span></span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="blk alt" id="notes-en">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eyebrow">Method</div><h2>How I build with AI</h2></div>
+        <p>I use real domain problems to set constraints, so AI output becomes something I can check. Then I verify behaviour, process and scope separately. When something fails, I keep the evidence, fix the model or the process, and only then decide whether to scale up.</p>
+      </div>
+      <ol class="method">
+        <li><h3>Write a task that can be judged right or wrong, then hand it to the agent</h3><p>Goal, existing context, hard constraints, what may be changed and the evidence for acceptance, each written out on its own.</p></li>
+        <li><h3>Use a domain model to remove ambiguity</h3><p>Common practice is not a requirement. When exceptions pile up, redraw the categories instead of adding rules.</p></li>
+        <li><h3>Prove that bad input gets rejected</h3><p>A passing happy-path example is not enough. In TDD, “red” must be the target assertion failing. An environment error doesn't count.</p></li>
+        <li><h3>Freeze the start, keep the failures</h3><p>Same commit, prompt, model and permissions. Record the raw run first, then make manual fixes.</p></li>
+        <li><h3>Judge task outcome and experiment validity separately</h3><p>The feature can pass while the attribution is still invalid. One score can't stand in for both.</p></li>
+        <li><h3>Let the environment enforce the limits</h3><p>Forbidding something in the prompt doesn't mean the environment forbids it. Limits belong in the tool layer, and independent checks decide what is done.</p></li>
+        <li><h3>Make every generated result traceable</h3><p>Keep field IDs, versions, source text and hashes. A restore never quietly regenerates past results.</p></li>
+        <li><h3>Verify in layers, report in layers</h3><p>Unit tests, real models, browser, device, cloud and user feedback each report on their own. Working locally is not deployed.</p></li>
+      <li><h3>Decide if it's worth packaging before building a skill</h3><p>Only the same inputs, calls and checks coming up again and again justify a skill. If an existing skill can be extended, I don't build a new one.</p></li>
+        <li><h3>When skills work together, decide who owns state first</h3><p>Upstream owns the lifecycle. Downstream only returns its call. The handoff carries only what is needed and never widens write access on its own.</p></li>
+      </ol>
+    </div>
+  </section>
+
+<section class="close" id="contact-en">
+    <div class="wrap">
+      <h2>Want to build something together?</h2>
+      <p>Job offers, project collaborations, or a chat about AI engineering, photography or short video: all welcome. I can talk in Chinese, English or French.</p>
+      <div class="mail" data-u="hugo.xinyulin" data-d="gmail.com">hugo.xinyulin [at] gmail.com</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>© 2026 Yulin Xin · 辛禹林</span><span>Paris</span></div>
+</footer>
+
+</div>
+<div class="L" data-l="fr" lang="fr" hidden>
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#hero-fr">Yulin Xin <small>辛禹林</small></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#path-fr">Parcours</a>
+      <a href="#now-fr">Travail</a>
+      <a href="#work-fr">Projets</a>
+      <a href="#skills-fr">Skills</a>
+      <a href="#calls-fr">Décisions</a>
+      <a href="#notes-fr">Méthode</a>
+    </nav>
+    <div class="langs" role="group" aria-label="Langue"><button type="button" class="lang-btn" data-lang="zh" lang="zh-CN">中</button><button type="button" class="lang-btn" data-lang="en" lang="en">EN</button><button type="button" class="lang-btn" data-lang="fr" lang="fr">FR</button></div>
+    <span class="counter" aria-hidden="true" title="Vues de la pellicule"><i>▾</i><b class="frame-count">01</b><small>/36</small></span>
+    <a class="cta" href="#contact-fr">Contact</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="hero-fr">
+    <div class="wrap">
+      <div>
+        <p class="kicker rise">Ingénieur full-stack · Paris</p>
+        <h1 class="rise d2">Mettre l'IA<br>au service de vrais projets.</h1>
+        <p class="lede rise d3">Je suis <b>Yulin Xin</b>, développeur full-stack à Paris depuis 3 ans. J'ai porté un CRM interne, le DevOps d'un système cœur et la refonte complète d'une app client. Depuis un an, je consacre l'essentiel de mon temps libre à l'IA : rendre les Agents de code fiables, trier photos et vidéos avec des modèles locaux, écrire des Agent Skills pour la création de contenu.</p>
+        <div class="btns rise d4">
+          <a class="btn btn-ivory" href="#work-fr">Voir mes projets</a>
+          <a class="btn btn-line" href="#contact-fr">Me contacter</a>
+        </div>
+        <div class="social rise d4">
+          <span>Me retrouver</span>
+          <a href="https://github.com/mushroom42" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/yulin-xin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <figure class="wlf rise d3">
+        <div class="wlf-hood" tabindex="0" role="button" aria-pressed="false" aria-label="Viseur poitrine : l'image est inversée gauche-droite. Appuyer pour la redresser">
+          <span class="wlf-mark" aria-hidden="true">6 × 6</span>
+          <div class="wlf-glass">
+            <div class="wlf-image"><span class="wlf-mono">辛</span></div>
+            <div class="wlf-screen" aria-hidden="true"><i class="wlf-prism"></i></div>
+          </div>
+        </div>
+        <figcaption>Dans un viseur poitrine, l'image est inversée gauche-droite. <span class="hint-hover">Survolez-la pour la redresser.</span><span class="hint-tap">Touchez-la pour la redresser.</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="blk" id="path-fr">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eyebrow">Parcours</div><h2>De Shanghai à Paris, des pages web à toute la chaîne de livraison.</h2></div>
+        <p>Diplômé ingénieur en informatique. En stage, j'ai refondu un ancien système ; en poste, je suis passé du front-end au back-end, au cloud et au CI/CD. Aujourd'hui, l'IA est le prochain savoir-faire que je veux vraiment maîtriser.</p>
+      </div>
+      <ol class="tl">
+        <li><div class="yr">2021.09 – 2024.02</div><div class="role">Informatique · titre d'ingénieur</div><div class="org">Université de technologie de Belfort-Montbéliard (UTBM)</div></li>
+        <li><div class="yr">2022.09 – 2023.02</div><div class="role">Stagiaire support technique</div><div class="org">Capgemini Consulting · Shanghai</div></li>
+        <li><div class="yr">2023.08 – aujourd'hui</div><div class="role">Ingénieur full-stack</div><div class="org">Une insurtech parisienne</div></li>
+        <li><div class="yr">2025 – aujourd'hui</div><div class="role">Pratique de l'ingénierie IA</div><div class="org">Agents, modèles locaux, Skills</div></li>
+      </ol>
+      <div class="stats">
+        <div class="stat"><b>3 ans</b><span>d'expérience en full-stack</span></div>
+        <div class="stat"><b>1 an</b><span>de pratique de l'ingénierie IA</span></div>
+        <div class="stat"><b>3 produits</b><span>pilotés en autonomie</span></div>
+        <div class="stat"><b>3 langues</b><span>de travail : chinois (langue maternelle), anglais (C1+), français (B2)</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk alt" id="now-fr">
+    <div class="wrap feature">
+      <div>
+        <div class="eyebrow">Travail · Insurtech</div>
+        <h3>Dans une insurtech parisienne, je gère à la fois front-end, back-end, cloud et livraison.</h3>
+        <div class="body">
+          <p>L'équipe est petite : une seule personne porte souvent un produit de la conception à la mise en production. Je travaille en Scrum, avec Jira pour les sprints. Souvent, je fais d'abord un prototype, je le fais tester à mes collègues, puis je l'ajuste selon leurs retours.</p>
+          <p>Sur ces trois produits, ce qui compte le plus pour moi, c'est la chaîne de livraison : environnements cohérents, déploiement automatisé, droits clairs. C'est ce qui permet d'itérer vite et sereinement.</p>
+        </div>
+        <ul class="chips" aria-label="Technologies utilisées">
+          <li>AWS Lambda</li><li>DynamoDB</li><li>Cognito</li><li>Serverless</li><li>Docker</li><li>GitHub Actions</li><li>Python · FastAPI</li><li>TypeScript</li><li>Vue</li><li>React</li><li>Flutter</li><li>Java</li><li>Salesforce</li>
+        </ul>
+      </div>
+      <ol class="points">
+        <li><span class="k">1</span><div><b>CRM interne</b><span>Application web pour les équipes internes. Front-end Vue + TypeScript, back-end en Lambda Python, avec un système complet d'authentification et de droits. Architecture modulaire, pensée pour évoluer.</span></div></li>
+        <li><span class="k">2</span><div><b>DevOps du système métier principal</b><span>Système Java / Tomcat / Redis. Docker Compose pour harmoniser les environnements, GitHub Actions pour déployer automatiquement sur AWS EC2.</span></div></li>
+        <li><span class="k">3</span><div><b>Refonte de l'app client</b><span>J'ai mené seul la migration du contenu principal vers la nouvelle architecture, avec un front-end réécrit en React : performances, évolutivité et qualité du code nettement améliorées. J'ai aussi mis en place une CI/CD complète sur AWS.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="blk" id="work-fr">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eyebrow">Projets</div><h2>Ce que je fais sur mon temps libre</h2></div>
+        <p>Surtout autour de la photo et de la vidéo courte : des domaines que je connais et que je pratique vraiment, parfaits pour tester ce que l'IA sait bien faire. Je définis le problème, les arbitrages et la validation ; l'IA m'aide pour l'implémentation, la documentation et les vérifications.</p>
+      </div>
+
+      <div class="cases">
+        <article class="case">
+          <aside class="case-meta">
+            <span class="tag">Produit web mobile</span>
+            <h3>Exercices de cadrage</h3>
+            <span class="status s-wip">V1.2 validée en local · test privé sur appareil à venir</span>
+            <dl>
+              <div><dt>Période</dt><dd>2026.07 – aujourd'hui</dd></div>
+              <div><dt>Stack</dt><dd>TypeScript · Vite · IndexedDB · Vitest</dd></div>
+            </dl>
+          </aside>
+          <div class="case-body">
+            <p class="one">Pour qui a quelques bases en photo mais ne sait pas quoi photographier une fois dehors : un exercice d'observation à mener sur le terrain, dont on juge soi-même la fin.</p>
+            <p>Au départ, c'était un générateur de sujets aléatoires, pour sortir avec un objectif sans hésiter. C'est devenu un exercice cadré : il dit quoi observer et quelle règle tenir dans l'image, mais ne juge ni les conditions sur place, ni les photos.</p>
+            <h4>Arbitrages clés</h4>
+            <ol class="dec">
+              <li><time>08.18</time><span>Terminer, c'est avoir vraiment exploré le thème, pas rendre « la meilleure photo ». Aucune contrainte de matériel, de focale ou d'exposition : argentique et numérique sont acceptés.</span></li>
+              <li><time>09.30</time><span>L'option lumière devient « quel contraste ombre-lumière observer ». Le photographe juge lui-même s'il y a de la lumière ; on ne déduit plus la faisabilité de l'heure de l'appareil.</span></li>
+              <li><time>10.05</time><span>« Trouver un point d'ancrage rouge » devient « trouver un point d'ancrage coloré ». Une couleur, une source de lumière ou une matière précise ne doit pas conditionner tout un type d'exercice.</span></li>
+              <li><time>10.08</time><span>Prise de vue d'abord en 1:1, orientation portrait fixe, partage de trois photos maximum, pas de mesure de lumière pour l'instant. Le basculement automatique paysage/portrait a été discuté le jour même, puis j'ai volontairement réduit le périmètre.</span></li>
+            </ol>
+            <h4>Résultats</h4>
+            <ul class="facts">
+              <li><b>7 / 14</b>Sept axes d'exercice, quatorze familles de tâches ; chaque tâche remonte aux champs et à la version qui l'ont générée</li>
+              <li><b>45</b>tests automatisés au vert (10.08) ; import de photos, reprise des brouillons et export de l'image de partage vérifiés aussi dans le navigateur</li>
+            </ul>
+            <p class="gap">Reste à faire : recette sur iPhone réel, déploiement cloud et données d'usage de vrais testeurs.</p>
+          </div>
+        </article>
+
+        <article class="case">
+          <aside class="case-meta">
+            <span class="tag">Expérience d'IA locale</span>
+            <h3>Boussole photo</h3>
+            <span class="status s-pivot">Architecture revue après expérience</span>
+            <dl>
+              <div><dt>Période</dt><dd>2026.07</dd></div>
+              <div><dt>Stack</dt><dd>Python · PhotoKit · Apple Vision · Ollama · Qwen2.5-VL</dd></div>
+            </dl>
+          </aside>
+          <div class="case-body">
+            <p class="one">Pour les photographes amateurs qui ont beaucoup de photos mais voient mal leur direction créative : tirer de leur photothèque une carte des directions, contestable et corrigeable, où chaque conclusion s'appuie sur des photos.</p>
+            <p>Une vraie photothèque mélange voyages, famille, captures d'écran et documents ; les photos d'auteur n'en sont qu'une petite part. Je ne voulais pas obliger l'utilisateur à trier des dizaines de photos avant de commencer. J'ai donc testé d'abord sur ma propre photothèque : traitement uniquement en local, avec des aperçus de 512 px.</p>
+            <h4>Arbitrages clés</h4>
+            <ol class="dec">
+              <li><time>07.27</time><span>Proposer quelques hypothèses de direction corrigeables, avec photos représentatives, contre-exemples et autres lectures possibles. Pas de note, ni d'étiquette du type « vous ressemblez à tel maître ».</span></li>
+              <li><time>07.27</time><span>Trois versions de Prompt sur les mêmes 20 photos. Le format était réglé, mais le modèle surinterprétait encore : de simples photos du quotidien devenaient des œuvres candidates. J'ai donc arrêté le jugement photo par photo pour chercher d'abord les choix qui se répètent d'une photo à l'autre.</span></li>
+            </ol>
+            <h4>Résultats</h4>
+            <ul class="facts">
+              <li><b>3 essais</b>comparatifs sur le même échantillon ; échecs conservés en entier, sans les masquer à force de retoucher le Prompt</li>
+              <li><b>≈3,3 s</b>par photo avec le modèle local (20 photos : indique la vitesse, pas la précision)</li>
+            </ul>
+            <p class="gap">Prochaines étapes : regroupement entre photos, carte complète des directions et validation par des utilisateurs externes.</p>
+          </div>
+        </article>
+
+        <article class="case">
+          <aside class="case-meta">
+            <span class="tag">Apprentissage de l'ingénierie IA</span>
+            <h3>Agentic Photo Lab</h3>
+            <span class="status s-wip">Expérience d'apprentissage en cours</span>
+            <dl>
+              <div><dt>Période</dt><dd>2026.07 – 08</dd></div>
+              <div><dt>Stack</dt><dd>TypeScript · TDD · Eval · Rubric</dd></div>
+            </dl>
+          </aside>
+          <div class="case-body">
+            <p class="one">La photo comme domaine contrôlé, pour observer et évaluer comment un Agent de code travaille sous contraintes complexes, et où il échoue.</p>
+            <p>Je veux apprendre à gérer Prompt, Context et Skills, et comprendre les limites et les modes d'échec des Agents, pas faire écrire tout le front et le back par l'IA. D'où un travail en binôme : j'implémente et je décide, l'IA explique, suggère et relit.</p>
+            <h4>Arbitrages clés</h4>
+            <ol class="dec">
+              <li><time>07.28</time><span>Prompt et commit de départ figés, exécution en environnement isolé, aucune correction manuelle avant la fin, résultats bruts conservés.</span></li>
+              <li><time>07.28</time><span>Au premier vrai run, tout passait, mais l'exécution avait activé d'elle-même une Skill et une sous-tâche de relecture : la configuration avait changé. Je l'ai classé « résultat contaminé », pas comme référence du Prompt seul.</span></li>
+              <li><time>08.03</time><span>Formuler une hypothèse réfutable par un 0/3, et juger séparément « tâche réussie » et « expérience valide ».</span></li>
+            </ol>
+            <h4>Résultats</h4>
+            <ul class="facts">
+              <li><b>17/17</b>tests au vert sur ce run, seuls les deux fichiers autorisés modifiés, 0 minute de correction manuelle</li>
+              <li><b>13</b>notes d'apprentissage numérotées, avec Prompts, modèles de Context, grilles d'évaluation et fiches de modes d'échec</li>
+            </ul>
+            <p class="gap">Pas encore démontré : des essais répétés valides, un A/B entre Context et Skill, un taux de réussite stable.</p>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="sub">Autres projets</h3>
+      <div class="proj">
+        <article class="card"><span class="tag">Outil en ligne de commande · 2026.07</span><h3>video-to-md</h3><p>Convertit une vidéo ou un dossier entier en Markdown avec whisper.cpp en local. Transcription brute, sans résumé ni réécriture. Aucun fichier existant n'est écrasé, les vidéos homonymes de formats différents sont traitées à part, et en cas de plantage GPU, retour au CPU.</p><span class="stack">Python · whisper.cpp · ffmpeg</span></article>
+        <article class="card"><span class="tag">Conception de processus · 2026.09</span><h3>Cahier de production vidéo IA</h3><p>Un cadre qui relie histoire, références, génération, montage et validation : d'abord une prévisualisation sonore du storyboard et des tests des plans difficiles, puis la génération en série. S'y ajoute une note créative pour une démo de web-série illustrée en français, pas encore en production.</p><span class="stack">Cadre de processus · 8 plans esquissés</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk alt" id="skills-fr">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eyebrow">SKILLS MAISON</div><h2>Transformer les jugements récurrents en protocoles qu'un Agent peut exécuter.</h2></div>
+        <p>Quand je refais le même type de travail une troisième ou quatrième fois, j'envisage d'en faire une Skill : un point d'entrée pour les principes communs, des détails lus à la demande, des versions, des contrôles, un usage d'un projet à l'autre. Pour ces quatre Skills, je pose le problème, fixe les contraintes et tranche ; l'IA m'aide à écrire protocoles, scripts et tests.</p>
+      </div>
+
+      <figure class="flow" aria-label="Passage de relais entre deux Skills">
+        <div class="node n-src"><b>Sources sauvegardées</b><span>Articles, transcriptions vidéo. Lecture seule, hash conservé</span></div>
+        <div class="arrow" aria-hidden="true"></div>
+        <div class="node n-skill"><code>content-to-action</code><span>Gère la boîte de réception, les fiches d'usage et le cycle de vie : à traiter, en attente, archivé, pratiqué</span></div>
+        <div class="arrow arrow-label" aria-hidden="true"><em>Transmis après accord de l'utilisateur</em></div>
+        <div class="node n-skill"><code>evidence-to-project-decision</code><span>Établit la base du projet, hiérarchise les preuves, ne renvoie qu'un dossier de décision</span></div>
+        <div class="arrow" aria-hidden="true"></div>
+        <div class="node n-out"><b>Adopter · Tester · Reporter · Refuser</b><span>Résultat reporté sur la fiche d'usage, sans prendre la main sur son état</span></div>
+        <figcaption>À leur création, les deux Skills se chevauchaient. En creusant, j'ai redéfini leurs frontières : l'état appartient à l'amont seul, l'aval ne fait que juger, et le relais ne transmet que le nécessaire.</figcaption>
+      </figure>
+
+      <div class="skills">
+        <article class="skill">
+          <header><code>short-video-growth-director</code><span class="tag">2026.08 · 3 itérations</span></header>
+          <h3>Directeur de croissance vidéo courte</h3>
+          <p>Du problème de l'utilisateur au bilan après publication, en passant par la stratégie de croissance, le mix de contenus, la conception de séries et les scripts : tout le processus est réutilisable d'un projet à l'autre.</p>
+          <ul>
+            <li>Les nouvelles connaissances sont classées en trois catégories : méthodes générales, infos de plateforme datées, spécificités d'un projet. Seules les méthodes générales entrent dans les règles globales.</li>
+            <li>Fenêtres de visibilité, programmes de soutien, seuils d'abonnés : tout est traité comme une hypothèse datée à vérifier, jamais comme une loi.</li>
+            <li>Une mise à jour passe d'abord par <code>--check</code>, puis <code>--apply</code> ; refus immédiat si l'espace de travail est modifié ou si les versions divergent. Branchée sur cinq outils d'Agent.</li>
+          </ul>
+        </article>
+        <article class="skill">
+          <header><code>content-to-action</code><span class="tag">Créée en 2026.08 · testée en octobre</span></header>
+          <h3>De la sauvegarde à la pratique</h3>
+          <p>Beaucoup de contenus sauvegardés, jamais utilisés ? Elle transforme chaque source en fiche d'usage : est-ce que ça vaut le coup, où l'appliquer, et y a-t-il une preuve une fois fait.</p>
+          <ul>
+            <li>Trois candidats prioritaires par semaine au maximum, voire aucun. Pas de tâches créées automatiquement.</li>
+            <li>Le jugement de valeur revient à l'Agent ; les scripts se limitent au scan, au hash, à l'index et aux contrôles de structure.</li>
+            <li>Test réel sur les 5 sources les plus anciennes : 5 fiches générées, SHA-256 des sources inchangés, et une seule retenue comme candidate à la pratique.</li>
+          </ul>
+        </article>
+        <article class="skill">
+          <header><code>evidence-to-project-decision</code><span class="tag">2026.08</span></header>
+          <h3>Des preuves à la décision</h3>
+          <p>Ramener un livre, une tendance ou un concurrent à une question : « notre projet doit-il changer ? » D'abord les contraintes du projet, ensuite les preuves externes.</p>
+          <ul>
+            <li>Quatre issues seulement : adopter tout de suite, expérience minimale, reporter, refuser. Une expérience minimale doit fixer son seuil de réussite et sa condition d'arrêt.</li>
+            <li>Pas un énième outil de recherche. Une seule question : quelle décision précise cette preuve change-t-elle ?</li>
+            <li>Le coût d'opportunité compte aussi comme preuve. Une ressource utile peut, elle aussi, être reportée ou refusée.</li>
+          </ul>
+        </article>
+        <article class="skill">
+          <header><code>authentic-communication-coach</code><span class="tag">Créée en 2026.08 · mise à jour en octobre</span></header>
+          <h3>Coach de communication sincère</h3>
+          <p>S'exercer à écouter, répondre, s'exprimer et poser des limites. Entraînement, conversation réelle et réparation d'une relation sont traités à part. Ni recettes toutes faites, ni manipulation.</p>
+          <ul>
+            <li>Le parcours : écrire d'abord sa propre réponse, recevoir un retour phrase par phrase, réécrire, s'exercer dans la vraie vie, puis faire le bilan. Aucune belle formule générée d'office.</li>
+            <li>Avant de travailler la formulation, vérifier si le problème se règle vraiment par les mots. Propos exacts, déductions et inconnues sont notés à part.</li>
+            <li>Les mises à jour n'intègrent que les sources alignées sur l'objectif ; les notes de physique ou les « niveaux » de relation sont refusés. Quand une source n'a pas été vérifiée de façon indépendante, c'est écrit dans les limites.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+<section class="blk inverse" id="calls-fr">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eyebrow">Décisions et arbitrages</div><h2>Écrire ses décisions d'abord, laisser le temps trancher.</h2></div>
+        <p>Ce que je fais et ce que je ne fais pas, daté du jour de la décision. Les erreurs et les corrections restent ici aussi.</p>
+      </div>
+      <ol class="jl sheet">
+        <li><div class="date"><span class="edge">01A ▸</span>2026.06</div><div class="main"><h3>Pas de BossDirect</h3><p>Une app de recrutement pour mettre en relation directe talents tech en France et fondateurs de startups ; l'architecture technique était prête. L'étude de marché a montré que le matching par swipe existait déjà, sans différence suffisante. J'ai arrêté.</p></div><span class="verdict v-closed"><svg class="gp gp-x" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M7 6 C15 15 25 27 34 35"/><path d="M33 5 C25 14 14 25 6 34"/></svg><span class="gp-label">Abandonné</span></span></li>
+        <li><div class="date"><span class="edge">02A ▸</span>2026.07</div><div class="main"><h3>« L'heure bleue peut compter comme la nuit »</h3><p>C'était mon hypothèse de modélisation de départ. En la suivant, les exceptions se multipliaient. Le jour même, j'en ai fait une plage horaire à part, au lieu de rapiécer encore la « nuit ».</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">Corrigé</span></span></li>
+        <li><div class="date"><span class="edge">03A ▸</span>2026.07</div><div class="main"><h3>Repérer les œuvres une à une, puis trouver la direction</h3><p>Après trois essais, le modèle surinterprétait toujours des photos du quotidien comme des œuvres. Le jour même, j'ai abandonné le classement photo par photo pour analyser les liens entre plusieurs photos.</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">Corrigé</span></span></li>
+        <li><div class="date"><span class="edge">04A ▸</span>2026.08</div><div class="main"><h3>Sans Skill exposée ni sous-tâches, le Prompt v1 réussit au moins une fois sur trois essais valides</h3><p>Une hypothèse de faisabilité réfutable directement par un 0/3. Les trois essais valides n'ont pas encore été menés.</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">À vérifier</span></span></li>
+        <li><div class="date"><span class="edge">05A ▸</span>2026.08</div><div class="main"><h3>Terminer un exercice, c'est explorer sérieusement, pas choisir une belle photo</h3><p>C'est désormais le critère de fin des Exercices de cadrage. Reste à savoir s'il améliore la rétention : seuls de vrais utilisateurs le diront.</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">À vérifier</span></span></li>
+        <li><div class="date"><span class="edge">06A ▸</span>2026.08</div><div class="main"><h3>Deux Skills qui se chevauchent : garder les deux, mais resserrer leur rôle</h3><p>content-to-action gère la boîte de réception et l'état, evidence-to-project-decision ne fait que juger le projet, et le relais passe par l'accord de l'utilisateur. Pas de fusion, et jamais le même état détenu des deux côtés.</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">Adopté</span></span></li>
+        <li><div class="date"><span class="edge">07A ▸</span>2026.10</div><div class="main"><h3>Avant qu'une Skill intègre du nouveau, vérifier la compatibilité</h3><p>Pour la mise à jour de la Skill de communication, je n'ai gardé que ce qui servait l'objectif, en refusant la manipulation et les généralisations non prouvées sur des groupes. Trois fichiers mis à jour ont passé les contrôles et ont été poussés.</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">Adopté</span></span></li>
+        <li><div class="date"><span class="edge">08A ▸</span>2026.10</div><div class="main"><h3>Toutes les tâches ne justifient pas une sortie photo entière</h3><p>Désormais, une même sortie permet d'enchaîner les exercices, mais un seul à la fois, et c'est l'utilisateur qui décide quand arrêter.</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">Adopté</span></span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="blk alt" id="notes-fr">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eyebrow">Méthode</div><h2>Comment je fais de l'ingénierie avec l'IA</h2></div>
+        <p>Poser des contraintes à partir de vrais problèmes métier, rendre la sortie de l'IA vérifiable, puis valider à part le comportement, le processus et le domaine de validité. En cas d'échec, garder d'abord les preuves, corriger le modèle ou le processus, puis seulement décider d'aller plus loin.</p>
+      </div>
+      <ol class="method">
+        <li><h3>Écrire une tâche vérifiable avant de la confier à l'Agent</h3><p>Objectif, contexte existant, contraintes fortes, périmètre modifiable et preuves de validation : chacun écrit à part, clairement.</p></li>
+        <li><h3>Lever l'ambiguïté par le modèle du domaine</h3><p>Une pratique courante n'est pas une condition nécessaire. Quand les exceptions s'accumulent, on redécoupe les catégories au lieu d'empiler des règles.</p></li>
+        <li><h3>Prouver que les entrées invalides sont refusées</h3><p>Que les exemples valides compilent ne suffit pas. En TDD, le « rouge » doit venir de l'assertion visée, pas d'une erreur d'environnement.</p></li>
+        <li><h3>Figer le point de départ, garder les échecs</h3><p>Même commit, même Prompt, même modèle, mêmes droits. On consigne d'abord le résultat brut, puis on corrige à la main.</p></li>
+        <li><h3>Juger à part le résultat et la validité de l'expérience</h3><p>Une fonctionnalité peut passer et l'attribution rester invalide. Un seul score ne remplace pas ces deux jugements.</p></li>
+        <li><h3>Laisser l'environnement faire respecter les limites</h3><p>Un interdit écrit dans le Prompt n'est pas un interdit dans l'environnement. Les limites se contrôlent au niveau des outils, et la fin d'une tâche se juge par une vérification indépendante.</p></li>
+        <li><h3>Rendre chaque résultat généré traçable</h3><p>Conserver numéros de champs, versions, textes sources et hash. À la reprise, ne pas régénérer en silence les résultats passés.</p></li>
+        <li><h3>Valider par niveaux, rendre compte par niveaux</h3><p>Tests unitaires, modèle réel, navigateur, appareil, cloud, retours utilisateurs : chacun son verdict. Réussir en local ne veut pas dire être déployé.</p></li>
+      <li><h3>Juger si ça vaut une Skill avant d'en créer une</h3><p>Il faut que les mêmes entrées, jugements et validations reviennent souvent. Si une Skill existante peut s'étendre, on n'en crée pas une nouvelle.</p></li>
+        <li><h3>Avec plusieurs Skills, décider d'abord à qui appartient l'état</h3><p>L'amont gère le cycle de vie, l'aval ne renvoie que son jugement. Le relais ne transmet que le nécessaire et n'élargit pas les droits d'écriture.</p></li>
+      </ol>
+    </div>
+  </section>
+
+<section class="close" id="contact-fr">
+    <div class="wrap">
+      <h2>Envie de construire quelque chose ensemble ?</h2>
+      <p>Offre d'emploi, collaboration, ou envie de parler d'ingénierie IA, de photo ou de vidéo courte : écrivez-moi. J'échange volontiers en chinois, en anglais ou en français.</p>
+      <div class="mail" data-u="hugo.xinyulin" data-d="gmail.com">hugo.xinyulin [at] gmail.com</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>© 2026 Yulin Xin · 辛禹林</span><span>Paris</span></div>
+</footer>
+
+</div>
+
+
+<script>
+(function(){
+  /* waist-level finder flip */
+  [].forEach.call(document.querySelectorAll('.wlf-hood'),function(hood){
+    function flip(){var on=hood.classList.toggle('is-flipped');hood.setAttribute('aria-pressed',on);}
+    hood.addEventListener('click',flip);
+    hood.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();flip();}});
+  });
+  /* frame counter */
+  var outs=document.querySelectorAll('.frame-count'),tick=false;
+  function update(){
+    tick=false;
+    var max=document.documentElement.scrollHeight-window.innerHeight;
+    var p=max>0?Math.min(1,Math.max(0,window.scrollY/max)):0;
+    var n=1+Math.round(p*35),txt=(n<10?'0':'')+n;
+    [].forEach.call(outs,function(o){o.textContent=txt;});
+  }
+  window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(update);}},{passive:true});
+  window.addEventListener('resize',update);
+  /* grease pencil */
+  var still=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function draw(sheet){
+    [].forEach.call(sheet.querySelectorAll('li'),function(li,i){
+      [].forEach.call(li.querySelectorAll('.gp path'),function(p,j){
+        var L=p.getTotalLength();
+        p.style.transition='none';p.style.strokeDasharray=L;p.style.strokeDashoffset=L;
+        p.getBoundingClientRect();
+        p.style.transition='stroke-dashoffset .55s cubic-bezier(.5,0,.3,1) '+(i*0.12+j*0.25)+'s';
+        p.style.strokeDashoffset=0;
+      });
+    });
+  }
+  if('IntersectionObserver' in window&&!still){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){io.unobserve(en.target);draw(en.target);}});},{rootMargin:'0px 0px -25% 0px'});
+    [].forEach.call(document.querySelectorAll('.jl.sheet'),function(s){io.observe(s);});
+  }
+  /* languages */
+  var TITLES={zh:'辛禹林 Yulin Xin',en:'Yulin Xin',fr:'Yulin Xin'};
+  var HTML_LANG={zh:'zh-CN',en:'en',fr:'fr'};
+  var blocks=document.querySelectorAll('.L'),current='zh';
+  var SECTIONS=['hero','path','now','work','skills','calls','notes','contact'];
+  function sid(id,l){return l==='zh'?id:id+'-'+l;}
+  function currentSection(){
+    var best='hero';
+    SECTIONS.forEach(function(id){var el=document.getElementById(sid(id,current));if(el&&el.getBoundingClientRect().top<=window.innerHeight*0.3)best=id;});
+    return best;
+  }
+  function setLang(l,keepPlace){
+    if(!TITLES[l])l='zh';
+    var anchor=keepPlace&&window.scrollY>0?currentSection():null;
+    [].forEach.call(blocks,function(b){b.hidden=b.dataset.l!==l;});
+    [].forEach.call(document.querySelectorAll('.lang-btn'),function(b){b.setAttribute('aria-pressed',b.dataset.lang===l);});
+    document.documentElement.lang=HTML_LANG[l];document.title=TITLES[l];current=l;
+    try{localStorage.setItem('lang',l)}catch(e){}
+    if(anchor&&anchor!=='hero'){var t=document.getElementById(sid(anchor,l));if(t)t.scrollIntoView();}
+    update();
+  }
+  [].forEach.call(document.querySelectorAll('.lang-btn'),function(b){b.addEventListener('click',function(){setLang(b.dataset.lang,true);});});
+  var start=null;
+  try{start=new URLSearchParams(location.search).get('lang')}catch(e){}
+  if(!TITLES[start]){start=null;try{start=localStorage.getItem('lang')}catch(e){}}
+  if(!start){var nl=(navigator.language||'').toLowerCase();start=nl.indexOf('zh')===0?'zh':nl.indexOf('fr')===0?'fr':'en';}
+  setLang(start,false);
+})();
+</script>
+<script>
+[].forEach.call(document.querySelectorAll('.mail[data-u]'),function(el){el.textContent=el.dataset.u+'@'+el.dataset.d;});
+</script>
+</body>
+</html>
