@@ -208,6 +208,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .status{font-size:12.5px;font-weight:600;padding:3px 10px;border-radius:999px;border:1px solid currentColor}
 .s-wip{color:var(--green-text)}
 .s-pivot{color:var(--warn)}
+.s-live{color:var(--green-text);background:color-mix(in srgb,var(--green) 12%,transparent)}
+.case-link{font-size:14px;font-weight:500;color:var(--green-text);border-bottom:1px solid currentColor}
+.case-link:hover{color:var(--ink)}
 .case-body{display:grid;gap:14px;max-width:44em;color:var(--ink-2)}
 .case-body .one{font-family:var(--serif);font-weight:600;font-size:clamp(18px,2vw,21px);line-height:1.6;color:var(--ink)}
 .case-body h4{margin:10px 0 0;font-size:13px;letter-spacing:.14em;color:var(--green-text)}
@@ -265,36 +268,18 @@ footer::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) :is(.card,.skill,.flow .node){box-shadow:none}}
 :root[data-theme="dark"] :is(.card,.skill,.flow .node){box-shadow:none}
 
-/* A · waist-level finder */
-.wlf{margin:0;display:grid;gap:14px;justify-items:center;width:100%;max-width:400px;justify-self:end}
-.wlf-hood{position:relative;width:100%;aspect-ratio:1;padding:clamp(14px,2.4vw,22px);border-radius:8px;cursor:pointer;
-  background:linear-gradient(160deg,#25221f,#141312 70%);
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,.07),inset 0 14px 22px -14px rgba(0,0,0,.9),0 40px 70px -36px rgba(0,0,0,.85)}
-.wlf-hood:focus-visible{outline:2px solid var(--green);outline-offset:4px}
-.wlf-mark{position:absolute;top:4px;left:50%;transform:translateX(-50%);font:600 10px/1 ui-monospace,"SF Mono",Menlo,monospace;letter-spacing:.2em;color:rgba(241,237,230,.38)}
-.wlf-glass{position:relative;width:100%;height:100%;overflow:hidden;border-radius:2px;
-  background:radial-gradient(circle at 50% 46%,#5a554f,#3a3632 55%,#252220);
-  box-shadow:inset 0 0 0 1px rgba(0,0,0,.6)}
-.wlf-image{position:absolute;inset:0;display:grid;place-items:center;transform:scaleX(-1);transition:transform .7s cubic-bezier(.65,0,.35,1)}
-.wlf-image img{width:100%;height:100%;object-fit:cover}
-.wlf-mono{font-family:var(--serif);font-weight:900;font-size:clamp(96px,12vw,150px);line-height:1;color:rgba(241,237,230,.82);filter:blur(.3px)}
-.wlf-screen{position:absolute;inset:0;pointer-events:none;
-  background:
-    radial-gradient(ellipse at center,transparent 52%,rgba(0,0,0,.5) 100%),
-    linear-gradient(to right,transparent calc(33.333% - .5px),rgba(241,237,230,.2) calc(33.333% - .5px) calc(33.333% + .5px),transparent calc(33.333% + .5px) calc(66.666% - .5px),rgba(241,237,230,.2) calc(66.666% - .5px) calc(66.666% + .5px),transparent calc(66.666% + .5px)),
-    linear-gradient(to bottom,transparent calc(33.333% - .5px),rgba(241,237,230,.2) calc(33.333% - .5px) calc(33.333% + .5px),transparent calc(33.333% + .5px) calc(66.666% - .5px),rgba(241,237,230,.2) calc(66.666% - .5px) calc(66.666% + .5px),transparent calc(66.666% + .5px)),
-    repeating-radial-gradient(circle at 50% 50%,rgba(255,255,255,.035) 0 1px,transparent 1px 6px)}
-.wlf-screen::after{content:"";position:absolute;inset:0;opacity:.35;mix-blend-mode:overlay;background-image:var(--paper-tex),var(--paper-tex);background-size:120px,200px}
-.wlf-prism{position:absolute;left:50%;top:50%;width:24%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;
-  box-shadow:0 0 0 1px rgba(241,237,230,.34),0 0 0 7px rgba(241,237,230,.05),0 0 0 8px rgba(241,237,230,.22);
-  background:repeating-conic-gradient(rgba(255,255,255,.07) 0 9deg,transparent 9deg 18deg)}
-.wlf-prism::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(241,237,230,.4)}
-.wlf figcaption{font-size:13px;color:var(--on-forest-2);text-align:center}
-.wlf .hint-tap{display:none}
-@media (hover:hover){.wlf-hood:hover .wlf-image{transform:scaleX(1)}}
-@media (hover:none){.wlf .hint-hover{display:none}.wlf .hint-tap{display:inline}}
-.wlf-hood.is-flipped .wlf-image{transform:scaleX(1)}
-@media (max-width:760px){.wlf{justify-self:center;max-width:300px}}
+/* A · photographer with a Leica: eyes follow the pointer, press to take a picture */
+.snap{margin:0;display:grid;gap:12px;justify-items:center;width:100%;max-width:330px;justify-self:end;
+  --s-ink:#1c1b19;--s-paper:#f4f1ea;--s-chrome:#d9d6cf;--s-leather:#262421;--s-glass:#2c3a3f;--s-jacket:#bfae8a;--s-trousers:#6e675d}
+.snap svg{width:100%;height:auto;display:block;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.snap svg:focus-visible{outline:2px solid var(--green);outline-offset:6px;border-radius:12px}
+.snap .ink{stroke:var(--s-ink);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.snap .thin{stroke:var(--s-ink);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.snap .paper{fill:var(--s-paper)}
+.snap .chrome{fill:var(--s-chrome)}
+.snap .none{fill:none}
+.snap figcaption{font-size:13px;color:var(--on-forest-2);text-align:center;min-height:1.75em}
+@media (max-width:760px){.snap{justify-self:center;max-width:260px}}
 
 /* B · contact sheet on a light box, marked with grease pencil */
 .jl.sheet{--rail:30px;position:relative;border-top:0;padding-inline:var(--rail);background:#0e0d0c;border-radius:3px;
@@ -334,7 +319,6 @@ section.blk.inverse .verdict.v-done{background:none}
 .L[data-l="en"] .hero h1,.L[data-l="fr"] .hero h1{font-size:clamp(38px,5.6vw,68px);line-height:1.08}
 .L[data-l="en"] .eyebrow,.L[data-l="fr"] .eyebrow{letter-spacing:.12em;text-transform:uppercase;font-size:12px}
 .L[data-l="en"] .verdict,.L[data-l="fr"] .verdict{font-family:"Caveat",cursive;font-weight:600;font-size:23px}
-.L[data-l="en"] .wlf-mono,.L[data-l="fr"] .wlf-mono{font-family:"Noto Serif SC",serif;font-weight:900}
 .langs{display:inline-flex;padding:2px;border-radius:7px;box-shadow:0 0 0 1px var(--forest-line);margin-left:auto}
 .langs+.counter{margin-left:0}
 .lang-btn{font:500 12.5px/1 var(--sans);color:var(--on-forest-2);background:none;border:0;padding:6px 8px;border-radius:5px;cursor:pointer;min-width:30px}
@@ -384,15 +368,9 @@ section.blk.inverse .verdict.v-done{background:none}
           <a href="https://www.linkedin.com/in/yulin-xin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
-      <figure class="wlf rise d3">
-        <div class="wlf-hood" tabindex="0" role="button" aria-pressed="false" aria-label="腰平取景器，画面左右相反。按下可以翻正">
-          <span class="wlf-mark" aria-hidden="true">6 × 6</span>
-          <div class="wlf-glass">
-            <div class="wlf-image"><span class="wlf-mono">辛</span></div>
-            <div class="wlf-screen" aria-hidden="true"><i class="wlf-prism"></i></div>
-          </div>
-        </div>
-        <figcaption>腰平取景器里的画面是左右相反的。<span class="hint-hover">把鼠标移上去，就能翻正。</span><span class="hint-tap">点一下，就能翻正。</span></figcaption>
+      <figure class="snap rise d3" data-shot="咔嚓。拍到你了。">
+        <div class="snap-stage" data-label="一个戴眼镜的人，胸前挂着一台徕卡相机。按下会举起相机拍你一张"></div>
+        <figcaption aria-live="polite">点我，拍你一张。</figcaption>
       </figure>
     </div>
   </section>
@@ -449,12 +427,42 @@ section.blk.inverse .verdict.v-done{background:none}
       <div class="cases">
         <article class="case">
           <aside class="case-meta">
+            <span class="tag">网页游戏</span>
+            <h3>藏光 Stonelight</h3>
+            <span class="status s-live">已在 itch.io 免费发布</span>
+            <dl>
+              <div><dt>时间</dt><dd>2026.11</dd></div>
+              <div><dt>技术</dt><dd>JavaScript · Canvas · 光线追踪</dd></div>
+            </dl>
+            <a class="case-link" href="https://mushroom42.itch.io/stonelight" target="_blank" rel="noopener noreferrer">在 itch.io 上玩 ↗</a>
+          </aside>
+          <div class="case-body">
+            <p class="one">一个像素风的宝石切割放置游戏：敲开原石，定下宝石底部的角度，磨出刻面。切好的宝石会发光，光就是游戏里的钱。</p>
+            <p>灵感来自一期讲钻石为什么会闪的视频。我想把“光进去就出不来”变成可以亲手试的东西：定角时，游戏在宝石截面上追踪每一条光线，按真实折射率和菲涅尔方程算出能留住多少光。萤石、祖母绿、刚玉、欧泊、钻石各有自己的规则。整个游戏是一个 HTML 文件，不需要服务器，进度存在浏览器里。</p>
+            <h4>关键取舍</h4>
+            <ol class="dec">
+              <li><time>11.04</time><span>定角原本要先看懂光路图才能操作。改成亮区指示条，直接点宝石定角；光路图收进折叠区，想看物理的人再展开。</span></li>
+              <li><time>11.04</time><span>itch.io 的玩家多数读英文，所以把所有文字抽到一张对照表里，中英双语，按浏览器语言自动选择，也可以手动切换。</span></li>
+              <li><time>11.04</time><span>视觉整体重做成“晶体学图版”风格，但宝石保留像素风：3D 像素宝石和它下面的彩色光斑，是这个游戏最让人记住的东西。</span></li>
+              <li><time>11.04</time><span>英文名原定 Hidden Light，发布前发现 itch 上已有同名作品，改成 Stonelight。首发免费，不收款。</span></li>
+            </ol>
+            <h4>结果</h4>
+            <ul class="facts">
+              <li><b>2 天</b>从第一个原型到在 itch.io 公开发布，共 26 次提交</li>
+              <li><b>24.4°</b>钻石的临界角。萤石只有大约 2° 的窗口能留住光，钻石宽得多，这些差别都直接变成了手感</li>
+            </ul>
+            <p class="gap">还没有：玩家数据和反馈、数值节奏实测、转生系统。</p>
+          </div>
+        </article>
+
+        <article class="case">
+          <aside class="case-meta">
             <span class="tag">移动 Web 产品</span>
-            <h3>取景练习</h3>
-            <span class="status s-wip">V1.2 本地验证完成 · 待实机私测</span>
+            <h3>Wind On</h3>
+            <span class="status s-wip">iPhone 实机测试通过 · 待私测</span>
             <dl>
               <div><dt>时间</dt><dd>2026.07 – 至今</dd></div>
-              <div><dt>技术</dt><dd>TypeScript · Vite · IndexedDB · Vitest</dd></div>
+              <div><dt>技术</dt><dd>TypeScript · Vite · IndexedDB · Vitest · AWS Lambda · DynamoDB</dd></div>
             </dl>
           </aside>
           <div class="case-body">
@@ -466,13 +474,16 @@ section.blk.inverse .verdict.v-done{background:none}
               <li><time>09.30</time><span>光影选项改为“你想观察哪种明暗关系”，现场有没有光交给摄影者判断，不再按设备时间去推断能不能拍。</span></li>
               <li><time>10.05</time><span>把“寻找红色锚点”拓宽成“寻找色彩锚点”。具体的颜色、光源和材料不该成为一类练习的必要条件。</span></li>
               <li><time>10.08</time><span>拍摄先只做 1:1 固定竖向，分享最多三张，暂不测光。当天讨论过横竖屏自动切换，后来主动收缩了范围。</span></li>
+              <li><time>10.16</time><span>取景比例在方形、3:4 竖窗、方窗加框线三个方案之间实机对比，选了框线：取景窗保持方形，按摄像头画面画出 3:4 框线，拍下来的就是框内的画面，和预览一致。</span></li>
+              <li><time>10.22</time><span>在手机上对比两套流程后，放弃了“关盖、收环、吐卡”的连续动画，改成一张任务纸的三个停放位置：纸盖住机身，遮光罩就合上；纸移开，遮光罩就弹开。</span></li>
+              <li><time>10.24</time><span>反馈后台部署在 AWS 新加坡区，因为测试者主要在中国。只接收任务事件，照片和回顾都留在手机上，不上传。</span></li>
             </ol>
             <h4>结果</h4>
             <ul class="facts">
               <li><b>7 / 14</b>七类练习侧重、十四个任务家族，每个任务都能追溯到生成它的字段和版本</li>
-              <li><b>45</b>项自动化测试通过（10.08）；也在浏览器里验证了照片导入、草稿恢复和分享图导出</li>
+              <li><b>53 + 5</b>项前端测试和后台接收测试通过（10.24）；摄像头、权限、照片保存和分享也在目标 iPhone 上实机测试通过（10.23）</li>
             </ul>
-            <p class="gap">还没完成：iPhone 实机验收、云端部署，以及真实测试者的使用数据。</p>
+            <p class="gap">还没完成：邀请测试者私测，以及真实的使用数据；中国大陆访问是否稳定也还没验证。</p>
           </div>
         </article>
 
@@ -544,7 +555,7 @@ section.blk.inverse .verdict.v-done{background:none}
     <div class="wrap">
       <div class="sec-head">
         <div><div class="eyebrow">自建 SKILLS</div><h2>把反复做的判断，写成 Agent 能执行的协议。</h2></div>
-        <p>同一类工作我做到第三、第四次，就会考虑把它封装成 Skill：入口负责共同原则，细节按需读取，有版本，有校验，可以跨项目调用。这四个 Skill 由我提出问题、定约束、做取舍，AI 辅助写协议、脚本和测试。</p>
+        <p>同一类工作我做到第三、第四次，就会考虑把它封装成 Skill：入口负责共同原则，细节按需读取，有版本，有校验，可以跨项目调用。这五个 Skill 由我提出问题、定约束、做取舍，AI 辅助写协议、脚本和测试。</p>
       </div>
 
       <figure class="flow" aria-label="两个 Skill 之间的交接关系">
@@ -599,6 +610,16 @@ section.blk.inverse .verdict.v-done{background:none}
             <li>更新时只吸收与目标相符的新材料，拒绝颜值评分、关系等级这类框架。发现来源没有独立核对，就如实写进限制里。</li>
           </ul>
         </article>
+        <article class="skill">
+          <header><code>pixel-mv</code><span class="tag">2026.10 · 从《任我行》MV 沉淀</span></header>
+          <h3>像素 MV</h3>
+          <p>把一首歌做成像素风 RPG 游戏画面的音乐 MV：画面在 320×180 绘制、放大到 1080p，歌词按逐字时间轴在游戏对话框里高亮。第一支是陈奕迅的《任我行》，4 分 39 秒。</p>
+          <ul>
+            <li>引擎和管线都是现成的，真正花时间的是“歌词 → 意象 → 游戏机制”的翻译。所以先写分镜，等我确认了再写代码。</li>
+            <li>画风必须从歌本身长出来。《任我行》用的是“主机进化史”：画质随着人生升级，地图却越来越小。</li>
+            <li>做这支 MV 时我提的 11 条意见都记进了反馈日志，最常见的是“太抽象”。它们变成了自查清单：每句歌词的画面要表达真实的意思，主体要一眼看清。</li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>
@@ -614,7 +635,7 @@ section.blk.inverse .verdict.v-done{background:none}
         <li><div class="date"><span class="edge">02A ▸</span>2026.07</div><div class="main"><h3>“蓝调时刻可以算夜间”</h3><p>这是我最初的建模判断。按这个做下去，例外越加越多。当天改为独立的时间段，不再给“夜间”继续打补丁。</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">已修正</span></span></li>
         <li><div class="date"><span class="edge">03A ▸</span>2026.07</div><div class="main"><h3>先逐张识别作品，再找创作方向</h3><p>三轮实验下来，模型总是把生活照过度解读成作品。当天放弃了全量逐张分类，转向分析多张照片之间的关系。</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">已修正</span></span></li>
         <li><div class="date"><span class="edge">04A ▸</span>2026.08</div><div class="main"><h3>不暴露 Skill、禁止子任务时，Prompt v1 三次有效试验里至少成功一次</h3><p>一个可以被 0/3 直接推翻的可行性假设。目前还没有跑完三次有效试验。</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">待检验</span></span></li>
-        <li><div class="date"><span class="edge">05A ▸</span>2026.08</div><div class="main"><h3>完成一项练习，靠的是认真探索，不是选出一张好照片</h3><p>这条已经成为取景练习的完成标准。它能不能带来更高的留存，要等真实用户来回答。</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">待检验</span></span></li>
+        <li><div class="date"><span class="edge">05A ▸</span>2026.08</div><div class="main"><h3>完成一项练习，靠的是认真探索，不是选出一张好照片</h3><p>这条已经成为 Wind On 的完成标准。它能不能带来更高的留存，要等真实用户来回答。</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">待检验</span></span></li>
         <li><div class="date"><span class="edge">06A ▸</span>2026.08</div><div class="main"><h3>两个 Skill 职责重叠时，保留两个，但收窄各自的职责</h3><p>content-to-action 管收件箱和状态，evidence-to-project-decision 只负责项目判断，交接需要用户确认。不合并，也不让两边同时拥有同一份状态。</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">已落地</span></span></li>
         <li><div class="date"><span class="edge">07A ▸</span>2026.10</div><div class="main"><h3>Skill 吸收新知识前，先审查兼容性</h3><p>沟通 Skill 更新时，只吸收与目标兼容的部分，拒绝操控和未经证实的人群概括。更新后三个文件通过了检查，已经推送。</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">已落地</span></span></li>
         <li><div class="date"><span class="edge">08A ▸</span>2026.10</div><div class="main"><h3>不是每个任务都撑得起一整场外拍</h3><p>改成一次出门可以连续练习，但每次只关注一个任务，什么时候结束由用户决定。</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">已落地</span></span></li>
@@ -691,15 +712,9 @@ section.blk.inverse .verdict.v-done{background:none}
           <a href="https://www.linkedin.com/in/yulin-xin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
-      <figure class="wlf rise d3">
-        <div class="wlf-hood" tabindex="0" role="button" aria-pressed="false" aria-label="Waist-level finder. The image is mirrored left to right. Press to flip it back">
-          <span class="wlf-mark" aria-hidden="true">6 × 6</span>
-          <div class="wlf-glass">
-            <div class="wlf-image"><span class="wlf-mono">辛</span></div>
-            <div class="wlf-screen" aria-hidden="true"><i class="wlf-prism"></i></div>
-          </div>
-        </div>
-        <figcaption>A waist-level finder shows the scene mirrored left to right. <span class="hint-hover">Hover to flip it back.</span><span class="hint-tap">Tap to flip it back.</span></figcaption>
+      <figure class="snap rise d3" data-shot="Click. Got you.">
+        <div class="snap-stage" data-label="A person in glasses with a Leica on their chest. Press to have them take your picture"></div>
+        <figcaption aria-live="polite">Press me and I’ll take your picture.</figcaption>
       </figure>
     </div>
   </section>
@@ -756,12 +771,42 @@ section.blk.inverse .verdict.v-done{background:none}
       <div class="cases">
         <article class="case">
           <aside class="case-meta">
+            <span class="tag">Web game</span>
+            <h3>Stonelight</h3>
+            <span class="status s-live">Free on itch.io</span>
+            <dl>
+              <div><dt>Period</dt><dd>2026.11</dd></div>
+              <div><dt>Stack</dt><dd>JavaScript · Canvas · ray tracing</dd></div>
+            </dl>
+            <a class="case-link" href="https://mushroom42.itch.io/stonelight" target="_blank" rel="noopener noreferrer">Play on itch.io ↗</a>
+          </aside>
+          <div class="case-body">
+            <p class="one">A pixel-art idle game about cutting gems. Chip off the rock, set the angle of the gem’s base, grind the facets. Finished gems glow, and light is the currency.</p>
+            <p>It was inspired by a video about why diamonds sparkle. I wanted “light goes in and can’t get out” to be something you can try with your own hands. When you set the angle, the game traces every ray through a cross-section of the gem and works out how much light stays in, using real refractive indices and the Fresnel equations. Fluorite, emerald, corundum, opal and diamond each have their own rules. The whole game is one HTML file with no server, and progress is saved in the browser.</p>
+            <h4>Key trade-offs</h4>
+            <ol class="dec">
+              <li><time>11.04</time><span>Setting the angle used to mean reading a ray diagram first. I replaced it with a bar showing the bright zone and a tap on the gem. The ray diagram moved into a fold-out panel for people who want the physics.</span></li>
+              <li><time>11.04</time><span>Most itch.io players read English, so every string went into one translation table. The game is in Chinese and English, follows the browser language and can be switched by hand.</span></li>
+              <li><time>11.04</time><span>I redid the whole look as a crystallography plate, but kept the gems in pixel art. The 3D pixel gems and the coloured light under them are what people remember.</span></li>
+              <li><time>11.04</time><span>The English name was going to be Hidden Light. Before release I found games with the same name on itch, so it became Stonelight. The first release is free, with no payments.</span></li>
+            </ol>
+            <h4>Results</h4>
+            <ul class="facts">
+              <li><b>2 days</b>from the first prototype to the public itch.io release, in 26 commits</li>
+              <li><b>24.4°</b>is diamond’s critical angle. Fluorite leaves a window of about 2° to keep the light; diamond is far more forgiving, and you feel the difference when you play</li>
+            </ul>
+            <p class="gap">Not yet: player data and feedback, pacing tests, a prestige system.</p>
+          </div>
+        </article>
+
+        <article class="case">
+          <aside class="case-meta">
             <span class="tag">Mobile web product</span>
-            <h3>Viewfinder Drills</h3>
-            <span class="status s-wip">V1.2 verified locally · device beta next</span>
+            <h3>Wind On</h3>
+            <span class="status s-wip">Passed on a real iPhone · private beta next</span>
             <dl>
               <div><dt>Period</dt><dd>2026.07 – now</dd></div>
-              <div><dt>Stack</dt><dd>TypeScript · Vite · IndexedDB · Vitest</dd></div>
+              <div><dt>Stack</dt><dd>TypeScript · Vite · IndexedDB · Vitest · AWS Lambda · DynamoDB</dd></div>
             </dl>
           </aside>
           <div class="case-body">
@@ -773,13 +818,16 @@ section.blk.inverse .verdict.v-done{background:none}
               <li><time>09.30</time><span>The light option became “which light-and-shadow relation do you want to observe”. The photographer decides whether the light is there. The app no longer guesses from the device clock.</span></li>
               <li><time>10.05</time><span>“Find a red anchor” became “find a colour anchor”. A specific colour, light source or material should not be required for a whole type of drill.</span></li>
               <li><time>10.08</time><span>Capture is 1:1 and portrait-locked for now, with up to three photos per share and no metering yet. We discussed auto-switching orientation that day, then I chose to cut the scope.</span></li>
+              <li><time>10.16</time><span>For framing I compared three options on the phone: square, a tall 3:4 window, and a square window with frame lines. I chose frame lines: the window stays square, 3:4 lines follow the camera image, and the saved photo is exactly what was inside the lines.</span></li>
+              <li><time>10.22</time><span>After trying both flows on the phone, I dropped the close-lid, retract-ring, eject-card animation. The task is now one sheet of paper with three resting places: when the sheet covers the body, the hood closes; when it moves away, the hood opens.</span></li>
+              <li><time>10.24</time><span>The feedback backend runs in AWS Singapore, because most testers are in China. It only receives task events. Photos and reviews stay on the phone and are never uploaded.</span></li>
             </ol>
             <h4>Results</h4>
             <ul class="facts">
               <li><b>7 / 14</b>seven drill focuses and fourteen task families. Every task traces back to the fields and version that generated it</li>
-              <li><b>45</b>automated tests passing (10.08). Photo import, draft recovery and share-image export also checked in the browser</li>
+              <li><b>53 + 5</b>frontend and backend tests passing (10.24). Camera, permissions, photo storage and sharing also passed on the target iPhone (10.23)</li>
             </ul>
-            <p class="gap">Not done yet: testing on a real iPhone, cloud deployment, and usage data from real testers.</p>
+            <p class="gap">Not done yet: the private beta with invited testers, and real usage data. Access from mainland China has not been tested either.</p>
           </div>
         </article>
 
@@ -851,7 +899,7 @@ section.blk.inverse .verdict.v-done{background:none}
     <div class="wrap">
       <div class="sec-head">
         <div><div class="eyebrow">MY OWN SKILLS</div><h2>Turning calls I make again and again into protocols an agent can run.</h2></div>
-        <p>When I do the same kind of work a third or fourth time, I consider packaging it as a skill: the entry point holds shared principles, details load on demand, and it has versions, checks and works across projects. For these four skills I framed the problem, set the constraints and made the trade-offs. AI helped write the protocols, scripts and tests.</p>
+        <p>When I do the same kind of work a third or fourth time, I consider packaging it as a skill: the entry point holds shared principles, details load on demand, and it has versions, checks and works across projects. For these five skills I framed the problem, set the constraints and made the trade-offs. AI helped write the protocols, scripts and tests.</p>
       </div>
 
       <figure class="flow" aria-label="Handoff between two skills">
@@ -906,6 +954,16 @@ section.blk.inverse .verdict.v-done{background:none}
             <li>Updates only take in material that fits the goal and reject frameworks like looks scores or relationship tiers. Sources not checked independently are listed as a limitation.</li>
           </ul>
         </article>
+        <article class="skill">
+          <header><code>pixel-mv</code><span class="tag">2026.10 · distilled from a music video</span></header>
+          <h3>Pixel music videos</h3>
+          <p>Turns a song into a music video styled as a pixel-art RPG. Scenes are drawn at 320×180 and scaled to 1080p, and the lyrics light up character by character in a game dialogue box. The first one was Eason Chan’s 任我行, 4 min 39 s.</p>
+          <ul>
+            <li>The engine and pipeline are ready-made. The real work is translating lyric → image → game mechanic, so the agent writes a storyboard first and only codes once I’ve approved it.</li>
+            <li>The visual style has to grow out of the song. For 任我行 it was a history of game consoles: the graphics improve as life goes on, while the world map keeps shrinking.</li>
+            <li>All 11 comments I made on that video went into a feedback log. The most common was “too abstract”. They became a self-check list: each line’s image must carry what the lyric really means, and the subject must read at a glance.</li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>
@@ -921,7 +979,7 @@ section.blk.inverse .verdict.v-done{background:none}
         <li><div class="date"><span class="edge">02A ▸</span>2026.07</div><div class="main"><h3>“Blue hour can count as night”</h3><p>This was my first modelling call. As I built on it, the exceptions kept piling up. The same day I made it a separate time slot and stopped patching “night”.</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">Revised</span></span></li>
         <li><div class="date"><span class="edge">03A ▸</span>2026.07</div><div class="main"><h3>Classify each photo as work first, then find the direction</h3><p>Over three rounds, the model kept reading snapshots as serious work. The same day I dropped photo-by-photo classification and moved to analysing relations across photos.</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">Revised</span></span></li>
         <li><div class="date"><span class="edge">04A ▸</span>2026.08</div><div class="main"><h3>With skills hidden and subtasks blocked, Prompt v1 succeeds at least once in three valid trials</h3><p>A feasibility hypothesis that a 0/3 result would disprove outright. The three valid trials have not all run yet.</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">Untested</span></span></li>
-        <li><div class="date"><span class="edge">05A ▸</span>2026.08</div><div class="main"><h3>A drill is done when you explore seriously, not when you pick one good photo</h3><p>This is now the completion rule in Viewfinder Drills. Whether it improves retention is a question for real users.</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">Untested</span></span></li>
+        <li><div class="date"><span class="edge">05A ▸</span>2026.08</div><div class="main"><h3>A drill is done when you explore seriously, not when you pick one good photo</h3><p>This is now the completion rule in Wind On. Whether it improves retention is a question for real users.</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">Untested</span></span></li>
         <li><div class="date"><span class="edge">06A ▸</span>2026.08</div><div class="main"><h3>When two skills overlap, keep both and narrow each one's role</h3><p>content-to-action owns the inbox and state. evidence-to-project-decision only makes project calls, and the handoff needs user confirmation. No merge, and no state owned by both.</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">Shipped</span></span></li>
         <li><div class="date"><span class="edge">07A ▸</span>2026.10</div><div class="main"><h3>Check compatibility before a skill takes in new knowledge</h3><p>When updating the communication skill, I kept only the parts that fit its goal and rejected manipulation and unproven claims about groups of people. After the update, three files passed checks and were pushed.</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">Shipped</span></span></li>
         <li><div class="date"><span class="edge">08A ▸</span>2026.10</div><div class="main"><h3>Not every task can fill a whole photo walk</h3><p>Now one outing can chain several drills, with one task in focus at a time. The user decides when to stop.</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">Shipped</span></span></li>
@@ -999,15 +1057,9 @@ section.blk.inverse .verdict.v-done{background:none}
           <a href="https://www.linkedin.com/in/yulin-xin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
-      <figure class="wlf rise d3">
-        <div class="wlf-hood" tabindex="0" role="button" aria-pressed="false" aria-label="Viseur poitrine : l'image est inversée gauche-droite. Appuyer pour la redresser">
-          <span class="wlf-mark" aria-hidden="true">6 × 6</span>
-          <div class="wlf-glass">
-            <div class="wlf-image"><span class="wlf-mono">辛</span></div>
-            <div class="wlf-screen" aria-hidden="true"><i class="wlf-prism"></i></div>
-          </div>
-        </div>
-        <figcaption>Dans un viseur poitrine, l'image est inversée gauche-droite. <span class="hint-hover">Survolez-la pour la redresser.</span><span class="hint-tap">Touchez-la pour la redresser.</span></figcaption>
+      <figure class="snap rise d3" data-shot="Clic-clac. C’est dans la boîte.">
+        <div class="snap-stage" data-label="Une personne à lunettes, un Leica autour du cou. Appuyez pour qu’elle vous prenne en photo"></div>
+        <figcaption aria-live="polite">Appuyez, je vous prends en photo.</figcaption>
       </figure>
     </div>
   </section>
@@ -1064,12 +1116,42 @@ section.blk.inverse .verdict.v-done{background:none}
       <div class="cases">
         <article class="case">
           <aside class="case-meta">
+            <span class="tag">Jeu web</span>
+            <h3>Stonelight</h3>
+            <span class="status s-live">Gratuit sur itch.io</span>
+            <dl>
+              <div><dt>Période</dt><dd>2026.11</dd></div>
+              <div><dt>Stack</dt><dd>JavaScript · Canvas · lancer de rayons</dd></div>
+            </dl>
+            <a class="case-link" href="https://mushroom42.itch.io/stonelight" target="_blank" rel="noopener noreferrer">Jouer sur itch.io ↗</a>
+          </aside>
+          <div class="case-body">
+            <p class="one">Un jeu incrémental en pixel art sur la taille des pierres. On casse la gangue, on règle l'angle du bas de la pierre, on polit les facettes. Les pierres taillées brillent, et la lumière sert de monnaie.</p>
+            <p>L'idée vient d'une vidéo qui explique pourquoi un diamant étincelle. Je voulais que « la lumière entre et ne ressort plus » devienne quelque chose qu'on essaie soi-même. Quand on règle l'angle, le jeu suit chaque rayon dans une coupe de la pierre et calcule la lumière qui reste, avec les vrais indices de réfraction et les équations de Fresnel. Fluorite, émeraude, corindon, opale et diamant ont chacun leurs règles. Tout le jeu tient dans un seul fichier HTML, sans serveur, et la progression est enregistrée dans le navigateur.</p>
+            <h4>Arbitrages clés</h4>
+            <ol class="dec">
+              <li><time>11.04</time><span>Pour régler l'angle, il fallait d'abord lire un schéma des rayons. Je l'ai remplacé par une barre qui montre la zone lumineuse et un simple appui sur la pierre. Le schéma est rangé dans un panneau dépliable, pour ceux qui veulent la physique.</span></li>
+              <li><time>11.04</time><span>La plupart des joueurs d'itch.io lisent l'anglais : tous les textes sont passés dans une seule table de traduction. Le jeu est en chinois et en anglais, suit la langue du navigateur et se change à la main.</span></li>
+              <li><time>11.04</time><span>J'ai refait tout le visuel façon planche de cristallographie, mais les pierres restent en pixel art : les pierres 3D pixelisées et la lumière colorée en dessous sont ce qu'on retient.</span></li>
+              <li><time>11.04</time><span>Le nom anglais devait être Hidden Light. Avant la sortie, j'ai trouvé des jeux du même nom sur itch : il est devenu Stonelight. La première version est gratuite, sans paiement.</span></li>
+            </ol>
+            <h4>Résultats</h4>
+            <ul class="facts">
+              <li><b>2 jours</b>du premier prototype à la sortie publique sur itch.io, en 26 commits</li>
+              <li><b>24,4°</b>c'est l'angle critique du diamant. La fluorite ne laisse qu'une fenêtre d'environ 2° pour garder la lumière ; le diamant est bien plus tolérant, et ça se sent en jouant</li>
+            </ul>
+            <p class="gap">Pas encore : données et retours de joueurs, tests d'équilibrage, système de prestige.</p>
+          </div>
+        </article>
+
+        <article class="case">
+          <aside class="case-meta">
             <span class="tag">Produit web mobile</span>
-            <h3>Exercices de cadrage</h3>
-            <span class="status s-wip">V1.2 validée en local · test privé sur appareil à venir</span>
+            <h3>Wind On</h3>
+            <span class="status s-wip">Validée sur iPhone réel · test privé à venir</span>
             <dl>
               <div><dt>Période</dt><dd>2026.07 – aujourd'hui</dd></div>
-              <div><dt>Stack</dt><dd>TypeScript · Vite · IndexedDB · Vitest</dd></div>
+              <div><dt>Stack</dt><dd>TypeScript · Vite · IndexedDB · Vitest · AWS Lambda · DynamoDB</dd></div>
             </dl>
           </aside>
           <div class="case-body">
@@ -1081,13 +1163,16 @@ section.blk.inverse .verdict.v-done{background:none}
               <li><time>09.30</time><span>L'option lumière devient « quel contraste ombre-lumière observer ». Le photographe juge lui-même s'il y a de la lumière ; on ne déduit plus la faisabilité de l'heure de l'appareil.</span></li>
               <li><time>10.05</time><span>« Trouver un point d'ancrage rouge » devient « trouver un point d'ancrage coloré ». Une couleur, une source de lumière ou une matière précise ne doit pas conditionner tout un type d'exercice.</span></li>
               <li><time>10.08</time><span>Prise de vue d'abord en 1:1, orientation portrait fixe, partage de trois photos maximum, pas de mesure de lumière pour l'instant. Le basculement automatique paysage/portrait a été discuté le jour même, puis j'ai volontairement réduit le périmètre.</span></li>
+              <li><time>10.16</time><span>Pour le cadrage, j'ai comparé trois options sur le téléphone : carré, fenêtre verticale 3:4, et fenêtre carrée avec cadre. J'ai choisi le cadre : la fenêtre reste carrée, un cadre 3:4 suit l'image de la caméra, et la photo enregistrée correspond exactement à l'intérieur du cadre.</span></li>
+              <li><time>10.22</time><span>Après avoir essayé les deux parcours sur le téléphone, j'ai abandonné l'animation « fermer le capot, rentrer les bagues, éjecter la carte ». La tâche est désormais une feuille de papier avec trois positions : quand la feuille couvre le boîtier, le capuchon du viseur se ferme ; quand elle s'écarte, il s'ouvre.</span></li>
+              <li><time>10.24</time><span>Le back-end de retours tourne sur AWS à Singapour, car la plupart des testeurs sont en Chine. Il ne reçoit que les événements liés aux tâches ; photos et bilans restent sur le téléphone et ne sont jamais envoyés.</span></li>
             </ol>
             <h4>Résultats</h4>
             <ul class="facts">
               <li><b>7 / 14</b>Sept axes d'exercice, quatorze familles de tâches ; chaque tâche remonte aux champs et à la version qui l'ont générée</li>
-              <li><b>45</b>tests automatisés au vert (10.08) ; import de photos, reprise des brouillons et export de l'image de partage vérifiés aussi dans le navigateur</li>
+              <li><b>53 + 5</b>tests front-end et back-end au vert (10.24) ; caméra, autorisations, stockage des photos et partage validés aussi sur l'iPhone cible (10.23)</li>
             </ul>
-            <p class="gap">Reste à faire : recette sur iPhone réel, déploiement cloud et données d'usage de vrais testeurs.</p>
+            <p class="gap">Reste à faire : le test privé avec des testeurs invités, et les données d'usage réelles. L'accès depuis la Chine continentale n'est pas encore vérifié.</p>
           </div>
         </article>
 
@@ -1159,7 +1244,7 @@ section.blk.inverse .verdict.v-done{background:none}
     <div class="wrap">
       <div class="sec-head">
         <div><div class="eyebrow">SKILLS MAISON</div><h2>Transformer les jugements récurrents en protocoles qu'un Agent peut exécuter.</h2></div>
-        <p>Quand je refais le même type de travail une troisième ou quatrième fois, j'envisage d'en faire une Skill : un point d'entrée pour les principes communs, des détails lus à la demande, des versions, des contrôles, un usage d'un projet à l'autre. Pour ces quatre Skills, je pose le problème, fixe les contraintes et tranche ; l'IA m'aide à écrire protocoles, scripts et tests.</p>
+        <p>Quand je refais le même type de travail une troisième ou quatrième fois, j'envisage d'en faire une Skill : un point d'entrée pour les principes communs, des détails lus à la demande, des versions, des contrôles, un usage d'un projet à l'autre. Pour ces cinq Skills, je pose le problème, fixe les contraintes et tranche ; l'IA m'aide à écrire protocoles, scripts et tests.</p>
       </div>
 
       <figure class="flow" aria-label="Passage de relais entre deux Skills">
@@ -1214,6 +1299,16 @@ section.blk.inverse .verdict.v-done{background:none}
             <li>Les mises à jour n'intègrent que les sources alignées sur l'objectif ; les notes de physique ou les « niveaux » de relation sont refusés. Quand une source n'a pas été vérifiée de façon indépendante, c'est écrit dans les limites.</li>
           </ul>
         </article>
+        <article class="skill">
+          <header><code>pixel-mv</code><span class="tag">2026.10 · tirée d'un clip</span></header>
+          <h3>Clips en pixel art</h3>
+          <p>Transforme une chanson en clip façon RPG en pixel art. Les scènes sont dessinées en 320×180 puis agrandies en 1080p, et les paroles s'allument caractère par caractère dans une boîte de dialogue de jeu. Le premier : 任我行 d'Eason Chan, 4 min 39.</p>
+          <ul>
+            <li>Le moteur et la chaîne de production existent déjà. Le vrai travail, c'est de traduire parole → image → mécanique de jeu : l'agent écrit d'abord un storyboard et ne code qu'une fois que je l'ai validé.</li>
+            <li>Le style visuel doit naître de la chanson. Pour 任我行, c'était une histoire des consoles : les graphismes progressent au fil de la vie, tandis que la carte du monde rétrécit.</li>
+            <li>Mes 11 remarques sur ce clip sont consignées dans un journal de retours. La plus fréquente : « trop abstrait ». Elles sont devenues une liste d'autocontrôle : chaque image doit porter le vrai sens de la parole, et le sujet doit se lire d'un coup d'œil.</li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>
@@ -1229,7 +1324,7 @@ section.blk.inverse .verdict.v-done{background:none}
         <li><div class="date"><span class="edge">02A ▸</span>2026.07</div><div class="main"><h3>« L'heure bleue peut compter comme la nuit »</h3><p>C'était mon hypothèse de modélisation de départ. En la suivant, les exceptions se multipliaient. Le jour même, j'en ai fait une plage horaire à part, au lieu de rapiécer encore la « nuit ».</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">Corrigé</span></span></li>
         <li><div class="date"><span class="edge">03A ▸</span>2026.07</div><div class="main"><h3>Repérer les œuvres une à une, puis trouver la direction</h3><p>Après trois essais, le modèle surinterprétait toujours des photos du quotidien comme des œuvres. Le jour même, j'ai abandonné le classement photo par photo pour analyser les liens entre plusieurs photos.</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">Corrigé</span></span></li>
         <li><div class="date"><span class="edge">04A ▸</span>2026.08</div><div class="main"><h3>Sans Skill exposée ni sous-tâches, le Prompt v1 réussit au moins une fois sur trois essais valides</h3><p>Une hypothèse de faisabilité réfutable directement par un 0/3. Les trois essais valides n'ont pas encore été menés.</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">À vérifier</span></span></li>
-        <li><div class="date"><span class="edge">05A ▸</span>2026.08</div><div class="main"><h3>Terminer un exercice, c'est explorer sérieusement, pas choisir une belle photo</h3><p>C'est désormais le critère de fin des Exercices de cadrage. Reste à savoir s'il améliore la rétention : seuls de vrais utilisateurs le diront.</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">À vérifier</span></span></li>
+        <li><div class="date"><span class="edge">05A ▸</span>2026.08</div><div class="main"><h3>Terminer un exercice, c'est explorer sérieusement, pas choisir une belle photo</h3><p>C'est désormais le critère de fin de Wind On. Reste à savoir s'il améliore la rétention : seuls de vrais utilisateurs le diront.</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">À vérifier</span></span></li>
         <li><div class="date"><span class="edge">06A ▸</span>2026.08</div><div class="main"><h3>Deux Skills qui se chevauchent : garder les deux, mais resserrer leur rôle</h3><p>content-to-action gère la boîte de réception et l'état, evidence-to-project-decision ne fait que juger le projet, et le relais passe par l'accord de l'utilisateur. Pas de fusion, et jamais le même état détenu des deux côtés.</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">Adopté</span></span></li>
         <li><div class="date"><span class="edge">07A ▸</span>2026.10</div><div class="main"><h3>Avant qu'une Skill intègre du nouveau, vérifier la compatibilité</h3><p>Pour la mise à jour de la Skill de communication, je n'ai gardé que ce qui servait l'objectif, en refusant la manipulation et les généralisations non prouvées sur des groupes. Trois fichiers mis à jour ont passé les contrôles et ont été poussés.</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">Adopté</span></span></li>
         <li><div class="date"><span class="edge">08A ▸</span>2026.10</div><div class="main"><h3>Toutes les tâches ne justifient pas une sortie photo entière</h3><p>Désormais, une même sortie permet d'enchaîner les exercices, mais un seul à la fois, et c'est l'utilisateur qui décide quand arrêter.</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">Adopté</span></span></li>
@@ -1274,14 +1369,187 @@ section.blk.inverse .verdict.v-done{background:none}
 </div>
 
 
+<template id="snap-fig"><svg viewBox="0 0 260 340" role="button" tabindex="0">
+<defs>
+<clipPath id="SNAP-headClip"><ellipse cx="130" cy="84" rx="30" ry="34"/></clipPath>
+<radialGradient id="SNAP-glint" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#a9c2c8"/><stop offset=".4" stop-color="var(--s-glass)"/><stop offset="1" stop-color="#0f1415"/></radialGradient>
+</defs>
+<g data-k="legs">
+<ellipse cx="130" cy="322" rx="42" ry="4.5" fill="#000" opacity=".22"/>
+<path class="ink" fill="var(--s-trousers)" d="M105 214 L155 214 L154 308 L135 308 L131 252 L129 252 L125 308 L106 308 Z"/>
+<path d="M106.2 299 H124.6 M135.4 299 H153.8 M130 214 V244" class="thin none"/>
+<g id="SNAP-shoe">
+<path class="ink" fill="#cfc8bb" d="M123 304 L123 316 Q123 321 118 321 L99 321 Q92 321 93.5 315.5 Q95 309.5 104 308 L110 304 Z"/>
+<path d="M94 317 H123" class="thin none"/>
+<path d="M111 307.5 L115 311 M113.5 305.5 L117.5 309" class="thin none" stroke-width="1.2"/>
+</g>
+<use href="#SNAP-shoe" transform="translate(260 0) scale(-1 1)"/>
+</g>
+<path class="ink" fill="var(--s-jacket)" d="M104 140 Q108 128 122 126 L138 126 Q152 128 156 140 L159 224 Q130 228 101 224 Z"/>
+<path class="paper ink" d="M122 127 Q130 134 138 127 L135 226 L125 226 Z"/>
+<path class="ink" fill="var(--s-jacket)" d="M122 125.5 L117 141 L125 152 L126 226 L121 226 L116 150 Z M138 125.5 L143 141 L135 152 L134 226 L139 226 L144 150 Z" stroke-width="2"/>
+<path class="thin none" d="M107 196 H118 V210 H107 Z M142 196 H153 V210 H142 Z M107 199.5 H118 M142 199.5 H153"/>
+<path data-k="armInk" class="none" stroke="var(--s-ink)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+<path data-k="armPaper" class="none" stroke="var(--s-jacket)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="paper ink" d="M123 112 L123 128 Q130 132 137 128 L137 112 Z"/>
+<g data-k="head">
+<ellipse class="paper ink" cx="99" cy="88" rx="5" ry="7"/>
+<ellipse class="paper ink" cx="161" cy="88" rx="5" ry="7"/>
+<ellipse class="paper ink" cx="130" cy="84" rx="31" ry="35"/>
+<g clip-path="url(#SNAP-headClip)"><g data-k="face">
+<path data-k="mouth" class="ink none" d="M124 106 Q130 109 136 106"/>
+<path class="ink none" d="M131 92 Q128 98 132 99" stroke-width="1.8"/>
+<g fill="var(--s-ink)"><circle data-k="pl" cx="118" cy="88" r="2.7"/><circle data-k="pr" cx="142" cy="88" r="2.7"/></g>
+<g class="ink none" stroke-width="2.2">
+<circle cx="118" cy="88" r="9"/><circle cx="142" cy="88" r="9"/>
+<path d="M127 87 Q130 84.5 133 87 M109 86 L100 83 M151 86 L160 83"/>
+</g>
+<path data-k="brows" class="ink none" d="M111 74 Q118 71 124 74 M136 74 Q142 71 149 74" stroke-width="2"/>
+</g></g>
+<path data-k="hair" fill="var(--s-ink)" d="M99 84 C95 58 110 44 131 44 C152 44 166 58 161 84 C159 72 154 65 148 62 C144 68 136 70 128 66 C122 70 114 70 110 66 C105 70 101 76 99 84 Z"/>
+</g>
+<path data-k="strap" class="none" stroke="var(--s-ink)" stroke-width="2.2" stroke-linecap="round"/>
+<g data-k="cam">
+<rect class="chrome thin" x="-31" y="-23" width="11" height="4.5" rx="1.2"/>
+<circle class="chrome thin" cx="-25.5" cy="-24.5" r="2"/>
+<path d="M-19 -20.5 L-33 -23.5" stroke="var(--s-ink)" stroke-width="3.2" stroke-linecap="round"/>
+<path d="M-19 -20.5 L-33 -23.5" stroke="var(--s-chrome)" stroke-width="1.3" stroke-linecap="round"/>
+<rect class="chrome thin" x="-6" y="-21.5" width="12" height="3" rx=".6"/>
+<rect class="chrome thin" x="20" y="-23" width="11" height="4.5" rx="1.2"/>
+<path class="thin none" d="M23 -23 V-18.5 M25.5 -23 V-18.5 M28 -23 V-18.5" stroke-width="1"/>
+<rect class="chrome ink" x="-39" y="-19" width="78" height="37" rx="9"/>
+<path fill="var(--s-leather)" d="M-37.8 -6 H37.8 V9.5 Q37.8 16.8 30 16.8 H-30 Q-37.8 16.8 -37.8 9.5 Z"/>
+<path d="M-37.8 -6 H37.8" class="thin"/>
+<rect x="-32" y="-16" width="14" height="7.5" rx="1.2" fill="url(#SNAP-glint)" stroke="var(--s-ink)" stroke-width="1.4"/>
+<rect x="-13" y="-16" width="8" height="7.5" rx="1" fill="#efeadf" stroke="var(--s-ink)" stroke-width="1.4"/>
+<path d="M-12 -14 H-6 M-12 -12 H-6 M-12 -10 H-6" stroke="#bdb6a6" stroke-width=".7"/>
+<rect x="23" y="-16" width="7.5" height="7.5" rx="1.2" fill="url(#SNAP-glint)" stroke="var(--s-ink)" stroke-width="1.4"/>
+<circle class="none ink" cx="-40.5" cy="-11" r="2.2" stroke-width="1.6"/>
+<circle class="none ink" cx="40.5" cy="-11" r="2.2" stroke-width="1.6"/>
+<circle cx="20" cy="-1.5" r="2.7" fill="#d2231a" stroke="var(--s-ink)" stroke-width=".9"/>
+<circle class="chrome ink" cx="0" cy="4" r="13.5"/>
+<path class="chrome thin" d="M-3 16.5 Q0 21 3 16.5 Z"/>
+<circle cx="0" cy="4" r="11.6" fill="none" stroke="#7a756d" stroke-width="2" stroke-dasharray="1 1.3"/>
+<circle cx="0" cy="4" r="9.6" fill="var(--s-ink)"/>
+<circle cx="0" cy="4" r="7" fill="url(#SNAP-glint)" stroke="#45413b" stroke-width="1"/>
+<ellipse cx="-2.6" cy="1.4" rx="2" ry="1.2" fill="#fff" opacity=".55" transform="rotate(-30 -2.6 1.4)"/>
+<circle data-k="flash" cx="0" cy="4" r="7" fill="#fff" opacity="0"/>
+</g>
+<ellipse data-k="handL" class="paper ink" rx="6.5" ry="8"/>
+<ellipse data-k="handR" class="paper ink" rx="6.5" ry="8"/>
+</svg></template>
+
 <script>
 (function(){
-  /* waist-level finder flip */
-  [].forEach.call(document.querySelectorAll('.wlf-hood'),function(hood){
-    function flip(){var on=hood.classList.toggle('is-flipped');hood.setAttribute('aria-pressed',on);}
-    hood.addEventListener('click',flip);
-    hood.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();flip();}});
-  });
+  /* photographer: eyes follow the pointer, press to raise the Leica and take a picture */
+  (function(){
+    var tpl=document.getElementById('snap-fig');
+    if(!tpl)return;
+    var still=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var REST={x:130,y:174,s:.58},UP={x:130,y:89,s:.68};              /* camera on the chest / at the eye */
+    var SH=[{x:109,y:140},{x:151,y:140}],SIDE=[{x:101,y:206},{x:159,y:206}];
+    var EL={rest:{x:101,y:173},grab:{x:96,y:166},up:{x:90,y:128}};   /* left elbow keyframes, the right one mirrors */
+    var GRAB=.38,RAISE=560,HOLD=520,LOWER=560;
+    function lerp(a,b,t){return{x:a.x+(b.x-a.x)*t,y:a.y+(b.y-a.y)*t};}
+    function smooth(t){return t*t*(3-2*t);}
+    function arm(s,e,h){                                              /* curve through the elbow */
+      var cx=2*e.x-(s.x+h.x)/2,cy=2*e.y-(s.y+h.y)/2;
+      return'M'+s.x+' '+s.y+' Q'+cx.toFixed(1)+' '+cy.toFixed(1)+' '+h.x.toFixed(1)+' '+h.y.toFixed(1);
+    }
+    var figs=[];
+    [].forEach.call(document.querySelectorAll('.snap'),function(fig,n){
+      var stage=fig.querySelector('.snap-stage'),cap=fig.querySelector('figcaption');
+      stage.innerHTML=tpl.innerHTML.replace(/SNAP-/g,'snap'+n+'-');
+      var svg=stage.querySelector('svg'),k={};
+      [].forEach.call(svg.querySelectorAll('[data-k]'),function(e){k[e.getAttribute('data-k')]=e;});
+      svg.setAttribute('aria-label',stage.getAttribute('data-label'));
+      var f={fig:fig,svg:svg,k:k,cap:cap,say:cap.textContent,shot:fig.getAttribute('data-shot'),
+        goal:{x:0,y:0},face:{x:0,y:0},eye:{x:0,y:0},shotAt:-1e9,fired:true,smileUntil:0,blinkAt:0,blinkT:-1e9};
+      function press(){
+        if(still){cap.textContent=f.shot;return;}
+        var now=performance.now();
+        if(now-f.shotAt<RAISE+HOLD+LOWER)return;
+        f.shotAt=now;f.fired=false;wake();
+      }
+      svg.addEventListener('click',press);
+      svg.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();press();}});
+      figs.push(f);
+      pose(f,0,0,0,0,0,0,0);
+    });
+    function pose(f,lx,ly,px,py,r,blink,smile){
+      var k=f.k,grab=smooth(Math.min(1,r/GRAB)),raise=smooth(Math.max(0,(r-GRAB)/(1-GRAB)));
+      var c={x:REST.x,y:REST.y+(UP.y-REST.y)*raise,s:REST.s+(UP.s-REST.s)*raise};
+      k.cam.setAttribute('transform','translate('+c.x+' '+c.y+') scale('+c.s+')');
+      var hands=[-1,1].map(function(side,i){return lerp(SIDE[i],{x:c.x+side*42*c.s,y:c.y+2*c.s},grab);});
+      var e=raise>0?lerp(EL.grab,EL.up,raise):lerp(EL.rest,EL.grab,grab);
+      var d=arm(SH[0],e,hands[0])+' '+arm(SH[1],{x:260-e.x,y:e.y},hands[1]);
+      k.armInk.setAttribute('d',d);k.armPaper.setAttribute('d',d);
+      k.handL.setAttribute('cx',hands[0].x);k.handL.setAttribute('cy',hands[0].y);
+      k.handR.setAttribute('cx',hands[1].x);k.handR.setAttribute('cy',hands[1].y);
+      var sag=10+34*raise,lx0=c.x-40.5*c.s,lx1=c.x+40.5*c.s,ly0=c.y-11*c.s;   /* strap sags as the camera rises */
+      k.strap.setAttribute('d','M123 127 C117 '+(127+sag)+' '+lx0+' '+(ly0+sag)+' '+lx0+' '+ly0+
+        ' M137 127 C143 '+(127+sag)+' '+lx1+' '+(ly0+sag)+' '+lx1+' '+ly0);
+      k.face.setAttribute('transform','translate('+lx*3.5+' '+ly*2.5+')');
+      k.hair.setAttribute('transform','translate('+(-lx)+' 0)');
+      var ox=px*4.4,oy=py*4.2,sy=1-blink*.9;
+      k.pl.setAttribute('transform','translate('+ox+' '+oy+') translate(118 88) scale(1 '+sy+') translate(-118 -88)');
+      k.pr.setAttribute('transform','translate('+ox+' '+oy+') translate(142 88) scale(1 '+sy+') translate(-142 -88)');
+      k.mouth.setAttribute('d',smile>0?'M122 105 Q130 '+(106+6*smile)+' 138 105':'M124 106 Q130 109 136 106');
+      k.brows.setAttribute('transform','translate(0 '+(-smile*2-Math.max(0,-py)*1.5)+')');
+    }
+    if(still)return;
+
+    window.addEventListener('pointermove',function(e){
+      figs.forEach(function(f){
+        var r=f.svg.getBoundingClientRect();
+        if(!r.width)return;
+        var s=r.width/260,dx=(e.clientX-(r.left+130*s))/(s*220),dy=(e.clientY-(r.top+88*s))/(s*220);
+        var d=Math.sqrt(dx*dx+dy*dy),m=d>1e-3?Math.min(1,d*1.4)/d:0;
+        f.goal.x=dx*m;f.goal.y=dy*m;
+      });
+      wake();
+    },{passive:true});
+
+    /* animate only while the hero is on screen */
+    var running=false,visible=true,last=0;
+    function wake(){if(!running&&visible){running=true;last=performance.now();requestAnimationFrame(tick);}}
+    function tick(now){
+      var dt=Math.min(.05,(now-last)/1000);last=now;
+      figs.forEach(function(f){
+        if(!f.svg.getBoundingClientRect().width)return;                /* language hidden */
+        var t=now-f.shotAt,r=0;
+        if(t<RAISE)r=t/RAISE;
+        else if(t<RAISE+HOLD){
+          r=1;
+          if(!f.fired&&t>RAISE+120){
+            f.fired=true;
+            if(f.k.flash.animate)f.k.flash.animate([{opacity:1},{opacity:0}],{duration:380,easing:'ease-out'});
+            f.cap.textContent=f.shot;
+            f.smileUntil=now+HOLD+LOWER+900;
+          }
+        }else if(t<RAISE+HOLD+LOWER)r=1-(t-RAISE-HOLD)/LOWER;
+        if(now>f.smileUntil+600&&f.cap.textContent!==f.say)f.cap.textContent=f.say;
+        var look=now<f.smileUntil?{x:0,y:0}:f.goal;                    /* after the shot, look at the viewer */
+        var kf=1-Math.exp(-dt*5),ke=1-Math.exp(-dt*16);
+        f.face.x+=(look.x-f.face.x)*kf;f.face.y+=(look.y-f.face.y)*kf;
+        f.eye.x+=(look.x-f.eye.x)*ke;f.eye.y+=(look.y-f.eye.y)*ke;
+        if(now>f.blinkAt){f.blinkT=now;f.blinkAt=now+2600+Math.random()*3600;}
+        var b=now-f.blinkT<140?Math.sin((now-f.blinkT)/140*Math.PI):0;
+        var sm=now<f.smileUntil?Math.min(1,(f.smileUntil-now)/300):0;
+        pose(f,f.face.x,f.face.y,f.eye.x,f.eye.y,r,b,sm*(1-r));
+      });
+      if(visible)requestAnimationFrame(tick);else running=false;
+    }
+    if('IntersectionObserver' in window){
+      var on=[];
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(en){var i=on.indexOf(en.target);if(en.isIntersecting){if(i<0)on.push(en.target);}else if(i>=0)on.splice(i,1);});
+        visible=on.length>0;if(visible)wake();
+      });
+      figs.forEach(function(f){io.observe(f.fig);});
+    }
+    wake();
+  })();
   /* frame counter */
   var outs=document.querySelectorAll('.frame-count'),tick=false;
   function update(){
