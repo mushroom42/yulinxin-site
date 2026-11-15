@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>辛禹林 Yulin Xin</title>
-<meta name="description" content="辛禹林（Yulin Xin），巴黎的全栈工程师。3 年全栈开发，1 年 AI 工程实践：Coding Agent、本地模型与 Agent Skills。Full-stack engineer in Paris working on reliable AI engineering.">
+<title>Yulin Xin</title>
+<meta name="description" content="Yulin Xin (辛禹林), ingénieur full-stack &amp; cloud à Paris : 3 ans en insurtech, applications LLM et agents de code. Full-stack &amp; cloud engineer in Paris who turns ideas into shipped products.">
 <meta name="author" content="Yulin Xin">
 <meta name="theme-color" content="#2a2724">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -15,8 +15,8 @@
 <link rel="alternate" hreflang="x-default" href="__SITE_URL__/">
 <meta property="og:type" content="profile">
 <meta property="og:url" content="__SITE_URL__/">
-<meta property="og:title" content="辛禹林 Yulin Xin · Full-stack engineer, Paris">
-<meta property="og:description" content="Bringing AI into real engineering. Projects, Agent Skills and dated decisions, in 中文 / English / Français.">
+<meta property="og:title" content="Yulin Xin · Full-stack &amp; cloud engineer, AI applications · Paris">
+<meta property="og:description" content="I turn ideas into products that ship: Stonelight (300+ players), coding-agent evals, AWS serverless. Français / English / 中文.">
 <meta property="og:image" content="__SITE_URL__/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -217,7 +217,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .dec{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .dec li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:12px;font-size:15px}
 .dec time{font-family:var(--num);font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
-.facts{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.facts{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
 .facts li{font-size:14.5px;background:var(--sand);border-radius:10px;padding:14px 16px}
 .facts b{display:block;font-family:var(--num);font-weight:600;font-size:28px;line-height:1.1;color:var(--ink);margin-bottom:6px}
 .gap{font-size:14.5px;color:var(--muted);border-left:2px solid var(--line);padding-left:12px}
@@ -280,6 +280,28 @@ footer::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:
 .snap .none{fill:none}
 .snap figcaption{font-size:13px;color:var(--on-forest-2);text-align:center;min-height:1.75em}
 @media (max-width:760px){.snap{justify-self:center;max-width:260px}}
+/* the shot prints a polaroid business card */
+.polaroid{position:relative;width:100%;max-width:300px;padding:10px 10px 12px;background:#f7f4ee;color:#1c1b19;border-radius:3px;
+  box-shadow:0 14px 30px rgba(0,0,0,.35);transform:rotate(-1.5deg);transform-origin:50% 0}
+.polaroid[hidden]{display:none}
+.polaroid.out{animation:pol-out .7s cubic-bezier(.2,.8,.3,1) both}
+@keyframes pol-out{from{opacity:0;transform:translateY(-24px) rotate(0) scaleY(.6)}to{opacity:1;transform:rotate(-1.5deg)}}
+.pol-photo{position:relative;display:grid;gap:4px;padding:18px 14px;min-height:112px;align-content:end;border-radius:2px;
+  background:linear-gradient(160deg,#3b3631,#1f1d1a);color:#f1ede6;overflow:hidden}
+.pol-photo strong{font-size:18px;letter-spacing:.02em}
+.pol-photo span{font-size:12.5px;line-height:1.45;color:rgba(241,237,230,.78)}
+.pol-photo::after{content:attr(data-dev);position:absolute;inset:0;display:grid;place-items:center;font-size:12px;letter-spacing:.14em;
+  color:rgba(241,237,230,.5);background:#121110;opacity:0;pointer-events:none}
+.polaroid.out .pol-photo::after{animation:pol-dev 1.6s ease-in both}
+@keyframes pol-dev{0%,35%{opacity:1}100%{opacity:0}}
+.pol-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.pol-actions>*{flex:1 1 auto;font:inherit;font-size:12.5px;font-weight:600;text-align:center;padding:7px 9px;border-radius:999px;
+  border:1px solid #cfc9be;background:#fff;color:#1c1b19;cursor:pointer;text-decoration:none}
+.pol-actions>*:hover{border-color:#1c1b19}
+.pol-actions>*:focus-visible,.pol-close:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.pol-close{position:absolute;top:-10px;right:-10px;width:26px;height:26px;border-radius:50%;border:1px solid #cfc9be;background:#fff;
+  color:#1c1b19;font-size:16px;line-height:1;cursor:pointer}
+@media (prefers-reduced-motion:reduce){.polaroid.out,.polaroid.out .pol-photo::after{animation:none}}
 
 /* B · contact sheet on a light box, marked with grease pencil */
 .jl.sheet{--rail:30px;position:relative;border-top:0;padding-inline:var(--rail);background:#0e0d0c;border-radius:3px;
@@ -330,10 +352,25 @@ section.blk.inverse .verdict.v-done{background:none}
 @media (max-width:820px){.counter{margin-left:0}.top .cta{margin-left:0}.top .bar{gap:10px}}
 @media (max-width:520px){.brand small{display:none}}
 @media (max-width:400px){.counter{display:none}}
+
+/* positioning update: availability, folds */
+.avail{display:inline-flex;align-items:baseline;gap:10px;max-width:40em;margin-top:22px;padding:8px 16px;border-radius:12px;border:1px solid var(--forest-line);font-size:14px;line-height:1.5;color:var(--on-forest)}
+.avail::before{content:"";flex:none;width:8px;height:8px;transform:translateY(-1px);border-radius:50%;background:var(--green);box-shadow:0 0 0 4px color-mix(in srgb,var(--green) 25%,transparent)}
+.more-d>summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.12em;color:var(--green-text)}
+.more-d>summary::-webkit-details-marker{display:none}
+.more-d>summary::before{content:"+";font-family:var(--num);font-size:16px;width:1em;text-align:center}
+.more-d[open]>summary::before{content:"\2212"}
+.more-d>summary:hover{color:var(--ink)}
+.more-d[open]>summary{margin-bottom:14px}
+.more-block{margin-top:28px}
+.more-block .method{counter-reset:m 5}
+.card .case-link{align-self:flex-start}
+.cv-line{margin-top:18px}
+.cv-line a{border-bottom:1px solid currentColor}
 </style>
 </head>
 <body>
-<div class="L" data-l="zh" lang="zh-CN">
+<div class="L" data-l="zh" lang="zh-CN" hidden>
 <header class="top">
   <div class="wrap bar">
     <a class="brand" href="#hero">辛禹林 <small>Yulin Xin</small></a>
@@ -355,22 +392,33 @@ section.blk.inverse .verdict.v-done{background:none}
   <section class="hero" id="hero">
     <div class="wrap">
       <div>
-        <p class="kicker rise">全栈工程师 · 巴黎</p>
-        <h1 class="rise d2">把 AI 带进<br>真实的工程里。</h1>
-        <p class="lede rise d3">我是<b>辛禹林</b>，在巴黎做了 3 年全栈开发，负责过内部 CRM、核心系统的 DevOps 和客户 App 的整体重构。最近一年，我把大部分业余时间花在 AI 上：研究怎么让 Coding Agent 可靠地干活，用本地模型整理照片和视频，也给内容创作写 Agent Skill。</p>
+        <p class="kicker rise">全栈 &amp; 云工程师 · AI 应用 · 巴黎</p>
+        <h1 class="rise d2">把想法做成<br>上线的产品。</h1>
+        <p class="lede rise d3">我是<b>辛禹林</b>，在保险科技公司做了 3 年全栈：独立负责过内部 CRM、核心系统的 DevOps 和客户 App 重构，新前端把报价加载从几十秒降到 5 秒以内。最近一年专注 LLM 应用和 Coding Agent：用 Agent 提速，用测试、评估和基础设施即代码保证质量。</p>
+        <p class="avail rise d3">正在巴黎寻找 AI 应用 / 全栈云工程师岗位 · 2027 年 1 月起可入职 · 有法国工作许可</p>
         <div class="btns rise d4">
           <a class="btn btn-ivory" href="#work">看我做的东西</a>
-          <a class="btn btn-line" href="#contact">联系我</a>
+          <a class="btn btn-line" href="cv/Yulin_XIN_CV_FR.pdf" target="_blank" rel="noopener">下载简历（法语 PDF）</a>
         </div>
         <div class="social rise d4">
           <span>找到我</span>
           <a href="https://github.com/mushroom42" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://www.linkedin.com/in/yulin-xin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://mushroom42.itch.io/stonelight" target="_blank" rel="noopener noreferrer">itch.io</a>
         </div>
       </div>
-      <figure class="snap rise d3" data-shot="咔嚓。拍到你了。">
+      <figure class="snap rise d3" data-shot="咔嚓。拍到你了，这张名片给你。">
         <div class="snap-stage" data-label="一个戴眼镜的人，胸前挂着一台徕卡相机。按下会举起相机拍你一张"></div>
         <figcaption aria-live="polite">点我，拍你一张。</figcaption>
+        <div class="polaroid" hidden data-l="zh" data-title="全栈 & 云工程师 · AI 应用" data-note="巴黎 · 2027 年 1 月起可入职">
+          <div class="pol-photo" data-dev="冲洗中…"><strong>辛禹林 Yulin Xin</strong><span>全栈 & 云工程师 · AI 应用</span><span>巴黎 · 2027 年 1 月起可入职</span></div>
+          <div class="pol-actions">
+            <button type="button" class="pol-copy" data-done="已复制">复制邮箱</button>
+            <a href="cv/Yulin_XIN_CV_FR.pdf" download>简历 PDF</a>
+            <button type="button" class="pol-vcf">存入通讯录</button>
+          </div>
+          <button type="button" class="pol-close" aria-label="收起">×</button>
+        </div>
       </figure>
     </div>
   </section>
@@ -379,18 +427,18 @@ section.blk.inverse .verdict.v-done{background:none}
     <div class="wrap">
       <div class="sec-head">
         <div><div class="eyebrow">履历</div><h2>从上海到巴黎，从写页面到管整条交付链路。</h2></div>
-        <p>工程师学位读的是信息工程。实习时重构旧系统，工作后从前端一路做到后端、云和 CI/CD，现在把 AI 当成下一门要真正学会的手艺。</p>
+        <p>工程师学位读的是信息工程。实习时重构旧系统，工作后从前端一路做到后端、云和 CI/CD，现在把 LLM 应用和 Agent 评估当成主攻方向。</p>
       </div>
       <ol class="tl">
         <li><div class="yr">2021.09 – 2024.02</div><div class="role">信息工程 · 工程师学位</div><div class="org">贝尔福-蒙贝利亚尔技术大学（UTBM）</div></li>
         <li><div class="yr">2022.09 – 2023.02</div><div class="role">技术支持实习生</div><div class="org">Capgemini Consulting · 上海</div></li>
-        <li><div class="yr">2023.08 – 今</div><div class="role">全栈工程师</div><div class="org">保险科技公司 · 巴黎</div></li>
-        <li><div class="yr">2025 – 今</div><div class="role">AI 工程实践</div><div class="org">Agent、本地模型、Skill</div></li>
+        <li><div class="yr">2023.08 – 2026.12</div><div class="role">全栈工程师</div><div class="org">保险科技公司 · 巴黎</div></li>
+        <li><div class="yr">2025 – 今</div><div class="role">AI 应用工程</div><div class="org">Coding Agent、评估、本地模型、Skill</div></li>
       </ol>
       <div class="stats">
-        <div class="stat"><b>3 年</b><span>全栈开发经验</span></div>
-        <div class="stat"><b>1 年</b><span>AI 工程实践</span></div>
+        <div class="stat"><b>3 年</b><span>全栈开发经验，前端、后端、云和 CI/CD</span></div>
         <div class="stat"><b>3 条</b><span>独立负责过的产品线</span></div>
+        <div class="stat"><b>&lt; 5 秒</b><span>重构后的报价加载时间，原来要几十秒</span></div>
         <div class="stat"><b>3 种</b><span>工作语言：中文、英语（C1+）、法语（B2）</span></div>
       </div>
     </div>
@@ -399,10 +447,10 @@ section.blk.inverse .verdict.v-done{background:none}
   <section class="blk alt" id="now">
     <div class="wrap feature">
       <div>
-        <div class="eyebrow">工作 · 保险科技</div>
-        <h3>在一家法国保险科技公司，同时管着前端、后端、云和交付。</h3>
+        <div class="eyebrow">工作 · 保险科技 · 2023–2026</div>
+        <h3>在一家法国保险科技公司，同时负责前端、后端、云和交付。</h3>
         <div class="body">
-          <p>团队不大，一个人往往要负责一条产品线从设计到上线的全过程。我在 Scrum 团队里工作，用 Jira 管理迭代，也经常先做原型，拿给同事试用，再根据反馈改。</p>
+          <p>团队不大，一个人往往要负责一条产品线从设计到上线的全过程。我在 Scrum 团队里工作，用 Jira 管理迭代，也经常先做原型，拿给同事试用，再根据反馈改。线上出了故障、新项目要启动，同事通常先来找我。</p>
           <p>三条线做下来，我最在意的是交付链路：环境一致、部署自动、权限清楚，这样代码才能放心地快速迭代。</p>
         </div>
         <ul class="chips" aria-label="常用技术">
@@ -410,9 +458,9 @@ section.blk.inverse .verdict.v-done{background:none}
         </ul>
       </div>
       <ol class="points">
-        <li><span class="k">1</span><div><b>内部 CRM</b><span>给公司同事用的 Web 应用。Vue + TypeScript 前端，Python Lambda 后端，搭了完整的认证和权限体系，按模块化架构设计，方便后续扩展。</span></div></li>
-        <li><span class="k">2</span><div><b>核心业务系统的 DevOps</b><span>Java / Tomcat / Redis 系统。用 Docker Compose 统一各环境，用 GitHub Actions 自动部署到 AWS EC2。</span></div></li>
-        <li><span class="k">3</span><div><b>客户 App 重构</b><span>独立主导核心内容向新架构的迁移，前端用 React 重写，性能、可扩展性和代码质量都有明显提升；同时在 AWS 上搭起完整的 CI/CD。</span></div></li>
+        <li><span class="k">1</span><div><b>客户 App 重构</b><span>独立主导核心内容向新架构的迁移，前端用 React 重写，报价加载时间从几十秒降到 5 秒以内；同时在 AWS 上搭起完整的 CI/CD，成为团队开发和部署的标准。</span></div></li>
+        <li><span class="k">2</span><div><b>内部 CRM</b><span>把同事原来手动处理的工作做成标准化的 Web 工具。Vue + TypeScript 前端，Python Lambda 后端，为敏感的保险数据搭了完整的认证和权限体系。</span></div></li>
+        <li><span class="k">3</span><div><b>核心业务系统的 DevOps</b><span>Java / Tomcat / Redis 系统。用 Docker Compose 统一各环境，用 GitHub Actions 自动部署到 AWS EC2；也是线上故障的主要对接人。</span></div></li>
       </ol>
     </div>
   </section>
@@ -420,8 +468,8 @@ section.blk.inverse .verdict.v-done{background:none}
   <section class="blk" id="work">
     <div class="wrap">
       <div class="sec-head">
-        <div><div class="eyebrow">作品</div><h2>业余时间做的东西</h2></div>
-        <p>大多围绕摄影和短视频，这是我熟悉、也真的在用的领域，适合拿来检验 AI 到底能做好什么。问题定义、取舍和验收由我负责，实现、文档和检查有 AI 辅助。</p>
+        <div><div class="eyebrow">作品</div><h2>从想法到上线</h2></div>
+        <p>每个项目先写结果：多久上线、交付了什么、用什么保证质量。问题定义、取舍和验收由我负责，实现、文档和检查用 AI Agent 加速。</p>
       </div>
 
       <div class="cases">
@@ -429,7 +477,7 @@ section.blk.inverse .verdict.v-done{background:none}
           <aside class="case-meta">
             <span class="tag">网页游戏</span>
             <h3>藏光 Stonelight</h3>
-            <span class="status s-live">已在 itch.io 免费发布</span>
+            <span class="status s-live">已在 itch.io 发布 · 300+ 玩家</span>
             <dl>
               <div><dt>时间</dt><dd>2026.11</dd></div>
               <div><dt>技术</dt><dd>JavaScript · Canvas · 光线追踪</dd></div>
@@ -438,116 +486,102 @@ section.blk.inverse .verdict.v-done{background:none}
           </aside>
           <div class="case-body">
             <p class="one">一个像素风的宝石切割放置游戏：敲开原石，定下宝石底部的角度，磨出刻面。切好的宝石会发光，光就是游戏里的钱。</p>
-            <p>灵感来自一期讲钻石为什么会闪的视频。我想把“光进去就出不来”变成可以亲手试的东西：定角时，游戏在宝石截面上追踪每一条光线，按真实折射率和菲涅尔方程算出能留住多少光。萤石、祖母绿、刚玉、欧泊、钻石各有自己的规则。整个游戏是一个 HTML 文件，不需要服务器，进度存在浏览器里。</p>
-            <h4>关键取舍</h4>
-            <ol class="dec">
-              <li><time>11.04</time><span>定角原本要先看懂光路图才能操作。改成亮区指示条，直接点宝石定角；光路图收进折叠区，想看物理的人再展开。</span></li>
-              <li><time>11.04</time><span>itch.io 的玩家多数读英文，所以把所有文字抽到一张对照表里，中英双语，按浏览器语言自动选择，也可以手动切换。</span></li>
-              <li><time>11.04</time><span>视觉整体重做成“晶体学图版”风格，但宝石保留像素风：3D 像素宝石和它下面的彩色光斑，是这个游戏最让人记住的东西。</span></li>
-              <li><time>11.04</time><span>英文名原定 Hidden Light，发布前发现 itch 上已有同名作品，改成 Stonelight。首发免费，不收款。</span></li>
-            </ol>
-            <h4>结果</h4>
             <ul class="facts">
               <li><b>2 天</b>从第一个原型到在 itch.io 公开发布，共 26 次提交</li>
-              <li><b>24.4°</b>钻石的临界角。萤石只有大约 2° 的窗口能留住光，钻石宽得多，这些差别都直接变成了手感</li>
+              <li><b>300+</b>玩家玩过，中英双语，按浏览器语言自动切换</li>
+              <li><b>0 后端</b>整个游戏是一个 HTML 文件，进度存在浏览器里</li>
             </ul>
-            <p class="gap">还没有：玩家数据和反馈、数值节奏实测、转生系统。</p>
+            <p>灵感来自一期讲钻石为什么会闪的视频。我想把“光进去就出不来”变成可以亲手试的东西：定角时，游戏在宝石截面上追踪每一条光线，按真实折射率和菲涅尔方程算出能留住多少光。钻石的临界角是 24.4°，萤石只有大约 2° 的窗口，这些差别都直接变成了手感。</p>
+            <details class="more-d">
+              <summary>关键取舍 · 4 条</summary>
+              <ol class="dec">
+                <li><time>11.04</time><span>定角原本要先看懂光路图才能操作。改成亮区指示条，直接点宝石定角；光路图收进折叠区，想看物理的人再展开。</span></li>
+                <li><time>11.04</time><span>itch.io 的玩家多数读英文，所以把所有文字抽到一张对照表里，中英双语，按浏览器语言自动选择，也可以手动切换。</span></li>
+                <li><time>11.04</time><span>视觉整体重做成“晶体学图版”风格，但宝石保留像素风：3D 像素宝石和它下面的彩色光斑，是这个游戏最让人记住的东西。</span></li>
+                <li><time>11.04</time><span>英文名原定 Hidden Light，发布前发现 itch 上已有同名作品，改成 Stonelight。首发免费，不收款。</span></li>
+              </ol>
+            </details>
+            <p class="gap">下一步：数值节奏实测、转生系统。</p>
           </div>
         </article>
 
         <article class="case">
           <aside class="case-meta">
-            <span class="tag">移动 Web 产品</span>
-            <h3>Wind On</h3>
-            <span class="status s-wip">iPhone 实机测试通过 · 待私测</span>
-            <dl>
-              <div><dt>时间</dt><dd>2026.07 – 至今</dd></div>
-              <div><dt>技术</dt><dd>TypeScript · Vite · IndexedDB · Vitest · AWS Lambda · DynamoDB</dd></div>
-            </dl>
-          </aside>
-          <div class="case-body">
-            <p class="one">给有一点摄影基础、出门后却不知道拍什么的人，一项能带到现场执行的观察练习，什么时候算完成由自己判断。</p>
-            <p>起点是一个随机题材生成器，目的是让人出门时有个目标，不用纠结。做下来它变成了一个有边界的练习：告诉你这次看什么、画面上守什么规则，但不替你判断现场条件，也不评价你的作品。</p>
-            <h4>关键取舍</h4>
-            <ol class="dec">
-              <li><time>08.18</time><span>完成的标准是认真探索过这个主题，不要求交出“最好的一张”。不限定器材、焦段和曝光参数，胶片和数码都能参加。</span></li>
-              <li><time>09.30</time><span>光影选项改为“你想观察哪种明暗关系”，现场有没有光交给摄影者判断，不再按设备时间去推断能不能拍。</span></li>
-              <li><time>10.05</time><span>把“寻找红色锚点”拓宽成“寻找色彩锚点”。具体的颜色、光源和材料不该成为一类练习的必要条件。</span></li>
-              <li><time>10.08</time><span>拍摄先只做 1:1 固定竖向，分享最多三张，暂不测光。当天讨论过横竖屏自动切换，后来主动收缩了范围。</span></li>
-              <li><time>10.16</time><span>取景比例在方形、3:4 竖窗、方窗加框线三个方案之间实机对比，选了框线：取景窗保持方形，按摄像头画面画出 3:4 框线，拍下来的就是框内的画面，和预览一致。</span></li>
-              <li><time>10.22</time><span>在手机上对比两套流程后，放弃了“关盖、收环、吐卡”的连续动画，改成一张任务纸的三个停放位置：纸盖住机身，遮光罩就合上；纸移开，遮光罩就弹开。</span></li>
-              <li><time>10.24</time><span>反馈后台部署在 AWS 新加坡区，因为测试者主要在中国。只接收任务事件，照片和回顾都留在手机上，不上传。</span></li>
-            </ol>
-            <h4>结果</h4>
-            <ul class="facts">
-              <li><b>7 / 14</b>七类练习侧重、十四个任务家族，每个任务都能追溯到生成它的字段和版本</li>
-              <li><b>53 + 5</b>项前端测试和后台接收测试通过（10.24）；摄像头、权限、照片保存和分享也在目标 iPhone 上实机测试通过（10.23）</li>
-            </ul>
-            <p class="gap">还没完成：邀请测试者私测，以及真实的使用数据；中国大陆访问是否稳定也还没验证。</p>
-          </div>
-        </article>
-
-        <article class="case">
-          <aside class="case-meta">
-            <span class="tag">本地 AI 实验</span>
-            <h3>AI 摄影方向发现</h3>
-            <span class="status s-pivot">实验后调整了架构</span>
-            <dl>
-              <div><dt>时间</dt><dd>2026.07</dd></div>
-              <div><dt>技术</dt><dd>Python · PhotoKit · Apple Vision · Ollama · Qwen2.5-VL</dd></div>
-            </dl>
-          </aside>
-          <div class="case-body">
-            <p class="one">帮照片很多、却看不清自己创作方向的摄影爱好者，从图库里整理出一张可以质疑、可以纠正、每个结论都有照片作证据的方向地图。</p>
-            <p>真实图库里混着旅行、家庭、截图和资料，作品只占一小部分。我不想让用户先手动挑几十张才能开始，所以先在自己的图库上做了实验：照片只在本机处理，只生成 512px 的预览。</p>
-            <h4>关键取舍</h4>
-            <ol class="dec">
-              <li><time>07.27</time><span>输出几个可以纠正的方向假设，附上代表照片、反例和其他可能的解释。不给作品打分，也不贴“你像哪位大师”这类标签。</span></li>
-              <li><time>07.27</time><span>同一批 20 张照片跑了三版 Prompt。格式问题解决了，但模型仍会过度解读：普通生活照也被标成作品候选。于是停止逐张判断，改为先找多张照片之间重复的选择。</span></li>
-            </ol>
-            <h4>结果</h4>
-            <ul class="facts">
-              <li><b>3 轮</b>同一批样本的对照实验，失败记录完整保留，没有用继续调 Prompt 来掩盖问题</li>
-              <li><b>≈3.3 秒</b>本地模型处理一张照片的时间（20 张小样本，只代表速度，不代表准确率）</li>
-            </ul>
-            <p class="gap">下一步：跨照片分组、完整的方向地图，以及外部用户验证。</p>
-          </div>
-        </article>
-
-        <article class="case">
-          <aside class="case-meta">
-            <span class="tag">AI 工程学习</span>
+            <span class="tag">AI 评估</span>
             <h3>Agentic Photo Lab</h3>
-            <span class="status s-wip">学习实验进行中</span>
+            <span class="status s-wip">评估框架已建成 · 重复试验进行中</span>
             <dl>
               <div><dt>时间</dt><dd>2026.07 – 08</dd></div>
               <div><dt>技术</dt><dd>TypeScript · TDD · Eval · Rubric</dd></div>
             </dl>
           </aside>
           <div class="case-body">
-            <p class="one">以摄影训练为受控领域，观察和评估 Coding Agent 在复杂约束下怎样工作、在哪里失败。</p>
-            <p>我想学的是 Prompt、Context、Skill 的管理，以及 Agent 的能力边界和失败模式，而不是让 AI 替我写完前后端。所以采用结对方式：我写实现、做判断，AI 负责解释、提示和审查。</p>
-            <h4>关键取舍</h4>
-            <ol class="dec">
-              <li><time>07.28</time><span>冻结 Prompt 和起始 commit，在隔离环境里运行，结束前不做人工纠正，保留原始结果。</span></li>
-              <li><time>07.28</time><span>第一次真实运行功能全部通过，但运行中自动用上了 Skill 和审查子任务，配置被改变了。我把它标为“结果有混杂”，不当作纯 Prompt 的基线。</span></li>
-              <li><time>08.03</time><span>写下一个可以被 0/3 推翻的假设，把“任务成功”和“实验有效”分开判断。</span></li>
-            </ol>
-            <h4>结果</h4>
+            <p class="one">一个评估 Coding Agent 的测试平台：在可复现的条件下，衡量 Agent 能不能守住组合约束，以及会在哪里失败。</p>
             <ul class="facts">
-              <li><b>17/17</b>那次运行的测试全部通过，只改了允许改的两个文件，人工纠正 0 分钟</li>
-              <li><b>13</b>篇编号学习记录，配有 Prompt、Context 模板、评分标准和失败模式文档</li>
+              <li><b>17/17</b>一次冻结条件的运行中测试全部通过，只改了允许改的两个文件，人工纠正 0 分钟</li>
+              <li><b>13</b>篇编号评估记录，配有 Prompt、Context 模板、评分标准和失败模式文档</li>
             </ul>
+            <p>我关心的是怎么判断 Agent 的输出可不可靠，而不只是让它把代码写完。所以每次运行都冻结起点、隔离环境、结束前不人工修正，再把“任务通过”和“实验有效”分开判断。领域选了我熟悉的摄影训练，约束足够复杂，对错也容易核对。</p>
+            <details class="more-d">
+              <summary>关键取舍 · 3 条</summary>
+              <ol class="dec">
+                <li><time>07.28</time><span>冻结 Prompt 和起始 commit，在隔离环境里运行，结束前不做人工纠正，保留原始结果。</span></li>
+                <li><time>07.28</time><span>第一次真实运行功能全部通过，但运行中自动用上了 Skill 和审查子任务，配置被改变了。我把它标为“结果有混杂”，不当作纯 Prompt 的基线。</span></li>
+                <li><time>08.03</time><span>写下一个可以被 0/3 推翻的假设，把“任务成功”和“实验有效”分开判断。</span></li>
+              </ol>
+            </details>
             <p class="gap">还没证明：有效的重复试验、Context 和 Skill 的 A/B 对比、稳定的成功率。</p>
+          </div>
+        </article>
+
+        <article class="case">
+          <aside class="case-meta">
+            <span class="tag">移动 Web 产品 · 全栈</span>
+            <h3>Wind On</h3>
+            <span class="status s-wip">iPhone 实机测试通过 · 待私测</span>
+            <dl>
+              <div><dt>时间</dt><dd>2026.07 – 至今</dd></div>
+              <div><dt>技术</dt><dd>TypeScript · Vite · IndexedDB · Vitest · AWS SAM（Lambda · HTTP API · DynamoDB）</dd></div>
+            </dl>
+          </aside>
+          <div class="case-body">
+            <p class="one">给有一点摄影基础、出门后却不知道拍什么的人，一项能带到现场执行的观察练习，什么时候算完成由自己判断。</p>
+            <ul class="facts">
+              <li><b>53 + 5</b>项前端测试和后台接收测试通过；摄像头、权限、照片保存和分享在目标 iPhone 上实机验证</li>
+              <li><b>7 / 14</b>七类练习侧重、十四个任务家族，每个任务都能追溯到生成它的字段和版本</li>
+            </ul>
+            <p>从一个随机题材生成器开始，做成了有边界的练习：告诉你这次看什么、画面上守什么规则，但不替你判断现场条件，也不评价你的作品。反馈后台用 AWS SAM 部署，只接收任务事件，照片和回顾都留在手机上。</p>
+            <details class="more-d">
+              <summary>关键取舍 · 7 条</summary>
+              <ol class="dec">
+                <li><time>08.18</time><span>完成的标准是认真探索过这个主题，不要求交出“最好的一张”。不限定器材、焦段和曝光参数，胶片和数码都能参加。</span></li>
+                <li><time>09.30</time><span>光影选项改为“你想观察哪种明暗关系”，现场有没有光交给摄影者判断，不再按设备时间去推断能不能拍。</span></li>
+                <li><time>10.05</time><span>把“寻找红色锚点”拓宽成“寻找色彩锚点”。具体的颜色、光源和材料不该成为一类练习的必要条件。</span></li>
+                <li><time>10.08</time><span>拍摄先只做 1:1 固定竖向，分享最多三张，暂不测光。当天讨论过横竖屏自动切换，后来主动收缩了范围。</span></li>
+                <li><time>10.16</time><span>取景比例在方形、3:4 竖窗、方窗加框线三个方案之间实机对比，选了框线：取景窗保持方形，按摄像头画面画出 3:4 框线，拍下来的就是框内的画面，和预览一致。</span></li>
+                <li><time>10.22</time><span>在手机上对比两套流程后，放弃了“关盖、收环、吐卡”的连续动画，改成一张任务纸的三个停放位置：纸盖住机身，遮光罩就合上；纸移开，遮光罩就弹开。</span></li>
+                <li><time>10.24</time><span>反馈后台部署在 AWS 新加坡区，因为测试者主要在中国。只接收任务事件，照片和回顾都留在手机上，不上传。</span></li>
+              </ol>
+            </details>
+            <p class="gap">还没完成：邀请测试者私测，以及真实的使用数据。</p>
           </div>
         </article>
       </div>
 
-      <h3 class="sub">其他作品</h3>
+      <h3 class="sub">更多交付</h3>
       <div class="proj">
-        <article class="card"><span class="tag">命令行工具 · 2026.07</span><h3>video-to-md</h3><p>用本地 whisper.cpp 把视频或整个文件夹转成 Markdown，只保留原始转录，不总结也不润色。已有文件不会被覆盖，同名不同格式的视频分开输出，GPU 崩溃时退回 CPU。</p><span class="stack">Python · whisper.cpp · ffmpeg</span></article>
-        <article class="card"><span class="tag">流程设计 · 2026.09</span><h3>AI 视频制作规范</h3><p>把故事、参考、生成、剪辑和验收连成一套规范：先做带声音的分镜预演和高难镜头小样，再批量生成。另外配了一份法语漫剧 Demo 的创作讨论稿，还没有进入生产。</p><span class="stack">流程规范 · 8 个粗分镜</span></article>
+        <article class="card"><span class="tag">本地 AI 流水线 · 2026.07</span><h3>本地视频库</h3><p>完全在本机运行：whisper.cpp 转录视频，本地 LLM（Ollama）按主题分类，支持全文搜索和 SRT 导出。其中的命令行工具 video-to-md 不覆盖已有文件，GPU 崩溃时自动退回 CPU。</p><span class="stack">Python · whisper.cpp · Ollama · ffmpeg</span></article>
+        <article class="card"><span class="tag">基础设施即代码 · 2026.11</span><h3>这个网站</h3><p>中英法三语的静态站点。托管用 CloudFormation 定义在 AWS Amplify 上，部署走单独的最小权限角色，配了 CSP、HSTS 等安全响应头，一条脚本发布。仓库公开。</p><span class="stack">HTML · CSS · JS · CloudFormation · Amplify · IAM</span><a class="case-link" href="https://github.com/mushroom42/yulinxin-site" target="_blank" rel="noopener noreferrer">看仓库 ↗</a></article>
+        <article class="card"><span class="tag">需求落地 · 2026</span><h3>帮朋友部署 AI Agent</h3><p>给不写代码的朋友安装和配置 Coding Agent，先听他们哪些工作在重复，再写成定制 Skill，让 Agent 按他们的流程干活。</p><span class="stack">Agent 配置 · 定制 Skill</span></article>
       </div>
+
+      <details class="more-d more-block">
+        <summary>更多实验 · 2 个</summary>
+        <div class="proj">
+          <article class="card"><span class="tag">本地 AI 实验 · 2026.07</span><h3>AI 摄影方向发现</h3><p>想用本地视觉模型（Qwen2.5-VL）从图库里找出一个人的创作方向，照片只在本机处理。同一批 20 张跑了三版 Prompt，模型仍会把生活照过度解读成作品，于是停止逐张判断，改为分析多张照片之间重复的选择。</p><span class="stack">Python · PhotoKit · Apple Vision · Ollama</span></article>
+          <article class="card"><span class="tag">流程设计 · 2026.09</span><h3>AI 视频制作规范</h3><p>把故事、参考、生成、剪辑和验收连成一套规范：先做带声音的分镜预演和高难镜头小样，再批量生成。</p><span class="stack">流程规范 · 8 个粗分镜</span></article>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -555,69 +589,35 @@ section.blk.inverse .verdict.v-done{background:none}
     <div class="wrap">
       <div class="sec-head">
         <div><div class="eyebrow">自建 SKILLS</div><h2>把反复做的判断，写成 Agent 能执行的协议。</h2></div>
-        <p>同一类工作我做到第三、第四次，就会考虑把它封装成 Skill：入口负责共同原则，细节按需读取，有版本，有校验，可以跨项目调用。这五个 Skill 由我提出问题、定约束、做取舍，AI 辅助写协议、脚本和测试。</p>
+        <p>同一类工作我做到第三、第四次，就会把它封装成 Skill：入口负责共同原则，细节按需读取，有版本、有校验脚本，可以跨项目调用。问题、约束和取舍由我定，AI 辅助写协议、脚本和测试。</p>
       </div>
-
-      <figure class="flow" aria-label="两个 Skill 之间的交接关系">
-        <div class="node n-src"><b>收藏的原稿</b><span>文章、视频转录。只读，保留哈希</span></div>
-        <div class="arrow" aria-hidden="true"></div>
-        <div class="node n-skill"><code>content-to-action</code><span>管收件箱、使用卡和生命周期：处理、等待、归档、已实践</span></div>
-        <div class="arrow arrow-label" aria-hidden="true"><em>用户确认后升级</em></div>
-        <div class="node n-skill"><code>evidence-to-project-decision</code><span>建项目基线、给证据分层，只返回一个决策包</span></div>
-        <div class="arrow" aria-hidden="true"></div>
-        <div class="node n-out"><b>采用 · 实验 · 延后 · 拒绝</b><span>结果回填到使用卡，不接管它的状态</span></div>
-        <figcaption>两个 Skill 刚建好时职责有重叠。我追问之后，把它们的边界重新划分：状态只归上游所有，下游只做判断，交接时只传必要的信息。</figcaption>
-      </figure>
 
       <div class="skills">
         <article class="skill">
+          <header><code>pixel-mv</code><span class="tag">2026.10 · 从一支 MV 沉淀</span></header>
+          <h3>像素 MV 流水线</h3>
+          <p>把一首歌做成像素风 RPG 游戏画面的音乐 MV：画面在 320×180 绘制、放大到 1080p，歌词按逐字时间轴在游戏对话框里高亮。第一支 4 分 39 秒。</p>
+          <ul>
+            <li>引擎和渲染管线固定下来，每支新歌只需要写分镜和场景；分镜经我确认后才写代码。</li>
+            <li>做第一支时我提的 11 条修改意见都记进了反馈日志，后来变成每次交付前的自查清单。</li>
+          </ul>
+        </article>
+        <article class="skill">
           <header><code>short-video-growth-director</code><span class="tag">2026.08 · 已迭代 3 次</span></header>
-          <h3>短视频增长编导</h3>
-          <p>从用户问题出发，经过增长路径、内容组合、系列设计和脚本，一直到发布后的复盘，整套流程都能跨项目调用。</p>
+          <h3>可升级的跨项目 Skill</h3>
+          <p>一个从选题到复盘的流程 Skill。值得说的是它的维护方式：知识怎么分层，更新怎么保证安全。</p>
           <ul>
             <li>新知识分成三类：通用方法、有时效的平台信息、某个项目专属。只有通用方法进入全局规则。</li>
-            <li>平台窗口、扶持政策、粉丝门槛都当作带日期、待验证的假设，不写成绝对规律。</li>
             <li>更新要先 <code>--check</code> 再 <code>--apply</code>，工作区有改动或版本分叉时直接拒绝。已接入五种 Agent 工具。</li>
           </ul>
         </article>
         <article class="skill">
-          <header><code>content-to-action</code><span class="tag">2026.08 创建 · 10 月试用</span></header>
-          <h3>从收藏到实践</h3>
-          <p>收藏了很多内容却从来不用？它把每篇原稿变成一张使用卡，判断这篇值不值得做、能用在哪、做完了有没有证据。</p>
+          <header><code>content-to-action</code> + <code>evidence-to-project-decision</code><span class="tag">2026.08</span></header>
+          <h3>两个协作的工作流 Skill</h3>
+          <p>前一个把收藏的资料变成使用卡并管理状态，后一个只判断某条证据该不该改变项目：采用、最小实验、延后或拒绝。</p>
           <ul>
-            <li>每周的优先候选最多三个，也可以一个都没有。不自动制造待办。</li>
-            <li>价值判断交给 Agent，脚本只做扫描、哈希、索引和结构检查。</li>
-            <li>拿最早的 5 篇做了真实试用：生成 5 张卡，原稿的 SHA-256 全部没变，最后只有 1 篇成为练习候选。</li>
-          </ul>
-        </article>
-        <article class="skill">
-          <header><code>evidence-to-project-decision</code><span class="tag">2026.08</span></header>
-          <h3>证据转项目决策</h3>
-          <p>把一本书、一个趋势或一个竞品，落实到“我们的项目该不该改”。先看项目自身的约束，再看外部证据。</p>
-          <ul>
-            <li>处置只有四种：立即采用、最小实验、延后、拒绝。最小实验必须写清成功门槛和停止条件。</li>
-            <li>不做第二个普通的研究工具，只回答一个问题：这条证据会改变哪个具体决定。</li>
-            <li>机会成本也算证据。有价值的资料同样可以被延后或拒绝。</li>
-          </ul>
-        </article>
-        <article class="skill">
-          <header><code>authentic-communication-coach</code><span class="tag">2026.08 创建 · 10 月更新</span></header>
-          <h3>真实沟通教练</h3>
-          <p>练习倾听、回应、表达自己和设定边界。训练、真实对话和关系修复三种场景分开处理，不教套路，不教操控。</p>
-          <ul>
-            <li>训练流程是：自己先写回复，逐句反馈，重写，再到现实里练习，最后复盘。不直接生成漂亮话术。</li>
-            <li>想优化表达之前，先判断问题是不是真能靠表达解决。原话、推断和未知分开写。</li>
-            <li>更新时只吸收与目标相符的新材料，拒绝颜值评分、关系等级这类框架。发现来源没有独立核对，就如实写进限制里。</li>
-          </ul>
-        </article>
-        <article class="skill">
-          <header><code>pixel-mv</code><span class="tag">2026.10 · 从《任我行》MV 沉淀</span></header>
-          <h3>像素 MV</h3>
-          <p>把一首歌做成像素风 RPG 游戏画面的音乐 MV：画面在 320×180 绘制、放大到 1080p，歌词按逐字时间轴在游戏对话框里高亮。第一支是陈奕迅的《任我行》，4 分 39 秒。</p>
-          <ul>
-            <li>引擎和管线都是现成的，真正花时间的是“歌词 → 意象 → 游戏机制”的翻译。所以先写分镜，等我确认了再写代码。</li>
-            <li>画风必须从歌本身长出来。《任我行》用的是“主机进化史”：画质随着人生升级，地图却越来越小。</li>
-            <li>做这支 MV 时我提的 11 条意见都记进了反馈日志，最常见的是“太抽象”。它们变成了自查清单：每句歌词的画面要表达真实的意思，主体要一眼看清。</li>
+            <li>刚建好时两者职责重叠。我重新划了边界：状态只归上游，下游只返回判断，交接需要用户确认。</li>
+            <li>价值判断交给 Agent，脚本只做扫描、哈希、索引和结构检查。真实试用 5 篇原稿，SHA-256 全部不变。</li>
           </ul>
         </article>
       </div>
@@ -631,15 +631,19 @@ section.blk.inverse .verdict.v-done{background:none}
         <p>做什么、不做什么，都标上当时的日期。判断错了、改过的，也留在这里。</p>
       </div>
       <ol class="jl sheet">
-        <li><div class="date"><span class="edge">01A ▸</span>2026.06</div><div class="main"><h3>不做 BossDirect</h3><p>想做一个让法国技术人才直接对接创业公司创始人的招聘 App，技术方案都设计好了。调研后发现 swipe 匹配模式市场上已经有了，差异不够，于是停下。</p></div><span class="verdict v-closed"><svg class="gp gp-x" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M7 6 C15 15 25 27 34 35"/><path d="M33 5 C25 14 14 25 6 34"/></svg><span class="gp-label">已放弃</span></span></li>
-        <li><div class="date"><span class="edge">02A ▸</span>2026.07</div><div class="main"><h3>“蓝调时刻可以算夜间”</h3><p>这是我最初的建模判断。按这个做下去，例外越加越多。当天改为独立的时间段，不再给“夜间”继续打补丁。</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">已修正</span></span></li>
-        <li><div class="date"><span class="edge">03A ▸</span>2026.07</div><div class="main"><h3>先逐张识别作品，再找创作方向</h3><p>三轮实验下来，模型总是把生活照过度解读成作品。当天放弃了全量逐张分类，转向分析多张照片之间的关系。</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">已修正</span></span></li>
-        <li><div class="date"><span class="edge">04A ▸</span>2026.08</div><div class="main"><h3>不暴露 Skill、禁止子任务时，Prompt v1 三次有效试验里至少成功一次</h3><p>一个可以被 0/3 直接推翻的可行性假设。目前还没有跑完三次有效试验。</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">待检验</span></span></li>
-        <li><div class="date"><span class="edge">05A ▸</span>2026.08</div><div class="main"><h3>完成一项练习，靠的是认真探索，不是选出一张好照片</h3><p>这条已经成为 Wind On 的完成标准。它能不能带来更高的留存，要等真实用户来回答。</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">待检验</span></span></li>
-        <li><div class="date"><span class="edge">06A ▸</span>2026.08</div><div class="main"><h3>两个 Skill 职责重叠时，保留两个，但收窄各自的职责</h3><p>content-to-action 管收件箱和状态，evidence-to-project-decision 只负责项目判断，交接需要用户确认。不合并，也不让两边同时拥有同一份状态。</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">已落地</span></span></li>
-        <li><div class="date"><span class="edge">07A ▸</span>2026.10</div><div class="main"><h3>Skill 吸收新知识前，先审查兼容性</h3><p>沟通 Skill 更新时，只吸收与目标兼容的部分，拒绝操控和未经证实的人群概括。更新后三个文件通过了检查，已经推送。</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">已落地</span></span></li>
-        <li><div class="date"><span class="edge">08A ▸</span>2026.10</div><div class="main"><h3>不是每个任务都撑得起一整场外拍</h3><p>改成一次出门可以连续练习，但每次只关注一个任务，什么时候结束由用户决定。</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">已落地</span></span></li>
+        <li><div class="date"><span class="edge">01A ▸</span>2026.06</div><div class="main"><h3>不做 BossDirect</h3><p>想做一个让法国技术人才直接对接创业公司创始人的招聘 App，技术方案都设计好了。调研后发现 swipe 匹配模式市场上已经有了，差异不够，于是在写代码前停下。</p></div><span class="verdict v-closed"><svg class="gp gp-x" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M7 6 C15 15 25 27 34 35"/><path d="M33 5 C25 14 14 25 6 34"/></svg><span class="gp-label">已放弃</span></span></li>
+        <li><div class="date"><span class="edge">02A ▸</span>2026.07</div><div class="main"><h3>先逐张识别作品，再找创作方向</h3><p>三轮实验下来，本地模型总是把生活照过度解读成作品。当天放弃了全量逐张分类，转向分析多张照片之间的关系，而不是继续调 Prompt 掩盖问题。</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">已修正</span></span></li>
+        <li><div class="date"><span class="edge">03A ▸</span>2026.08</div><div class="main"><h3>不暴露 Skill、禁止子任务时，Prompt v1 三次有效试验里至少成功一次</h3><p>一个可以被 0/3 直接推翻的可行性假设。目前还没有跑完三次有效试验。</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">待检验</span></span></li>
+        <li><div class="date"><span class="edge">04A ▸</span>2026.08</div><div class="main"><h3>两个 Skill 职责重叠时，保留两个，但收窄各自的职责</h3><p>content-to-action 管收件箱和状态，evidence-to-project-decision 只负责项目判断，交接需要用户确认。不合并，也不让两边同时拥有同一份状态。</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">已落地</span></span></li>
       </ol>
+      <details class="more-d more-block">
+        <summary>更早的判断 · 3 条</summary>
+        <ol class="jl sheet">
+          <li><div class="date"><span class="edge">05A ▸</span>2026.07</div><div class="main"><h3>“蓝调时刻可以算夜间”</h3><p>这是我最初的建模判断。按这个做下去，例外越加越多。当天改为独立的时间段，不再给“夜间”继续打补丁。</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">已修正</span></span></li>
+          <li><div class="date"><span class="edge">06A ▸</span>2026.08</div><div class="main"><h3>完成一项练习，靠的是认真探索，不是选出一张好照片</h3><p>这条已经成为 Wind On 的完成标准。它能不能带来更高的留存，要等真实用户来回答。</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">待检验</span></span></li>
+          <li><div class="date"><span class="edge">07A ▸</span>2026.10</div><div class="main"><h3>不是每个任务都撑得起一整场外拍</h3><p>改成一次出门可以连续练习，但每次只关注一个任务，什么时候结束由用户决定。</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">已落地</span></span></li>
+        </ol>
+      </details>
     </div>
   </section>
 
@@ -647,28 +651,34 @@ section.blk.inverse .verdict.v-done{background:none}
     <div class="wrap">
       <div class="sec-head">
         <div><div class="eyebrow">工作方法</div><h2>我怎样和 AI 一起做工程</h2></div>
-        <p>用真实领域问题建立约束，让 AI 的输出变成可以检查的产物，再分别验证行为、过程和适用边界。遇到失败时，先保留证据，修正模型或流程，再决定要不要继续扩大。</p>
+        <p>用 Agent 提速，但每一步都留下可以检查的证据：任务能判断对错，运行能复现，边界由环境保证，验证分层报告。</p>
       </div>
       <ol class="method">
         <li><h3>先写能判断对错的任务，再交给 Agent</h3><p>目标、已有上下文、硬约束、允许修改的范围和验收证据，分开写清楚。</p></li>
-        <li><h3>用领域模型消除歧义</h3><p>常见做法不等于必要条件。例外太多时，重新划分类别，而不是继续加规则。</p></li>
-        <li><h3>证明非法输入会被拒绝</h3><p>正向示例能编译还不够。TDD 的“红”必须是目标断言失败，环境报错不算。</p></li>
         <li><h3>冻结起点，保留失败</h3><p>同一个 commit、Prompt、模型和权限。先记录原始运行结果，再做人工修正。</p></li>
-        <li><h3>任务结果和实验有效性分开判断</h3><p>功能通过了，归因仍可能无效。一个分数代替不了这两个判断。</p></li>
-        <li><h3>让环境落实边界</h3><p>Prompt 里写了禁止，不等于环境真的禁止。能力边界要靠工具层控制，完成与否由独立的验证来判断。</p></li>
-        <li><h3>让每个生成结果都能追溯来源</h3><p>保留字段编号、版本、原文和哈希。恢复时不悄悄重新生成历史结果。</p></li>
+        <li><h3>让环境落实边界</h3><p>Prompt 里写了禁止，不等于环境真的禁止。能力边界要靠工具层和权限控制，完成与否由独立的验证来判断。</p></li>
         <li><h3>分层验证，分层报告</h3><p>单元测试、真实模型、浏览器、实机、云端、用户反馈各说各的。本地成功不等于已经部署。</p></li>
-      <li><h3>先判断值不值得封装，再建 Skill</h3><p>同样的输入、判断和验收反复出现，才值得封装。已有的 Skill 能扩展，就不再新建一个。</p></li>
-        <li><h3>多个 Skill 协作时，先定状态归谁</h3><p>上游负责生命周期，下游只返回判断结果。交接只传必要信息，不自动扩大写入权限。</p></li>
+        <li><h3>让每个生成结果都能追溯来源</h3><p>保留字段编号、版本、原文和哈希。恢复时不悄悄重新生成历史结果。</p></li>
       </ol>
+      <details class="more-d more-block">
+        <summary>另外 5 条</summary>
+        <ol class="method" start="6">
+          <li><h3>用领域模型消除歧义</h3><p>常见做法不等于必要条件。例外太多时，重新划分类别，而不是继续加规则。</p></li>
+          <li><h3>证明非法输入会被拒绝</h3><p>正向示例能编译还不够。TDD 的“红”必须是目标断言失败，环境报错不算。</p></li>
+          <li><h3>任务结果和实验有效性分开判断</h3><p>功能通过了，归因仍可能无效。一个分数代替不了这两个判断。</p></li>
+          <li><h3>先判断值不值得封装，再建 Skill</h3><p>同样的输入、判断和验收反复出现，才值得封装。已有的 Skill 能扩展，就不再新建一个。</p></li>
+          <li><h3>多个 Skill 协作时，先定状态归谁</h3><p>上游负责生命周期，下游只返回判断结果。交接只传必要信息，不自动扩大写入权限。</p></li>
+        </ol>
+      </details>
     </div>
   </section>
 
 <section class="close" id="contact">
     <div class="wrap">
       <h2>想一起做点东西？</h2>
-      <p>工作机会、项目合作，或者想聊聊 AI 工程、摄影和短视频，都欢迎写信。我可以用中文、英语或法语交流。</p>
+      <p>招聘、项目合作，或者想聊聊 AI 应用工程，都欢迎写信。中文、英语、法语都可以。</p>
       <div class="mail" data-u="hugo.xinyulin" data-d="gmail.com">hugo.xinyulin [at] gmail.com</div>
+      <p class="cv-line"><a href="cv/Yulin_XIN_CV_FR.pdf" target="_blank" rel="noopener">下载简历（法语 PDF）↗</a></p>
     </div>
   </section>
 </main>
@@ -699,22 +709,33 @@ section.blk.inverse .verdict.v-done{background:none}
   <section class="hero" id="hero-en">
     <div class="wrap">
       <div>
-        <p class="kicker rise">Full-stack engineer · Paris</p>
-        <h1 class="rise d2">Bringing AI into<br>real engineering.</h1>
-        <p class="lede rise d3">I'm <b>Yulin Xin</b>. I've been a full-stack developer in Paris for 3 years. I've built an internal CRM, run DevOps for a core system and led a full rebuild of a client app. Over the past year I've spent most of my free time on AI: getting coding agents to work reliably, sorting photos and videos with local models, and writing agent skills for content creation.</p>
+        <p class="kicker rise">Full-stack &amp; cloud engineer · AI applications · Paris</p>
+        <h1 class="rise d2">I turn ideas into<br>products that ship.</h1>
+        <p class="lede rise d3">I'm <b>Yulin Xin</b>, a full-stack engineer with 3 years in insurtech. I owned an internal CRM, the DevOps of a core system and a client app rebuild, where the new front end cut quote loading from tens of seconds to under 5. For the past year I've focused on LLM applications and coding agents: agents for speed, tests, evals and infrastructure as code for quality.</p>
+        <p class="avail rise d3">Looking for an AI application or full-stack cloud role in Paris · available from January 2027 · authorised to work in France</p>
         <div class="btns rise d4">
           <a class="btn btn-ivory" href="#work-en">See my work</a>
-          <a class="btn btn-line" href="#contact-en">Contact me</a>
+          <a class="btn btn-line" href="cv/Yulin_XIN_CV_FR.pdf" target="_blank" rel="noopener">Download CV (PDF, French)</a>
         </div>
         <div class="social rise d4">
           <span>Find me</span>
           <a href="https://github.com/mushroom42" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://www.linkedin.com/in/yulin-xin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://mushroom42.itch.io/stonelight" target="_blank" rel="noopener noreferrer">itch.io</a>
         </div>
       </div>
-      <figure class="snap rise d3" data-shot="Click. Got you.">
+      <figure class="snap rise d3" data-shot="Click. Got you. Here’s my card.">
         <div class="snap-stage" data-label="A person in glasses with a Leica on their chest. Press to have them take your picture"></div>
         <figcaption aria-live="polite">Press me and I’ll take your picture.</figcaption>
+        <div class="polaroid" hidden data-l="en" data-title="Full-stack & cloud engineer · AI applications" data-note="Paris · available from January 2027">
+          <div class="pol-photo" data-dev="Developing…"><strong>Yulin Xin</strong><span>Full-stack & cloud engineer · AI applications</span><span>Paris · available from January 2027</span></div>
+          <div class="pol-actions">
+            <button type="button" class="pol-copy" data-done="Copied">Copy email</button>
+            <a href="cv/Yulin_XIN_CV_FR.pdf" download>CV (PDF)</a>
+            <button type="button" class="pol-vcf">Save contact</button>
+          </div>
+          <button type="button" class="pol-close" aria-label="Close">×</button>
+        </div>
       </figure>
     </div>
   </section>
@@ -723,18 +744,18 @@ section.blk.inverse .verdict.v-done{background:none}
     <div class="wrap">
       <div class="sec-head">
         <div><div class="eyebrow">Path</div><h2>From Shanghai to Paris, from building pages to owning the whole delivery chain.</h2></div>
-        <p>I studied computer science for my engineering degree. As an intern I rebuilt a legacy system. At work I moved from front end to back end, cloud and CI/CD. Now AI is the next craft I want to learn properly.</p>
+        <p>I studied computer science for my engineering degree. As an intern I rebuilt a legacy system. At work I moved from front end to back end, cloud and CI/CD. Now LLM applications and agent evaluation are my main focus.</p>
       </div>
       <ol class="tl">
         <li><div class="yr">2021.09 – 2024.02</div><div class="role">Computer science · Engineering degree (Titre d'ingénieur)</div><div class="org">Université de technologie de Belfort-Montbéliard (UTBM)</div></li>
         <li><div class="yr">2022.09 – 2023.02</div><div class="role">Technical support intern</div><div class="org">Capgemini Consulting · Shanghai</div></li>
-        <li><div class="yr">2023.08 – now</div><div class="role">Full-stack engineer</div><div class="org">An insurtech company · Paris</div></li>
-        <li><div class="yr">2025 – now</div><div class="role">AI engineering practice</div><div class="org">Agents, local models, skills</div></li>
+        <li><div class="yr">2023.08 – 2026.12</div><div class="role">Full-stack engineer</div><div class="org">An insurtech company · Paris</div></li>
+        <li><div class="yr">2025 – now</div><div class="role">AI application engineering</div><div class="org">Coding agents, evals, local models, skills</div></li>
       </ol>
       <div class="stats">
-        <div class="stat"><b>3 yrs</b><span>of full-stack development</span></div>
-        <div class="stat"><b>1 yr</b><span>of AI engineering practice</span></div>
+        <div class="stat"><b>3 yrs</b><span>of full-stack work: front end, back end, cloud and CI/CD</span></div>
         <div class="stat"><b>3</b><span>product lines I've owned end to end</span></div>
+        <div class="stat"><b>&lt; 5 s</b><span>quote loading after the rebuild, down from tens of seconds</span></div>
         <div class="stat"><b>3</b><span>working languages: Chinese (native), English (C1+), French (B2)</span></div>
       </div>
     </div>
@@ -743,10 +764,10 @@ section.blk.inverse .verdict.v-done{background:none}
   <section class="blk alt" id="now-en">
     <div class="wrap feature">
       <div>
-        <div class="eyebrow">Work · Insurtech</div>
-        <h3>At a French insurtech company, I cover front end, back end, cloud and delivery.</h3>
+        <div class="eyebrow">Work · Insurtech · 2023–2026</div>
+        <h3>At a French insurtech company, I covered front end, back end, cloud and delivery.</h3>
         <div class="body">
-          <p>The team is small, so one person often owns a product line from design to release. I work in a Scrum team and run sprints in Jira. I often build a prototype first, let colleagues try it, and then iterate on their feedback.</p>
+          <p>The team is small, so one person often owns a product line from design to release. I worked in a Scrum team and ran sprints in Jira. I often built a prototype first, let colleagues try it, and then iterated on their feedback. When production broke or a new project started, colleagues usually came to me first.</p>
           <p>After three product lines, what I care about most is the delivery chain: consistent environments, automated deploys and clear permissions. That is what lets code change fast and safely.</p>
         </div>
         <ul class="chips" aria-label="Main tech stack">
@@ -754,9 +775,9 @@ section.blk.inverse .verdict.v-done{background:none}
         </ul>
       </div>
       <ol class="points">
-        <li><span class="k">1</span><div><b>Internal CRM</b><span>A web app for colleagues. Vue + TypeScript front end, Python Lambda back end, with full authentication and permissions. Modular architecture so it is easy to extend.</span></div></li>
-        <li><span class="k">2</span><div><b>DevOps for the core business system</b><span>A Java / Tomcat / Redis system. I unified the environments with Docker Compose and automated deploys to AWS EC2 with GitHub Actions.</span></div></li>
-        <li><span class="k">3</span><div><b>Client app rebuild</b><span>I led the move of the core content to a new architecture on my own and rewrote the front end in React, with clear gains in performance, scalability and code quality. I also set up full CI/CD on AWS.</span></div></li>
+        <li><span class="k">1</span><div><b>Client app rebuild</b><span>I led the move of the core content to a new architecture on my own and rewrote the front end in React, cutting quote loading from tens of seconds to under 5. I also set up full CI/CD on AWS, which became the team's standard for building and deploying.</span></div></li>
+        <li><span class="k">2</span><div><b>Internal CRM</b><span>Turned work colleagues used to do by hand into a standard web tool. Vue + TypeScript front end, Python Lambda back end, with full authentication and permissions for sensitive insurance data.</span></div></li>
+        <li><span class="k">3</span><div><b>DevOps for the core business system</b><span>A Java / Tomcat / Redis system. I unified the environments with Docker Compose and automated deploys to AWS EC2 with GitHub Actions. I was also the main contact for production incidents.</span></div></li>
       </ol>
     </div>
   </section>
@@ -764,8 +785,8 @@ section.blk.inverse .verdict.v-done{background:none}
   <section class="blk" id="work-en">
     <div class="wrap">
       <div class="sec-head">
-        <div><div class="eyebrow">Projects</div><h2>What I build in my free time</h2></div>
-        <p>Most of it is about photography and short video. I know these fields and use them myself, so they are a good test of what AI can really do well. I own the problem, the trade-offs and the acceptance checks. AI helps with code, docs and reviews.</p>
+        <div><div class="eyebrow">Projects</div><h2>From idea to release</h2></div>
+        <p>Each project starts with the results: how fast it shipped, what it delivers, and what keeps the quality up. I own the problem, the trade-offs and the acceptance checks. AI agents speed up the code, docs and reviews.</p>
       </div>
 
       <div class="cases">
@@ -773,7 +794,7 @@ section.blk.inverse .verdict.v-done{background:none}
           <aside class="case-meta">
             <span class="tag">Web game</span>
             <h3>Stonelight</h3>
-            <span class="status s-live">Free on itch.io</span>
+            <span class="status s-live">Live on itch.io · 300+ players</span>
             <dl>
               <div><dt>Period</dt><dd>2026.11</dd></div>
               <div><dt>Stack</dt><dd>JavaScript · Canvas · ray tracing</dd></div>
@@ -782,116 +803,102 @@ section.blk.inverse .verdict.v-done{background:none}
           </aside>
           <div class="case-body">
             <p class="one">A pixel-art idle game about cutting gems. Chip off the rock, set the angle of the gem’s base, grind the facets. Finished gems glow, and light is the currency.</p>
-            <p>It was inspired by a video about why diamonds sparkle. I wanted “light goes in and can’t get out” to be something you can try with your own hands. When you set the angle, the game traces every ray through a cross-section of the gem and works out how much light stays in, using real refractive indices and the Fresnel equations. Fluorite, emerald, corundum, opal and diamond each have their own rules. The whole game is one HTML file with no server, and progress is saved in the browser.</p>
-            <h4>Key trade-offs</h4>
-            <ol class="dec">
-              <li><time>11.04</time><span>Setting the angle used to mean reading a ray diagram first. I replaced it with a bar showing the bright zone and a tap on the gem. The ray diagram moved into a fold-out panel for people who want the physics.</span></li>
-              <li><time>11.04</time><span>Most itch.io players read English, so every string went into one translation table. The game is in Chinese and English, follows the browser language and can be switched by hand.</span></li>
-              <li><time>11.04</time><span>I redid the whole look as a crystallography plate, but kept the gems in pixel art. The 3D pixel gems and the coloured light under them are what people remember.</span></li>
-              <li><time>11.04</time><span>The English name was going to be Hidden Light. Before release I found games with the same name on itch, so it became Stonelight. The first release is free, with no payments.</span></li>
-            </ol>
-            <h4>Results</h4>
             <ul class="facts">
               <li><b>2 days</b>from the first prototype to the public itch.io release, in 26 commits</li>
-              <li><b>24.4°</b>is diamond’s critical angle. Fluorite leaves a window of about 2° to keep the light; diamond is far more forgiving, and you feel the difference when you play</li>
+              <li><b>300+</b>players so far. Chinese and English, following the browser language</li>
+              <li><b>0 backend</b>the whole game is one HTML file, and progress is saved in the browser</li>
             </ul>
-            <p class="gap">Not yet: player data and feedback, pacing tests, a prestige system.</p>
+            <p>It was inspired by a video about why diamonds sparkle. I wanted “light goes in and can’t get out” to be something you can try with your own hands. When you set the angle, the game traces every ray through a cross-section of the gem and works out how much light stays in, using real refractive indices and the Fresnel equations. Diamond’s critical angle is 24.4°, while fluorite leaves a window of about 2°, and you feel the difference when you play.</p>
+            <details class="more-d">
+              <summary>Key trade-offs · 4</summary>
+              <ol class="dec">
+                <li><time>11.04</time><span>Setting the angle used to mean reading a ray diagram first. I replaced it with a bar showing the bright zone and a tap on the gem. The ray diagram moved into a fold-out panel for people who want the physics.</span></li>
+                <li><time>11.04</time><span>Most itch.io players read English, so every string went into one translation table. The game is in Chinese and English, follows the browser language and can be switched by hand.</span></li>
+                <li><time>11.04</time><span>I redid the whole look as a crystallography plate, but kept the gems in pixel art. The 3D pixel gems and the coloured light under them are what people remember.</span></li>
+                <li><time>11.04</time><span>The English name was going to be Hidden Light. Before release I found games with the same name on itch, so it became Stonelight. The first release is free, with no payments.</span></li>
+              </ol>
+            </details>
+            <p class="gap">Next: pacing tests and a prestige system.</p>
           </div>
         </article>
 
         <article class="case">
           <aside class="case-meta">
-            <span class="tag">Mobile web product</span>
-            <h3>Wind On</h3>
-            <span class="status s-wip">Passed on a real iPhone · private beta next</span>
-            <dl>
-              <div><dt>Period</dt><dd>2026.07 – now</dd></div>
-              <div><dt>Stack</dt><dd>TypeScript · Vite · IndexedDB · Vitest · AWS Lambda · DynamoDB</dd></div>
-            </dl>
-          </aside>
-          <div class="case-body">
-            <p class="one">For people with some photography basics who go out and don't know what to shoot: an observation drill they can run on location, and decide for themselves when it's done.</p>
-            <p>It started as a random subject generator, so people would have a goal when they went out. It grew into a bounded drill: it tells you what to look for and which framing rule to keep. It does not judge conditions on site for you, and it does not rate your photos.</p>
-            <h4>Key trade-offs</h4>
-            <ol class="dec">
-              <li><time>08.18</time><span>A drill is done when you have explored the theme seriously. You don't have to hand in “the best shot”. No limits on gear, focal length or exposure. Film and digital both work.</span></li>
-              <li><time>09.30</time><span>The light option became “which light-and-shadow relation do you want to observe”. The photographer decides whether the light is there. The app no longer guesses from the device clock.</span></li>
-              <li><time>10.05</time><span>“Find a red anchor” became “find a colour anchor”. A specific colour, light source or material should not be required for a whole type of drill.</span></li>
-              <li><time>10.08</time><span>Capture is 1:1 and portrait-locked for now, with up to three photos per share and no metering yet. We discussed auto-switching orientation that day, then I chose to cut the scope.</span></li>
-              <li><time>10.16</time><span>For framing I compared three options on the phone: square, a tall 3:4 window, and a square window with frame lines. I chose frame lines: the window stays square, 3:4 lines follow the camera image, and the saved photo is exactly what was inside the lines.</span></li>
-              <li><time>10.22</time><span>After trying both flows on the phone, I dropped the close-lid, retract-ring, eject-card animation. The task is now one sheet of paper with three resting places: when the sheet covers the body, the hood closes; when it moves away, the hood opens.</span></li>
-              <li><time>10.24</time><span>The feedback backend runs in AWS Singapore, because most testers are in China. It only receives task events. Photos and reviews stay on the phone and are never uploaded.</span></li>
-            </ol>
-            <h4>Results</h4>
-            <ul class="facts">
-              <li><b>7 / 14</b>seven drill focuses and fourteen task families. Every task traces back to the fields and version that generated it</li>
-              <li><b>53 + 5</b>frontend and backend tests passing (10.24). Camera, permissions, photo storage and sharing also passed on the target iPhone (10.23)</li>
-            </ul>
-            <p class="gap">Not done yet: the private beta with invited testers, and real usage data. Access from mainland China has not been tested either.</p>
-          </div>
-        </article>
-
-        <article class="case">
-          <aside class="case-meta">
-            <span class="tag">Local AI experiment</span>
-            <h3>Photo Direction Finder</h3>
-            <span class="status s-pivot">Architecture changed after tests</span>
-            <dl>
-              <div><dt>Period</dt><dd>2026.07</dd></div>
-              <div><dt>Stack</dt><dd>Python · PhotoKit · Apple Vision · Ollama · Qwen2.5-VL</dd></div>
-            </dl>
-          </aside>
-          <div class="case-body">
-            <p class="one">For hobby photographers with many photos but no clear sense of their own direction: it turns the library into a direction map you can question and correct, with photos as evidence for every claim.</p>
-            <p>A real library mixes travel, family, screenshots and reference images. Actual work is a small share. I didn't want users to hand-pick dozens of photos before starting, so I first ran the experiment on my own library. Photos stay on the device, and only 512px previews are generated.</p>
-            <h4>Key trade-offs</h4>
-            <ol class="dec">
-              <li><time>07.27</time><span>It outputs a few direction hypotheses you can correct, each with sample photos, counter-examples and other possible readings. No scores for your work, and no “you shoot like this master” labels.</span></li>
-              <li><time>07.27</time><span>I ran three prompt versions on the same 20 photos. The format issues went away, but the model still over-read: ordinary snapshots were flagged as candidate work. So I stopped judging photo by photo and looked for choices that repeat across many photos.</span></li>
-            </ol>
-            <h4>Results</h4>
-            <ul class="facts">
-              <li><b>3 rounds</b>of controlled tests on the same sample. All failures are logged. I didn't hide the problem with more prompt tuning</li>
-              <li><b>≈3.3 s</b>per photo with the local model (small sample of 20; this shows speed, not accuracy)</li>
-            </ul>
-            <p class="gap">Next: grouping across photos, a full direction map, and testing with outside users.</p>
-          </div>
-        </article>
-
-        <article class="case">
-          <aside class="case-meta">
-            <span class="tag">AI engineering study</span>
+            <span class="tag">AI evaluation</span>
             <h3>Agentic Photo Lab</h3>
-            <span class="status s-wip">Study in progress</span>
+            <span class="status s-wip">Harness built · trials in progress</span>
             <dl>
               <div><dt>Period</dt><dd>2026.07 – 08</dd></div>
               <div><dt>Stack</dt><dd>TypeScript · TDD · Eval · Rubric</dd></div>
             </dl>
           </aside>
           <div class="case-body">
-            <p class="one">Using photo training as a controlled domain to observe and evaluate how coding agents work under complex constraints, and where they fail.</p>
-            <p>I wanted to learn how to manage prompts, context and skills, and where an agent's limits and failure modes are. I didn't want AI to write the whole stack for me. So we work as a pair: I write the code and make the calls, and AI explains, hints and reviews.</p>
-            <h4>Key trade-offs</h4>
-            <ol class="dec">
-              <li><time>07.28</time><span>Freeze the prompt and the starting commit, run in an isolated environment, make no manual fixes before the end, and keep the raw output.</span></li>
-              <li><time>07.28</time><span>The first real run passed every feature, but it pulled in a skill and review subtasks on its own, which changed the setup. I marked the result “confounded” and did not use it as a pure-prompt baseline.</span></li>
-              <li><time>08.03</time><span>I wrote down a hypothesis that a 0/3 result would disprove, and judged “task succeeded” and “experiment valid” separately.</span></li>
-            </ol>
-            <h4>Results</h4>
+            <p class="one">A test bench for coding agents: under reproducible conditions, it measures whether an agent holds combined constraints, and where it fails.</p>
             <ul class="facts">
-              <li><b>17/17</b>tests passed in that run. Only the two allowed files changed. 0 minutes of manual fixes</li>
-              <li><b>13</b>numbered study notes, with prompts, context templates, a scoring rubric and failure-mode docs</li>
+              <li><b>17/17</b>tests passed in a frozen-condition run. Only the two allowed files changed. 0 minutes of manual fixes</li>
+              <li><b>13</b>numbered eval notes, with prompts, context templates, a scoring rubric and failure-mode docs</li>
             </ul>
+            <p>What I care about is how to tell whether an agent's output can be trusted, not just getting it to finish the code. So every run freezes the starting point, runs in isolation and gets no manual fixes before the end. Then “task passed” and “experiment valid” are judged separately. The domain is photo training, which I know well: the constraints are rich and the answers are easy to check.</p>
+            <details class="more-d">
+              <summary>Key trade-offs · 3</summary>
+              <ol class="dec">
+                <li><time>07.28</time><span>Freeze the prompt and the starting commit, run in an isolated environment, make no manual fixes before the end, and keep the raw output.</span></li>
+                <li><time>07.28</time><span>The first real run passed every feature, but it pulled in a skill and review subtasks on its own, which changed the setup. I marked the result “confounded” and did not use it as a pure-prompt baseline.</span></li>
+                <li><time>08.03</time><span>I wrote down a hypothesis that a 0/3 result would disprove, and judged “task succeeded” and “experiment valid” separately.</span></li>
+              </ol>
+            </details>
             <p class="gap">Not proven yet: valid repeated trials, A/B tests on context and skills, a stable success rate.</p>
+          </div>
+        </article>
+
+        <article class="case">
+          <aside class="case-meta">
+            <span class="tag">Mobile web product · full stack</span>
+            <h3>Wind On</h3>
+            <span class="status s-wip">Passed on a real iPhone · private beta next</span>
+            <dl>
+              <div><dt>Period</dt><dd>2026.07 – now</dd></div>
+              <div><dt>Stack</dt><dd>TypeScript · Vite · IndexedDB · Vitest · AWS SAM (Lambda · HTTP API · DynamoDB)</dd></div>
+            </dl>
+          </aside>
+          <div class="case-body">
+            <p class="one">For people with some photography basics who go out and don't know what to shoot: an observation drill they can run on location, and decide for themselves when it's done.</p>
+            <ul class="facts">
+              <li><b>53 + 5</b>frontend and backend tests passing. Camera, permissions, photo storage and sharing verified on the target iPhone</li>
+              <li><b>7 / 14</b>seven drill focuses and fourteen task families. Every task traces back to the fields and version that generated it</li>
+            </ul>
+            <p>It started as a random subject generator and grew into a bounded drill: it tells you what to look for and which framing rule to keep, but it does not judge conditions on site for you or rate your photos. The feedback backend is deployed with AWS SAM and only receives task events. Photos and reviews stay on the phone.</p>
+            <details class="more-d">
+              <summary>Key trade-offs · 7</summary>
+              <ol class="dec">
+                <li><time>08.18</time><span>A drill is done when you have explored the theme seriously. You don't have to hand in “the best shot”. No limits on gear, focal length or exposure. Film and digital both work.</span></li>
+                <li><time>09.30</time><span>The light option became “which light-and-shadow relation do you want to observe”. The photographer decides whether the light is there. The app no longer guesses from the device clock.</span></li>
+                <li><time>10.05</time><span>“Find a red anchor” became “find a colour anchor”. A specific colour, light source or material should not be required for a whole type of drill.</span></li>
+                <li><time>10.08</time><span>Capture is 1:1 and portrait-locked for now, with up to three photos per share and no metering yet. We discussed auto-switching orientation that day, then I chose to cut the scope.</span></li>
+                <li><time>10.16</time><span>For framing I compared three options on the phone: square, a tall 3:4 window, and a square window with frame lines. I chose frame lines: the window stays square, 3:4 lines follow the camera image, and the saved photo is exactly what was inside the lines.</span></li>
+                <li><time>10.22</time><span>After trying both flows on the phone, I dropped the close-lid, retract-ring, eject-card animation. The task is now one sheet of paper with three resting places: when the sheet covers the body, the hood closes; when it moves away, the hood opens.</span></li>
+                <li><time>10.24</time><span>The feedback backend runs in AWS Singapore, because most testers are in China. It only receives task events. Photos and reviews stay on the phone and are never uploaded.</span></li>
+              </ol>
+            </details>
+            <p class="gap">Not done yet: the private beta with invited testers, and real usage data.</p>
           </div>
         </article>
       </div>
 
-      <h3 class="sub">Other projects</h3>
+      <h3 class="sub">More shipped work</h3>
       <div class="proj">
-        <article class="card"><span class="tag">CLI tool · 2026.07</span><h3>video-to-md</h3><p>Turns a video or a whole folder into Markdown with a local whisper.cpp. It keeps the raw transcript, with no summary and no polish. Existing files are never overwritten, videos with the same name in different formats get separate outputs, and it falls back to CPU if the GPU crashes.</p><span class="stack">Python · whisper.cpp · ffmpeg</span></article>
-        <article class="card"><span class="tag">Workflow design · 2026.09</span><h3>AI Video Production Spec</h3><p>One spec that links story, references, generation, editing and review: first an animatic with sound and test clips for hard shots, then batch generation. It comes with a discussion draft for a French animated-drama demo, not yet in production.</p><span class="stack">Workflow spec · 8 rough storyboards</span></article>
+        <article class="card"><span class="tag">Local AI pipeline · 2026.07</span><h3>Local video library</h3><p>Runs fully on my machine: whisper.cpp transcribes the videos, a local LLM (Ollama) sorts them by topic, with full-text search and SRT export. Its CLI tool, video-to-md, never overwrites existing files and falls back to CPU if the GPU crashes.</p><span class="stack">Python · whisper.cpp · Ollama · ffmpeg</span></article>
+        <article class="card"><span class="tag">Infrastructure as code · 2026.11</span><h3>This website</h3><p>A static site in Chinese, English and French. Hosting on AWS Amplify is defined in CloudFormation, deploys go through a separate least-privilege role, security headers such as CSP and HSTS are set, and one script publishes it. The repo is public.</p><span class="stack">HTML · CSS · JS · CloudFormation · Amplify · IAM</span><a class="case-link" href="https://github.com/mushroom42/yulinxin-site" target="_blank" rel="noopener noreferrer">View the repo ↗</a></article>
+        <article class="card"><span class="tag">From needs to delivery · 2026</span><h3>AI agents for friends</h3><p>I install and configure coding agents for friends who don't code. I first find out which parts of their work repeat, then write custom skills so the agent works the way they do.</p><span class="stack">Agent setup · custom skills</span></article>
       </div>
+
+      <details class="more-d more-block">
+        <summary>More experiments · 2</summary>
+        <div class="proj">
+          <article class="card"><span class="tag">Local AI experiment · 2026.07</span><h3>Photo Direction Finder</h3><p>Using a local vision model (Qwen2.5-VL) to find someone's creative direction in their photo library, with every photo processed on the device. I ran three prompt versions on the same 20 photos, and the model still read snapshots as serious work. So I stopped judging photo by photo and looked for choices that repeat across photos.</p><span class="stack">Python · PhotoKit · Apple Vision · Ollama</span></article>
+          <article class="card"><span class="tag">Workflow design · 2026.09</span><h3>AI Video Production Spec</h3><p>One spec that links story, references, generation, editing and review: first an animatic with sound and test clips for hard shots, then batch generation.</p><span class="stack">Workflow spec · 8 rough storyboards</span></article>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -899,69 +906,35 @@ section.blk.inverse .verdict.v-done{background:none}
     <div class="wrap">
       <div class="sec-head">
         <div><div class="eyebrow">MY OWN SKILLS</div><h2>Turning calls I make again and again into protocols an agent can run.</h2></div>
-        <p>When I do the same kind of work a third or fourth time, I consider packaging it as a skill: the entry point holds shared principles, details load on demand, and it has versions, checks and works across projects. For these five skills I framed the problem, set the constraints and made the trade-offs. AI helped write the protocols, scripts and tests.</p>
+        <p>When I do the same kind of work a third or fourth time, I package it as a skill: the entry point holds shared principles, details load on demand, and it has versions and check scripts and works across projects. I set the problem, the constraints and the trade-offs. AI helps write the protocols, scripts and tests.</p>
       </div>
-
-      <figure class="flow" aria-label="Handoff between two skills">
-        <div class="node n-src"><b>Saved originals</b><span>Articles, video transcripts. Read-only, hashes kept</span></div>
-        <div class="arrow" aria-hidden="true"></div>
-        <div class="node n-skill"><code>content-to-action</code><span>Owns the inbox, use cards and lifecycle: process, wait, archive, practised</span></div>
-        <div class="arrow arrow-label" aria-hidden="true"><em>Escalated after user confirms</em></div>
-        <div class="node n-skill"><code>evidence-to-project-decision</code><span>Sets a project baseline, ranks evidence, returns one decision pack</span></div>
-        <div class="arrow" aria-hidden="true"></div>
-        <div class="node n-out"><b>Adopt · Test · Defer · Reject</b><span>Result written back to the use card, without taking over its state</span></div>
-        <figcaption>When I first built these two skills, their roles overlapped. After pushing on it, I redrew the boundary: only the upstream skill owns state, the downstream one only makes calls, and the handoff carries only what is needed.</figcaption>
-      </figure>
 
       <div class="skills">
         <article class="skill">
+          <header><code>pixel-mv</code><span class="tag">2026.10 · distilled from a music video</span></header>
+          <h3>Pixel music video pipeline</h3>
+          <p>Turns a song into a music video styled as a pixel-art RPG. Scenes are drawn at 320×180 and scaled to 1080p, and the lyrics light up character by character in a game dialogue box. The first one runs 4 min 39 s.</p>
+          <ul>
+            <li>The engine and render pipeline are fixed, so each new song only needs a storyboard and scenes. Code is written only after I approve the storyboard.</li>
+            <li>All 11 change requests I made on the first video went into a feedback log, which became the self-check list before every delivery.</li>
+          </ul>
+        </article>
+        <article class="skill">
           <header><code>short-video-growth-director</code><span class="tag">2026.08 · 3 iterations</span></header>
-          <h3>Short-Video Growth Director</h3>
-          <p>Starts from the audience's problem and goes through growth path, content mix, series design and scripts, up to the post-release review. The whole flow works across projects.</p>
+          <h3>An upgradable cross-project skill</h3>
+          <p>A workflow skill from topic choice to post-release review. The interesting part is how it is maintained: how knowledge is layered and how updates stay safe.</p>
           <ul>
             <li>New knowledge falls into three types: general methods, time-bound platform info, and project-specific notes. Only general methods go into the global rules.</li>
-            <li>Platform windows, creator programmes and follower thresholds are dated hypotheses to verify, never fixed rules.</li>
             <li>Updates run <code>--check</code> before <code>--apply</code>, and refuse to run on a dirty workspace or a forked version. Connected to five agent tools.</li>
           </ul>
         </article>
         <article class="skill">
-          <header><code>content-to-action</code><span class="tag">Built 2026.08 · trial in Oct</span></header>
-          <h3>From Saved to Practised</h3>
-          <p>Saved lots of content but never used it? This turns each original into a use card: is it worth doing, where does it apply, and is there evidence once it's done.</p>
+          <header><code>content-to-action</code> + <code>evidence-to-project-decision</code><span class="tag">2026.08</span></header>
+          <h3>Two workflow skills that cooperate</h3>
+          <p>The first turns saved material into use cards and manages their state. The second only decides whether a piece of evidence should change a project: adopt, minimal test, defer or reject.</p>
           <ul>
-            <li>At most three priority picks per week, and zero is fine. It never invents to-dos.</li>
-            <li>The agent makes the value calls. Scripts only scan, hash, index and check structure.</li>
-            <li>A real trial on the 5 oldest items: 5 cards created, every original's SHA-256 unchanged, and only 1 became a practice candidate.</li>
-          </ul>
-        </article>
-        <article class="skill">
-          <header><code>evidence-to-project-decision</code><span class="tag">2026.08</span></header>
-          <h3>Evidence to Project Decision</h3>
-          <p>Takes a book, a trend or a competitor down to one question: should our project change? It looks at the project's own constraints first, then at outside evidence.</p>
-          <ul>
-            <li>Only four outcomes: adopt now, minimal test, defer, reject. A minimal test must state its success bar and stop condition.</li>
-            <li>It is not one more research tool. It answers one question: which specific decision would this evidence change.</li>
-            <li>Opportunity cost counts as evidence. Useful material can still be deferred or rejected.</li>
-          </ul>
-        </article>
-        <article class="skill">
-          <header><code>authentic-communication-coach</code><span class="tag">Built 2026.08 · updated Oct</span></header>
-          <h3>Authentic Communication Coach</h3>
-          <p>Practise listening, responding, speaking for yourself and setting boundaries. Training, real conversations and repairing relationships are handled separately. No scripts, no manipulation.</p>
-          <ul>
-            <li>The training loop: write your own reply, get line-by-line feedback, rewrite, practise in real life, then review. It doesn't hand you polished lines.</li>
-            <li>Before polishing the wording, it checks whether wording can solve the problem at all. Quotes, inferences and unknowns are kept apart.</li>
-            <li>Updates only take in material that fits the goal and reject frameworks like looks scores or relationship tiers. Sources not checked independently are listed as a limitation.</li>
-          </ul>
-        </article>
-        <article class="skill">
-          <header><code>pixel-mv</code><span class="tag">2026.10 · distilled from a music video</span></header>
-          <h3>Pixel music videos</h3>
-          <p>Turns a song into a music video styled as a pixel-art RPG. Scenes are drawn at 320×180 and scaled to 1080p, and the lyrics light up character by character in a game dialogue box. The first one was Eason Chan’s 任我行, 4 min 39 s.</p>
-          <ul>
-            <li>The engine and pipeline are ready-made. The real work is translating lyric → image → game mechanic, so the agent writes a storyboard first and only codes once I’ve approved it.</li>
-            <li>The visual style has to grow out of the song. For 任我行 it was a history of game consoles: the graphics improve as life goes on, while the world map keeps shrinking.</li>
-            <li>All 11 comments I made on that video went into a feedback log. The most common was “too abstract”. They became a self-check list: each line’s image must carry what the lyric really means, and the subject must read at a glance.</li>
+            <li>At first their roles overlapped. I redrew the boundary: only upstream owns state, downstream only returns its call, and the handoff needs user confirmation.</li>
+            <li>The agent makes the value calls. Scripts only scan, hash, index and check structure. In a real trial on 5 originals, every SHA-256 stayed unchanged.</li>
           </ul>
         </article>
       </div>
@@ -975,15 +948,19 @@ section.blk.inverse .verdict.v-done{background:none}
         <p>What I chose to build or skip, each with the date I decided. Calls I got wrong and changed stay here too.</p>
       </div>
       <ol class="jl sheet">
-        <li><div class="date"><span class="edge">01A ▸</span>2026.06</div><div class="main"><h3>Not building BossDirect</h3><p>A hiring app linking tech talent in France directly with startup founders. The technical design was done. Research showed the swipe-matching model already existed and mine wasn't different enough, so I stopped.</p></div><span class="verdict v-closed"><svg class="gp gp-x" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M7 6 C15 15 25 27 34 35"/><path d="M33 5 C25 14 14 25 6 34"/></svg><span class="gp-label">Dropped</span></span></li>
-        <li><div class="date"><span class="edge">02A ▸</span>2026.07</div><div class="main"><h3>“Blue hour can count as night”</h3><p>This was my first modelling call. As I built on it, the exceptions kept piling up. The same day I made it a separate time slot and stopped patching “night”.</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">Revised</span></span></li>
-        <li><div class="date"><span class="edge">03A ▸</span>2026.07</div><div class="main"><h3>Classify each photo as work first, then find the direction</h3><p>Over three rounds, the model kept reading snapshots as serious work. The same day I dropped photo-by-photo classification and moved to analysing relations across photos.</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">Revised</span></span></li>
-        <li><div class="date"><span class="edge">04A ▸</span>2026.08</div><div class="main"><h3>With skills hidden and subtasks blocked, Prompt v1 succeeds at least once in three valid trials</h3><p>A feasibility hypothesis that a 0/3 result would disprove outright. The three valid trials have not all run yet.</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">Untested</span></span></li>
-        <li><div class="date"><span class="edge">05A ▸</span>2026.08</div><div class="main"><h3>A drill is done when you explore seriously, not when you pick one good photo</h3><p>This is now the completion rule in Wind On. Whether it improves retention is a question for real users.</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">Untested</span></span></li>
-        <li><div class="date"><span class="edge">06A ▸</span>2026.08</div><div class="main"><h3>When two skills overlap, keep both and narrow each one's role</h3><p>content-to-action owns the inbox and state. evidence-to-project-decision only makes project calls, and the handoff needs user confirmation. No merge, and no state owned by both.</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">Shipped</span></span></li>
-        <li><div class="date"><span class="edge">07A ▸</span>2026.10</div><div class="main"><h3>Check compatibility before a skill takes in new knowledge</h3><p>When updating the communication skill, I kept only the parts that fit its goal and rejected manipulation and unproven claims about groups of people. After the update, three files passed checks and were pushed.</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">Shipped</span></span></li>
-        <li><div class="date"><span class="edge">08A ▸</span>2026.10</div><div class="main"><h3>Not every task can fill a whole photo walk</h3><p>Now one outing can chain several drills, with one task in focus at a time. The user decides when to stop.</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">Shipped</span></span></li>
+        <li><div class="date"><span class="edge">01A ▸</span>2026.06</div><div class="main"><h3>Not building BossDirect</h3><p>A hiring app linking tech talent in France directly with startup founders. The technical design was done. Research showed the swipe-matching model already existed and mine wasn't different enough, so I stopped before writing code.</p></div><span class="verdict v-closed"><svg class="gp gp-x" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M7 6 C15 15 25 27 34 35"/><path d="M33 5 C25 14 14 25 6 34"/></svg><span class="gp-label">Dropped</span></span></li>
+        <li><div class="date"><span class="edge">02A ▸</span>2026.07</div><div class="main"><h3>Classify each photo as work first, then find the direction</h3><p>Over three rounds, the local model kept reading snapshots as serious work. The same day I dropped photo-by-photo classification and moved to analysing relations across photos, instead of hiding the problem with more prompt tuning.</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">Revised</span></span></li>
+        <li><div class="date"><span class="edge">03A ▸</span>2026.08</div><div class="main"><h3>With skills hidden and subtasks blocked, Prompt v1 succeeds at least once in three valid trials</h3><p>A feasibility hypothesis that a 0/3 result would disprove outright. The three valid trials have not all run yet.</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">Untested</span></span></li>
+        <li><div class="date"><span class="edge">04A ▸</span>2026.08</div><div class="main"><h3>When two skills overlap, keep both and narrow each one's role</h3><p>content-to-action owns the inbox and state. evidence-to-project-decision only makes project calls, and the handoff needs user confirmation. No merge, and no state owned by both.</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">Shipped</span></span></li>
       </ol>
+      <details class="more-d more-block">
+        <summary>Earlier calls · 3</summary>
+        <ol class="jl sheet">
+          <li><div class="date"><span class="edge">05A ▸</span>2026.07</div><div class="main"><h3>“Blue hour can count as night”</h3><p>This was my first modelling call. As I built on it, the exceptions kept piling up. The same day I made it a separate time slot and stopped patching “night”.</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">Revised</span></span></li>
+          <li><div class="date"><span class="edge">06A ▸</span>2026.08</div><div class="main"><h3>A drill is done when you explore seriously, not when you pick one good photo</h3><p>This is now the completion rule in Wind On. Whether it improves retention is a question for real users.</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">Untested</span></span></li>
+          <li><div class="date"><span class="edge">07A ▸</span>2026.10</div><div class="main"><h3>Not every task can fill a whole photo walk</h3><p>Now one outing can chain several drills, with one task in focus at a time. The user decides when to stop.</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">Shipped</span></span></li>
+        </ol>
+      </details>
     </div>
   </section>
 
@@ -991,28 +968,34 @@ section.blk.inverse .verdict.v-done{background:none}
     <div class="wrap">
       <div class="sec-head">
         <div><div class="eyebrow">Method</div><h2>How I build with AI</h2></div>
-        <p>I use real domain problems to set constraints, so AI output becomes something I can check. Then I verify behaviour, process and scope separately. When something fails, I keep the evidence, fix the model or the process, and only then decide whether to scale up.</p>
+        <p>Agents for speed, but every step leaves evidence I can check: tasks that can be judged, runs that can be reproduced, limits enforced by the environment, and verification reported in layers.</p>
       </div>
       <ol class="method">
         <li><h3>Write a task that can be judged right or wrong, then hand it to the agent</h3><p>Goal, existing context, hard constraints, what may be changed and the evidence for acceptance, each written out on its own.</p></li>
-        <li><h3>Use a domain model to remove ambiguity</h3><p>Common practice is not a requirement. When exceptions pile up, redraw the categories instead of adding rules.</p></li>
-        <li><h3>Prove that bad input gets rejected</h3><p>A passing happy-path example is not enough. In TDD, “red” must be the target assertion failing. An environment error doesn't count.</p></li>
         <li><h3>Freeze the start, keep the failures</h3><p>Same commit, prompt, model and permissions. Record the raw run first, then make manual fixes.</p></li>
-        <li><h3>Judge task outcome and experiment validity separately</h3><p>The feature can pass while the attribution is still invalid. One score can't stand in for both.</p></li>
-        <li><h3>Let the environment enforce the limits</h3><p>Forbidding something in the prompt doesn't mean the environment forbids it. Limits belong in the tool layer, and independent checks decide what is done.</p></li>
-        <li><h3>Make every generated result traceable</h3><p>Keep field IDs, versions, source text and hashes. A restore never quietly regenerates past results.</p></li>
+        <li><h3>Let the environment enforce the limits</h3><p>Forbidding something in the prompt doesn't mean the environment forbids it. Limits belong in the tool layer and permissions, and independent checks decide what is done.</p></li>
         <li><h3>Verify in layers, report in layers</h3><p>Unit tests, real models, browser, device, cloud and user feedback each report on their own. Working locally is not deployed.</p></li>
-      <li><h3>Decide if it's worth packaging before building a skill</h3><p>Only the same inputs, calls and checks coming up again and again justify a skill. If an existing skill can be extended, I don't build a new one.</p></li>
-        <li><h3>When skills work together, decide who owns state first</h3><p>Upstream owns the lifecycle. Downstream only returns its call. The handoff carries only what is needed and never widens write access on its own.</p></li>
+        <li><h3>Make every generated result traceable</h3><p>Keep field IDs, versions, source text and hashes. A restore never quietly regenerates past results.</p></li>
       </ol>
+      <details class="more-d more-block">
+        <summary>5 more</summary>
+        <ol class="method" start="6">
+          <li><h3>Use a domain model to remove ambiguity</h3><p>Common practice is not a requirement. When exceptions pile up, redraw the categories instead of adding rules.</p></li>
+          <li><h3>Prove that bad input gets rejected</h3><p>A passing happy-path example is not enough. In TDD, “red” must be the target assertion failing. An environment error doesn't count.</p></li>
+          <li><h3>Judge task outcome and experiment validity separately</h3><p>The feature can pass while the attribution is still invalid. One score can't stand in for both.</p></li>
+          <li><h3>Decide if it's worth packaging before building a skill</h3><p>Only the same inputs, calls and checks coming up again and again justify a skill. If an existing skill can be extended, I don't build a new one.</p></li>
+          <li><h3>When skills work together, decide who owns state first</h3><p>Upstream owns the lifecycle. Downstream only returns its call. The handoff carries only what is needed and never widens write access on its own.</p></li>
+        </ol>
+      </details>
     </div>
   </section>
 
 <section class="close" id="contact-en">
     <div class="wrap">
       <h2>Want to build something together?</h2>
-      <p>Job offers, project collaborations, or a chat about AI engineering, photography or short video: all welcome. I can talk in Chinese, English or French.</p>
+      <p>Job offers, project collaborations, or a chat about AI application engineering: all welcome. I can talk in Chinese, English or French.</p>
       <div class="mail" data-u="hugo.xinyulin" data-d="gmail.com">hugo.xinyulin [at] gmail.com</div>
+      <p class="cv-line"><a href="cv/Yulin_XIN_CV_FR.pdf" target="_blank" rel="noopener">Download CV (PDF, French) ↗</a></p>
     </div>
   </section>
 </main>
@@ -1020,9 +1003,9 @@ section.blk.inverse .verdict.v-done{background:none}
 <footer>
   <div class="wrap"><span>© 2026 Yulin Xin · 辛禹林</span><span>Paris</span></div>
 </footer>
-
 </div>
-<div class="L" data-l="fr" lang="fr" hidden>
+
+<div class="L" data-l="fr" lang="fr">
 <header class="top">
   <div class="wrap bar">
     <a class="brand" href="#hero-fr">Yulin Xin <small>辛禹林</small></a>
@@ -1044,22 +1027,33 @@ section.blk.inverse .verdict.v-done{background:none}
   <section class="hero" id="hero-fr">
     <div class="wrap">
       <div>
-        <p class="kicker rise">Ingénieur full-stack · Paris</p>
-        <h1 class="rise d2">Mettre l'IA<br>au service de vrais projets.</h1>
-        <p class="lede rise d3">Je suis <b>Yulin Xin</b>, développeur full-stack à Paris depuis 3 ans. J'ai porté un CRM interne, le DevOps d'un système cœur et la refonte complète d'une app client. Depuis un an, je consacre l'essentiel de mon temps libre à l'IA : rendre les Agents de code fiables, trier photos et vidéos avec des modèles locaux, écrire des Agent Skills pour la création de contenu.</p>
+        <p class="kicker rise">Ingénieur full-stack &amp; cloud · applications IA · Paris</p>
+        <h1 class="rise d2">Je transforme une idée<br>en produit en ligne.</h1>
+        <p class="lede rise d3">Je suis <b>Yulin Xin</b>, ingénieur full-stack avec 3 ans d'expérience en insurtech. J'ai porté un CRM interne, le DevOps d'un système métier et la refonte d'une app client, dont le nouveau front-end a fait passer le chargement des devis de plusieurs dizaines de secondes à moins de 5. Depuis un an, je me concentre sur les applications LLM et les agents de code : vite grâce aux agents, solide grâce aux tests, aux évaluations et à l'infrastructure as code.</p>
+        <p class="avail rise d3">En recherche d'un poste d'ingénieur IA applicative ou full-stack cloud à Paris · disponible à partir de janvier 2027 · autorisé à travailler en France</p>
         <div class="btns rise d4">
           <a class="btn btn-ivory" href="#work-fr">Voir mes projets</a>
-          <a class="btn btn-line" href="#contact-fr">Me contacter</a>
+          <a class="btn btn-line" href="cv/Yulin_XIN_CV_FR.pdf" target="_blank" rel="noopener">Télécharger mon CV (PDF)</a>
         </div>
         <div class="social rise d4">
-          <span>Me retrouver</span>
+          <span>Me trouver</span>
           <a href="https://github.com/mushroom42" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://www.linkedin.com/in/yulin-xin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://mushroom42.itch.io/stonelight" target="_blank" rel="noopener noreferrer">itch.io</a>
         </div>
       </div>
-      <figure class="snap rise d3" data-shot="Clic-clac. C’est dans la boîte.">
+      <figure class="snap rise d3" data-shot="Clic-clac. Dans la boîte. Voici ma carte.">
         <div class="snap-stage" data-label="Une personne à lunettes, un Leica autour du cou. Appuyez pour qu’elle vous prenne en photo"></div>
         <figcaption aria-live="polite">Appuyez, je vous prends en photo.</figcaption>
+        <div class="polaroid" hidden data-l="fr" data-title="Ingénieur full-stack & cloud · applications IA" data-note="Paris · disponible dès janvier 2027">
+          <div class="pol-photo" data-dev="Révélation…"><strong>Yulin Xin</strong><span>Ingénieur full-stack & cloud · applications IA</span><span>Paris · disponible dès janvier 2027</span></div>
+          <div class="pol-actions">
+            <button type="button" class="pol-copy" data-done="Copié">Copier l’e-mail</button>
+            <a href="cv/Yulin_XIN_CV_FR.pdf" download>CV (PDF)</a>
+            <button type="button" class="pol-vcf">Ajouter aux contacts</button>
+          </div>
+          <button type="button" class="pol-close" aria-label="Fermer">×</button>
+        </div>
       </figure>
     </div>
   </section>
@@ -1068,19 +1062,19 @@ section.blk.inverse .verdict.v-done{background:none}
     <div class="wrap">
       <div class="sec-head">
         <div><div class="eyebrow">Parcours</div><h2>De Shanghai à Paris, des pages web à toute la chaîne de livraison.</h2></div>
-        <p>Diplômé ingénieur en informatique. En stage, j'ai refondu un ancien système ; en poste, je suis passé du front-end au back-end, au cloud et au CI/CD. Aujourd'hui, l'IA est le prochain savoir-faire que je veux vraiment maîtriser.</p>
+        <p>Diplômé ingénieur en informatique. En stage, j'ai refondu un ancien système ; en poste, je suis passé du front-end au back-end, au cloud et au CI/CD. Aujourd'hui, je me concentre sur les applications LLM et l'évaluation d'agents.</p>
       </div>
       <ol class="tl">
         <li><div class="yr">2021.09 – 2024.02</div><div class="role">Informatique · titre d'ingénieur</div><div class="org">Université de technologie de Belfort-Montbéliard (UTBM)</div></li>
         <li><div class="yr">2022.09 – 2023.02</div><div class="role">Stagiaire support technique</div><div class="org">Capgemini Consulting · Shanghai</div></li>
-        <li><div class="yr">2023.08 – aujourd'hui</div><div class="role">Ingénieur full-stack</div><div class="org">Une insurtech parisienne</div></li>
-        <li><div class="yr">2025 – aujourd'hui</div><div class="role">Pratique de l'ingénierie IA</div><div class="org">Agents, modèles locaux, Skills</div></li>
+        <li><div class="yr">2023.08 – 2026.12</div><div class="role">Ingénieur full-stack</div><div class="org">Une insurtech parisienne</div></li>
+        <li><div class="yr">2025 – aujourd'hui</div><div class="role">Ingénierie d'applications IA</div><div class="org">Agents de code, évaluations, modèles locaux, Skills</div></li>
       </ol>
       <div class="stats">
-        <div class="stat"><b>3 ans</b><span>d'expérience en full-stack</span></div>
-        <div class="stat"><b>1 an</b><span>de pratique de l'ingénierie IA</span></div>
+        <div class="stat"><b>3 ans</b><span>de full-stack : front-end, back-end, cloud et CI/CD</span></div>
         <div class="stat"><b>3 produits</b><span>pilotés en autonomie</span></div>
-        <div class="stat"><b>3 langues</b><span>de travail : chinois (langue maternelle), anglais (C1+), français (B2)</span></div>
+        <div class="stat"><b>&lt; 5 s</b><span>de chargement des devis après la refonte, contre plusieurs dizaines avant</span></div>
+        <div class="stat"><b>3 langues</b><span>de travail : chinois (langue maternelle), anglais (C1+), français (B2)</span></div>
       </div>
     </div>
   </section>
@@ -1088,20 +1082,20 @@ section.blk.inverse .verdict.v-done{background:none}
   <section class="blk alt" id="now-fr">
     <div class="wrap feature">
       <div>
-        <div class="eyebrow">Travail · Insurtech</div>
-        <h3>Dans une insurtech parisienne, je gère à la fois front-end, back-end, cloud et livraison.</h3>
+        <div class="eyebrow">Travail · Insurtech · 2023–2026</div>
+        <h3>Dans une insurtech parisienne, j'ai géré à la fois front-end, back-end, cloud et livraison.</h3>
         <div class="body">
-          <p>L'équipe est petite : une seule personne porte souvent un produit de la conception à la mise en production. Je travaille en Scrum, avec Jira pour les sprints. Souvent, je fais d'abord un prototype, je le fais tester à mes collègues, puis je l'ajuste selon leurs retours.</p>
-          <p>Sur ces trois produits, ce qui compte le plus pour moi, c'est la chaîne de livraison : environnements cohérents, déploiement automatisé, droits clairs. C'est ce qui permet d'itérer vite et sereinement.</p>
+          <p>L'équipe est petite : une seule personne porte souvent un produit de la conception à la mise en production. Je travaillais en Scrum, avec Jira pour les sprints. Souvent, je faisais d'abord un prototype, je le faisais tester à mes collègues, puis je l'ajustais selon leurs retours. En cas d'incident en production ou au lancement d'un nouveau projet, c'est en général moi qu'on venait voir en premier.</p>
+          <p>Sur ces trois produits, ce qui compte le plus pour moi, c'est la chaîne de livraison : environnements cohérents, déploiement automatisé, droits clairs. C'est ce qui permet d'itérer vite et sereinement.</p>
         </div>
         <ul class="chips" aria-label="Technologies utilisées">
           <li>AWS Lambda</li><li>DynamoDB</li><li>Cognito</li><li>Serverless</li><li>Docker</li><li>GitHub Actions</li><li>Python · FastAPI</li><li>TypeScript</li><li>Vue</li><li>React</li><li>Flutter</li><li>Java</li><li>Salesforce</li>
         </ul>
       </div>
       <ol class="points">
-        <li><span class="k">1</span><div><b>CRM interne</b><span>Application web pour les équipes internes. Front-end Vue + TypeScript, back-end en Lambda Python, avec un système complet d'authentification et de droits. Architecture modulaire, pensée pour évoluer.</span></div></li>
-        <li><span class="k">2</span><div><b>DevOps du système métier principal</b><span>Système Java / Tomcat / Redis. Docker Compose pour harmoniser les environnements, GitHub Actions pour déployer automatiquement sur AWS EC2.</span></div></li>
-        <li><span class="k">3</span><div><b>Refonte de l'app client</b><span>J'ai mené seul la migration du contenu principal vers la nouvelle architecture, avec un front-end réécrit en React : performances, évolutivité et qualité du code nettement améliorées. J'ai aussi mis en place une CI/CD complète sur AWS.</span></div></li>
+        <li><span class="k">1</span><div><b>Refonte de l'app client</b><span>J'ai mené seul la migration du contenu principal vers une nouvelle architecture, avec un front-end réécrit en React : le chargement des devis est passé de plusieurs dizaines de secondes à moins de 5. J'ai aussi mis en place une CI/CD complète sur AWS, devenue le standard de l'équipe.</span></div></li>
+        <li><span class="k">2</span><div><b>CRM interne</b><span>Des tâches que les collègues faisaient à la main, transformées en outil web standardisé. Front-end Vue + TypeScript, back-end en Lambda Python, avec un système complet d'authentification et de droits pour des données d'assurance sensibles.</span></div></li>
+        <li><span class="k">3</span><div><b>DevOps du système métier principal</b><span>Système Java / Tomcat / Redis. Docker Compose pour harmoniser les environnements, GitHub Actions pour déployer automatiquement sur AWS EC2. J'étais aussi le référent sur les incidents de production.</span></div></li>
       </ol>
     </div>
   </section>
@@ -1109,8 +1103,8 @@ section.blk.inverse .verdict.v-done{background:none}
   <section class="blk" id="work-fr">
     <div class="wrap">
       <div class="sec-head">
-        <div><div class="eyebrow">Projets</div><h2>Ce que je fais sur mon temps libre</h2></div>
-        <p>Surtout autour de la photo et de la vidéo courte : des domaines que je connais et que je pratique vraiment, parfaits pour tester ce que l'IA sait bien faire. Je définis le problème, les arbitrages et la validation ; l'IA m'aide pour l'implémentation, la documentation et les vérifications.</p>
+        <div><div class="eyebrow">Projets</div><h2>De l'idée à la mise en ligne</h2></div>
+        <p>Chaque projet commence par ses résultats : en combien de temps il est sorti, ce qu'il livre, et ce qui garantit sa qualité. Je définis le problème, les arbitrages et la validation ; les agents IA accélèrent l'implémentation, la documentation et les vérifications.</p>
       </div>
 
       <div class="cases">
@@ -1118,7 +1112,7 @@ section.blk.inverse .verdict.v-done{background:none}
           <aside class="case-meta">
             <span class="tag">Jeu web</span>
             <h3>Stonelight</h3>
-            <span class="status s-live">Gratuit sur itch.io</span>
+            <span class="status s-live">En ligne sur itch.io · 300+ joueurs</span>
             <dl>
               <div><dt>Période</dt><dd>2026.11</dd></div>
               <div><dt>Stack</dt><dd>JavaScript · Canvas · lancer de rayons</dd></div>
@@ -1127,116 +1121,102 @@ section.blk.inverse .verdict.v-done{background:none}
           </aside>
           <div class="case-body">
             <p class="one">Un jeu incrémental en pixel art sur la taille des pierres. On casse la gangue, on règle l'angle du bas de la pierre, on polit les facettes. Les pierres taillées brillent, et la lumière sert de monnaie.</p>
-            <p>L'idée vient d'une vidéo qui explique pourquoi un diamant étincelle. Je voulais que « la lumière entre et ne ressort plus » devienne quelque chose qu'on essaie soi-même. Quand on règle l'angle, le jeu suit chaque rayon dans une coupe de la pierre et calcule la lumière qui reste, avec les vrais indices de réfraction et les équations de Fresnel. Fluorite, émeraude, corindon, opale et diamant ont chacun leurs règles. Tout le jeu tient dans un seul fichier HTML, sans serveur, et la progression est enregistrée dans le navigateur.</p>
-            <h4>Arbitrages clés</h4>
-            <ol class="dec">
-              <li><time>11.04</time><span>Pour régler l'angle, il fallait d'abord lire un schéma des rayons. Je l'ai remplacé par une barre qui montre la zone lumineuse et un simple appui sur la pierre. Le schéma est rangé dans un panneau dépliable, pour ceux qui veulent la physique.</span></li>
-              <li><time>11.04</time><span>La plupart des joueurs d'itch.io lisent l'anglais : tous les textes sont passés dans une seule table de traduction. Le jeu est en chinois et en anglais, suit la langue du navigateur et se change à la main.</span></li>
-              <li><time>11.04</time><span>J'ai refait tout le visuel façon planche de cristallographie, mais les pierres restent en pixel art : les pierres 3D pixelisées et la lumière colorée en dessous sont ce qu'on retient.</span></li>
-              <li><time>11.04</time><span>Le nom anglais devait être Hidden Light. Avant la sortie, j'ai trouvé des jeux du même nom sur itch : il est devenu Stonelight. La première version est gratuite, sans paiement.</span></li>
-            </ol>
-            <h4>Résultats</h4>
             <ul class="facts">
               <li><b>2 jours</b>du premier prototype à la sortie publique sur itch.io, en 26 commits</li>
-              <li><b>24,4°</b>c'est l'angle critique du diamant. La fluorite ne laisse qu'une fenêtre d'environ 2° pour garder la lumière ; le diamant est bien plus tolérant, et ça se sent en jouant</li>
+              <li><b>300+</b>joueurs à ce jour ; chinois et anglais, selon la langue du navigateur</li>
+              <li><b>0 back-end</b>tout le jeu tient dans un seul fichier HTML, la progression est enregistrée dans le navigateur</li>
             </ul>
-            <p class="gap">Pas encore : données et retours de joueurs, tests d'équilibrage, système de prestige.</p>
+            <p>L'idée vient d'une vidéo qui explique pourquoi un diamant étincelle. Je voulais que « la lumière entre et ne ressort plus » devienne quelque chose qu'on essaie soi-même. Quand on règle l'angle, le jeu suit chaque rayon dans une coupe de la pierre et calcule la lumière qui reste, avec les vrais indices de réfraction et les équations de Fresnel. L'angle critique du diamant est de 24,4°, alors que la fluorite ne laisse qu'une fenêtre d'environ 2° : ça se sent en jouant.</p>
+            <details class="more-d">
+              <summary>Arbitrages clés · 4</summary>
+              <ol class="dec">
+                <li><time>11.04</time><span>Pour régler l'angle, il fallait d'abord lire un schéma des rayons. Je l'ai remplacé par une barre qui montre la zone lumineuse et un simple appui sur la pierre. Le schéma est rangé dans un panneau dépliable, pour ceux qui veulent la physique.</span></li>
+                <li><time>11.04</time><span>La plupart des joueurs d'itch.io lisent l'anglais : tous les textes sont passés dans une seule table de traduction. Le jeu est en chinois et en anglais, suit la langue du navigateur et se change à la main.</span></li>
+                <li><time>11.04</time><span>J'ai refait tout le visuel façon planche de cristallographie, mais les pierres restent en pixel art : les pierres 3D pixelisées et la lumière colorée en dessous sont ce qu'on retient.</span></li>
+                <li><time>11.04</time><span>Le nom anglais devait être Hidden Light. Avant la sortie, j'ai trouvé des jeux du même nom sur itch : il est devenu Stonelight. La première version est gratuite, sans paiement.</span></li>
+              </ol>
+            </details>
+            <p class="gap">Prochaines étapes : tests d'équilibrage, système de prestige.</p>
           </div>
         </article>
 
         <article class="case">
           <aside class="case-meta">
-            <span class="tag">Produit web mobile</span>
-            <h3>Wind On</h3>
-            <span class="status s-wip">Validée sur iPhone réel · test privé à venir</span>
-            <dl>
-              <div><dt>Période</dt><dd>2026.07 – aujourd'hui</dd></div>
-              <div><dt>Stack</dt><dd>TypeScript · Vite · IndexedDB · Vitest · AWS Lambda · DynamoDB</dd></div>
-            </dl>
-          </aside>
-          <div class="case-body">
-            <p class="one">Pour qui a quelques bases en photo mais ne sait pas quoi photographier une fois dehors : un exercice d'observation à mener sur le terrain, dont on juge soi-même la fin.</p>
-            <p>Au départ, c'était un générateur de sujets aléatoires, pour sortir avec un objectif sans hésiter. C'est devenu un exercice cadré : il dit quoi observer et quelle règle tenir dans l'image, mais ne juge ni les conditions sur place, ni les photos.</p>
-            <h4>Arbitrages clés</h4>
-            <ol class="dec">
-              <li><time>08.18</time><span>Terminer, c'est avoir vraiment exploré le thème, pas rendre « la meilleure photo ». Aucune contrainte de matériel, de focale ou d'exposition : argentique et numérique sont acceptés.</span></li>
-              <li><time>09.30</time><span>L'option lumière devient « quel contraste ombre-lumière observer ». Le photographe juge lui-même s'il y a de la lumière ; on ne déduit plus la faisabilité de l'heure de l'appareil.</span></li>
-              <li><time>10.05</time><span>« Trouver un point d'ancrage rouge » devient « trouver un point d'ancrage coloré ». Une couleur, une source de lumière ou une matière précise ne doit pas conditionner tout un type d'exercice.</span></li>
-              <li><time>10.08</time><span>Prise de vue d'abord en 1:1, orientation portrait fixe, partage de trois photos maximum, pas de mesure de lumière pour l'instant. Le basculement automatique paysage/portrait a été discuté le jour même, puis j'ai volontairement réduit le périmètre.</span></li>
-              <li><time>10.16</time><span>Pour le cadrage, j'ai comparé trois options sur le téléphone : carré, fenêtre verticale 3:4, et fenêtre carrée avec cadre. J'ai choisi le cadre : la fenêtre reste carrée, un cadre 3:4 suit l'image de la caméra, et la photo enregistrée correspond exactement à l'intérieur du cadre.</span></li>
-              <li><time>10.22</time><span>Après avoir essayé les deux parcours sur le téléphone, j'ai abandonné l'animation « fermer le capot, rentrer les bagues, éjecter la carte ». La tâche est désormais une feuille de papier avec trois positions : quand la feuille couvre le boîtier, le capuchon du viseur se ferme ; quand elle s'écarte, il s'ouvre.</span></li>
-              <li><time>10.24</time><span>Le back-end de retours tourne sur AWS à Singapour, car la plupart des testeurs sont en Chine. Il ne reçoit que les événements liés aux tâches ; photos et bilans restent sur le téléphone et ne sont jamais envoyés.</span></li>
-            </ol>
-            <h4>Résultats</h4>
-            <ul class="facts">
-              <li><b>7 / 14</b>Sept axes d'exercice, quatorze familles de tâches ; chaque tâche remonte aux champs et à la version qui l'ont générée</li>
-              <li><b>53 + 5</b>tests front-end et back-end au vert (10.24) ; caméra, autorisations, stockage des photos et partage validés aussi sur l'iPhone cible (10.23)</li>
-            </ul>
-            <p class="gap">Reste à faire : le test privé avec des testeurs invités, et les données d'usage réelles. L'accès depuis la Chine continentale n'est pas encore vérifié.</p>
-          </div>
-        </article>
-
-        <article class="case">
-          <aside class="case-meta">
-            <span class="tag">Expérience d'IA locale</span>
-            <h3>Boussole photo</h3>
-            <span class="status s-pivot">Architecture revue après expérience</span>
-            <dl>
-              <div><dt>Période</dt><dd>2026.07</dd></div>
-              <div><dt>Stack</dt><dd>Python · PhotoKit · Apple Vision · Ollama · Qwen2.5-VL</dd></div>
-            </dl>
-          </aside>
-          <div class="case-body">
-            <p class="one">Pour les photographes amateurs qui ont beaucoup de photos mais voient mal leur direction créative : tirer de leur photothèque une carte des directions, contestable et corrigeable, où chaque conclusion s'appuie sur des photos.</p>
-            <p>Une vraie photothèque mélange voyages, famille, captures d'écran et documents ; les photos d'auteur n'en sont qu'une petite part. Je ne voulais pas obliger l'utilisateur à trier des dizaines de photos avant de commencer. J'ai donc testé d'abord sur ma propre photothèque : traitement uniquement en local, avec des aperçus de 512 px.</p>
-            <h4>Arbitrages clés</h4>
-            <ol class="dec">
-              <li><time>07.27</time><span>Proposer quelques hypothèses de direction corrigeables, avec photos représentatives, contre-exemples et autres lectures possibles. Pas de note, ni d'étiquette du type « vous ressemblez à tel maître ».</span></li>
-              <li><time>07.27</time><span>Trois versions de Prompt sur les mêmes 20 photos. Le format était réglé, mais le modèle surinterprétait encore : de simples photos du quotidien devenaient des œuvres candidates. J'ai donc arrêté le jugement photo par photo pour chercher d'abord les choix qui se répètent d'une photo à l'autre.</span></li>
-            </ol>
-            <h4>Résultats</h4>
-            <ul class="facts">
-              <li><b>3 essais</b>comparatifs sur le même échantillon ; échecs conservés en entier, sans les masquer à force de retoucher le Prompt</li>
-              <li><b>≈3,3 s</b>par photo avec le modèle local (20 photos : indique la vitesse, pas la précision)</li>
-            </ul>
-            <p class="gap">Prochaines étapes : regroupement entre photos, carte complète des directions et validation par des utilisateurs externes.</p>
-          </div>
-        </article>
-
-        <article class="case">
-          <aside class="case-meta">
-            <span class="tag">Apprentissage de l'ingénierie IA</span>
+            <span class="tag">Évaluation d'agents IA</span>
             <h3>Agentic Photo Lab</h3>
-            <span class="status s-wip">Expérience d'apprentissage en cours</span>
+            <span class="status s-wip">Banc prêt · essais en cours</span>
             <dl>
               <div><dt>Période</dt><dd>2026.07 – 08</dd></div>
               <div><dt>Stack</dt><dd>TypeScript · TDD · Eval · Rubric</dd></div>
             </dl>
           </aside>
           <div class="case-body">
-            <p class="one">La photo comme domaine contrôlé, pour observer et évaluer comment un Agent de code travaille sous contraintes complexes, et où il échoue.</p>
-            <p>Je veux apprendre à gérer Prompt, Context et Skills, et comprendre les limites et les modes d'échec des Agents, pas faire écrire tout le front et le back par l'IA. D'où un travail en binôme : j'implémente et je décide, l'IA explique, suggère et relit.</p>
-            <h4>Arbitrages clés</h4>
-            <ol class="dec">
-              <li><time>07.28</time><span>Prompt et commit de départ figés, exécution en environnement isolé, aucune correction manuelle avant la fin, résultats bruts conservés.</span></li>
-              <li><time>07.28</time><span>Au premier vrai run, tout passait, mais l'exécution avait activé d'elle-même une Skill et une sous-tâche de relecture : la configuration avait changé. Je l'ai classé « résultat contaminé », pas comme référence du Prompt seul.</span></li>
-              <li><time>08.03</time><span>Formuler une hypothèse réfutable par un 0/3, et juger séparément « tâche réussie » et « expérience valide ».</span></li>
-            </ol>
-            <h4>Résultats</h4>
+            <p class="one">Un banc d'essai pour agents de code : dans des conditions reproductibles, il mesure si un agent respecte des contraintes combinées, et où il échoue.</p>
             <ul class="facts">
-              <li><b>17/17</b>tests au vert sur ce run, seuls les deux fichiers autorisés modifiés, 0 minute de correction manuelle</li>
-              <li><b>13</b>notes d'apprentissage numérotées, avec Prompts, modèles de Context, grilles d'évaluation et fiches de modes d'échec</li>
+              <li><b>17/17</b>tests au vert sur un run aux conditions figées, seuls les deux fichiers autorisés modifiés, 0 minute de correction manuelle</li>
+              <li><b>13</b>notes d'évaluation numérotées, avec Prompts, modèles de Context, grilles d'évaluation et fiches de modes d'échec</li>
             </ul>
-            <p class="gap">Pas encore démontré : des essais répétés valides, un A/B entre Context et Skill, un taux de réussite stable.</p>
+            <p>Ce qui m'intéresse, c'est de savoir si la sortie d'un agent est fiable, pas seulement de lui faire finir le code. Chaque run fige donc le point de départ, s'exécute en isolation et ne reçoit aucune correction manuelle avant la fin ; « tâche réussie » et « expérience valide » sont ensuite jugés séparément. Le domaine choisi, l'entraînement photo, je le connais bien : les contraintes sont riches et les réponses faciles à vérifier.</p>
+            <details class="more-d">
+              <summary>Arbitrages clés · 3</summary>
+              <ol class="dec">
+                <li><time>07.28</time><span>Prompt et commit de départ figés, exécution en environnement isolé, aucune correction manuelle avant la fin, résultats bruts conservés.</span></li>
+                <li><time>07.28</time><span>Au premier vrai run, tout passait, mais l'exécution avait activé d'elle-même une Skill et une sous-tâche de relecture : la configuration avait changé. Je l'ai classé « résultat contaminé », pas comme référence du Prompt seul.</span></li>
+                <li><time>08.03</time><span>Formuler une hypothèse réfutable par un 0/3, et juger séparément « tâche réussie » et « expérience valide ».</span></li>
+              </ol>
+            </details>
+            <p class="gap">Pas encore démontré : des essais répétés valides, un A/B entre Context et Skill, un taux de réussite stable.</p>
+          </div>
+        </article>
+
+        <article class="case">
+          <aside class="case-meta">
+            <span class="tag">Produit web mobile · full-stack</span>
+            <h3>Wind On</h3>
+            <span class="status s-wip">Validée sur iPhone réel · test privé à venir</span>
+            <dl>
+              <div><dt>Période</dt><dd>2026.07 – aujourd'hui</dd></div>
+              <div><dt>Stack</dt><dd>TypeScript · Vite · IndexedDB · Vitest · AWS SAM (Lambda · HTTP API · DynamoDB)</dd></div>
+            </dl>
+          </aside>
+          <div class="case-body">
+            <p class="one">Pour qui a quelques bases en photo mais ne sait pas quoi photographier une fois dehors : un exercice d'observation à mener sur le terrain, dont on juge soi-même la fin.</p>
+            <ul class="facts">
+              <li><b>53 + 5</b>tests front-end et back-end au vert ; caméra, autorisations, stockage des photos et partage validés sur l'iPhone cible</li>
+              <li><b>7 / 14</b>sept axes d'exercice, quatorze familles de tâches ; chaque tâche remonte aux champs et à la version qui l'ont générée</li>
+            </ul>
+            <p>Au départ, un générateur de sujets aléatoires ; c'est devenu un exercice cadré : il dit quoi observer et quelle règle tenir dans l'image, sans juger les conditions sur place ni les photos. Le back-end de retours est déployé avec AWS SAM et ne reçoit que les événements liés aux tâches ; photos et bilans restent sur le téléphone.</p>
+            <details class="more-d">
+              <summary>Arbitrages clés · 7</summary>
+              <ol class="dec">
+                <li><time>08.18</time><span>Terminer, c'est avoir vraiment exploré le thème, pas rendre « la meilleure photo ». Aucune contrainte de matériel, de focale ou d'exposition : argentique et numérique sont acceptés.</span></li>
+                <li><time>09.30</time><span>L'option lumière devient « quel contraste ombre-lumière observer ». Le photographe juge lui-même s'il y a de la lumière ; on ne déduit plus la faisabilité de l'heure de l'appareil.</span></li>
+                <li><time>10.05</time><span>« Trouver un point d'ancrage rouge » devient « trouver un point d'ancrage coloré ». Une couleur, une source de lumière ou une matière précise ne doit pas conditionner tout un type d'exercice.</span></li>
+                <li><time>10.08</time><span>Prise de vue d'abord en 1:1, orientation portrait fixe, partage de trois photos maximum, pas de mesure de lumière pour l'instant. Le basculement automatique paysage/portrait a été discuté le jour même, puis j'ai volontairement réduit le périmètre.</span></li>
+                <li><time>10.16</time><span>Pour le cadrage, j'ai comparé trois options sur le téléphone : carré, fenêtre verticale 3:4, et fenêtre carrée avec cadre. J'ai choisi le cadre : la fenêtre reste carrée, un cadre 3:4 suit l'image de la caméra, et la photo enregistrée correspond exactement à l'intérieur du cadre.</span></li>
+                <li><time>10.22</time><span>Après avoir essayé les deux parcours sur le téléphone, j'ai abandonné l'animation « fermer le capot, rentrer les bagues, éjecter la carte ». La tâche est désormais une feuille de papier avec trois positions : quand la feuille couvre le boîtier, le capuchon du viseur se ferme ; quand elle s'écarte, il s'ouvre.</span></li>
+                <li><time>10.24</time><span>Le back-end de retours tourne sur AWS à Singapour, car la plupart des testeurs sont en Chine. Il ne reçoit que les événements liés aux tâches ; photos et bilans restent sur le téléphone et ne sont jamais envoyés.</span></li>
+              </ol>
+            </details>
+            <p class="gap">Reste à faire : le test privé avec des testeurs invités, et les données d'usage réelles.</p>
           </div>
         </article>
       </div>
 
-      <h3 class="sub">Autres projets</h3>
+      <h3 class="sub">Autres réalisations</h3>
       <div class="proj">
-        <article class="card"><span class="tag">Outil en ligne de commande · 2026.07</span><h3>video-to-md</h3><p>Convertit une vidéo ou un dossier entier en Markdown avec whisper.cpp en local. Transcription brute, sans résumé ni réécriture. Aucun fichier existant n'est écrasé, les vidéos homonymes de formats différents sont traitées à part, et en cas de plantage GPU, retour au CPU.</p><span class="stack">Python · whisper.cpp · ffmpeg</span></article>
-        <article class="card"><span class="tag">Conception de processus · 2026.09</span><h3>Cahier de production vidéo IA</h3><p>Un cadre qui relie histoire, références, génération, montage et validation : d'abord une prévisualisation sonore du storyboard et des tests des plans difficiles, puis la génération en série. S'y ajoute une note créative pour une démo de web-série illustrée en français, pas encore en production.</p><span class="stack">Cadre de processus · 8 plans esquissés</span></article>
+        <article class="card"><span class="tag">Pipeline IA local · 2026.07</span><h3>Médiathèque vidéo locale</h3><p>Tout tourne en local : whisper.cpp transcrit les vidéos, un LLM local (Ollama) les classe par thème, avec recherche plein texte et export SRT. Son outil en ligne de commande, video-to-md, n'écrase jamais un fichier existant et repasse sur le CPU si le GPU plante.</p><span class="stack">Python · whisper.cpp · Ollama · ffmpeg</span></article>
+        <article class="card"><span class="tag">Infrastructure as code · 2026.11</span><h3>Ce site</h3><p>Un site statique en chinois, anglais et français. L'hébergement sur AWS Amplify est décrit en CloudFormation, le déploiement passe par un rôle dédié à privilèges minimaux, les en-têtes de sécurité (CSP, HSTS…) sont en place, et un seul script publie le tout. Le dépôt est public.</p><span class="stack">HTML · CSS · JS · CloudFormation · Amplify · IAM</span><a class="case-link" href="https://github.com/mushroom42/yulinxin-site" target="_blank" rel="noopener noreferrer">Voir le dépôt ↗</a></article>
+        <article class="card"><span class="tag">Du besoin à la livraison · 2026</span><h3>Agents IA pour des proches</h3><p>J'installe et je configure des agents de code pour des proches qui ne programment pas. Je repère d'abord ce qui se répète dans leur travail, puis j'écris des Skills sur mesure pour que l'agent suive leur façon de faire.</p><span class="stack">Configuration d'agents · Skills sur mesure</span></article>
       </div>
+
+      <details class="more-d more-block">
+        <summary>Autres expériences · 2</summary>
+        <div class="proj">
+          <article class="card"><span class="tag">Expérience d'IA locale · 2026.07</span><h3>Boussole photo</h3><p>Utiliser un modèle de vision local (Qwen2.5-VL) pour dégager la direction créative d'une photothèque, avec un traitement entièrement sur l'appareil. Trois versions de Prompt sur les mêmes 20 photos : le modèle surinterprétait encore des photos du quotidien. J'ai donc arrêté le jugement photo par photo pour chercher les choix qui se répètent d'une photo à l'autre.</p><span class="stack">Python · PhotoKit · Apple Vision · Ollama</span></article>
+          <article class="card"><span class="tag">Conception de processus · 2026.09</span><h3>Cahier de production vidéo IA</h3><p>Un cadre qui relie histoire, références, génération, montage et validation : d'abord une prévisualisation sonore du storyboard et des tests des plans difficiles, puis la génération en série.</p><span class="stack">Cadre de processus · 8 plans esquissés</span></article>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -1244,69 +1224,35 @@ section.blk.inverse .verdict.v-done{background:none}
     <div class="wrap">
       <div class="sec-head">
         <div><div class="eyebrow">SKILLS MAISON</div><h2>Transformer les jugements récurrents en protocoles qu'un Agent peut exécuter.</h2></div>
-        <p>Quand je refais le même type de travail une troisième ou quatrième fois, j'envisage d'en faire une Skill : un point d'entrée pour les principes communs, des détails lus à la demande, des versions, des contrôles, un usage d'un projet à l'autre. Pour ces cinq Skills, je pose le problème, fixe les contraintes et tranche ; l'IA m'aide à écrire protocoles, scripts et tests.</p>
+        <p>Quand je refais le même type de travail une troisième ou quatrième fois, j'en fais une Skill : un point d'entrée pour les principes communs, des détails lus à la demande, des versions, des scripts de contrôle, un usage d'un projet à l'autre. Je pose le problème, les contraintes et les arbitrages ; l'IA m'aide à écrire protocoles, scripts et tests.</p>
       </div>
-
-      <figure class="flow" aria-label="Passage de relais entre deux Skills">
-        <div class="node n-src"><b>Sources sauvegardées</b><span>Articles, transcriptions vidéo. Lecture seule, hash conservé</span></div>
-        <div class="arrow" aria-hidden="true"></div>
-        <div class="node n-skill"><code>content-to-action</code><span>Gère la boîte de réception, les fiches d'usage et le cycle de vie : à traiter, en attente, archivé, pratiqué</span></div>
-        <div class="arrow arrow-label" aria-hidden="true"><em>Transmis après accord de l'utilisateur</em></div>
-        <div class="node n-skill"><code>evidence-to-project-decision</code><span>Établit la base du projet, hiérarchise les preuves, ne renvoie qu'un dossier de décision</span></div>
-        <div class="arrow" aria-hidden="true"></div>
-        <div class="node n-out"><b>Adopter · Tester · Reporter · Refuser</b><span>Résultat reporté sur la fiche d'usage, sans prendre la main sur son état</span></div>
-        <figcaption>À leur création, les deux Skills se chevauchaient. En creusant, j'ai redéfini leurs frontières : l'état appartient à l'amont seul, l'aval ne fait que juger, et le relais ne transmet que le nécessaire.</figcaption>
-      </figure>
 
       <div class="skills">
         <article class="skill">
-          <header><code>short-video-growth-director</code><span class="tag">2026.08 · 3 itérations</span></header>
-          <h3>Directeur de croissance vidéo courte</h3>
-          <p>Du problème de l'utilisateur au bilan après publication, en passant par la stratégie de croissance, le mix de contenus, la conception de séries et les scripts : tout le processus est réutilisable d'un projet à l'autre.</p>
-          <ul>
-            <li>Les nouvelles connaissances sont classées en trois catégories : méthodes générales, infos de plateforme datées, spécificités d'un projet. Seules les méthodes générales entrent dans les règles globales.</li>
-            <li>Fenêtres de visibilité, programmes de soutien, seuils d'abonnés : tout est traité comme une hypothèse datée à vérifier, jamais comme une loi.</li>
-            <li>Une mise à jour passe d'abord par <code>--check</code>, puis <code>--apply</code> ; refus immédiat si l'espace de travail est modifié ou si les versions divergent. Branchée sur cinq outils d'Agent.</li>
-          </ul>
-        </article>
-        <article class="skill">
-          <header><code>content-to-action</code><span class="tag">Créée en 2026.08 · testée en octobre</span></header>
-          <h3>De la sauvegarde à la pratique</h3>
-          <p>Beaucoup de contenus sauvegardés, jamais utilisés ? Elle transforme chaque source en fiche d'usage : est-ce que ça vaut le coup, où l'appliquer, et y a-t-il une preuve une fois fait.</p>
-          <ul>
-            <li>Trois candidats prioritaires par semaine au maximum, voire aucun. Pas de tâches créées automatiquement.</li>
-            <li>Le jugement de valeur revient à l'Agent ; les scripts se limitent au scan, au hash, à l'index et aux contrôles de structure.</li>
-            <li>Test réel sur les 5 sources les plus anciennes : 5 fiches générées, SHA-256 des sources inchangés, et une seule retenue comme candidate à la pratique.</li>
-          </ul>
-        </article>
-        <article class="skill">
-          <header><code>evidence-to-project-decision</code><span class="tag">2026.08</span></header>
-          <h3>Des preuves à la décision</h3>
-          <p>Ramener un livre, une tendance ou un concurrent à une question : « notre projet doit-il changer ? » D'abord les contraintes du projet, ensuite les preuves externes.</p>
-          <ul>
-            <li>Quatre issues seulement : adopter tout de suite, expérience minimale, reporter, refuser. Une expérience minimale doit fixer son seuil de réussite et sa condition d'arrêt.</li>
-            <li>Pas un énième outil de recherche. Une seule question : quelle décision précise cette preuve change-t-elle ?</li>
-            <li>Le coût d'opportunité compte aussi comme preuve. Une ressource utile peut, elle aussi, être reportée ou refusée.</li>
-          </ul>
-        </article>
-        <article class="skill">
-          <header><code>authentic-communication-coach</code><span class="tag">Créée en 2026.08 · mise à jour en octobre</span></header>
-          <h3>Coach de communication sincère</h3>
-          <p>S'exercer à écouter, répondre, s'exprimer et poser des limites. Entraînement, conversation réelle et réparation d'une relation sont traités à part. Ni recettes toutes faites, ni manipulation.</p>
-          <ul>
-            <li>Le parcours : écrire d'abord sa propre réponse, recevoir un retour phrase par phrase, réécrire, s'exercer dans la vraie vie, puis faire le bilan. Aucune belle formule générée d'office.</li>
-            <li>Avant de travailler la formulation, vérifier si le problème se règle vraiment par les mots. Propos exacts, déductions et inconnues sont notés à part.</li>
-            <li>Les mises à jour n'intègrent que les sources alignées sur l'objectif ; les notes de physique ou les « niveaux » de relation sont refusés. Quand une source n'a pas été vérifiée de façon indépendante, c'est écrit dans les limites.</li>
-          </ul>
-        </article>
-        <article class="skill">
           <header><code>pixel-mv</code><span class="tag">2026.10 · tirée d'un clip</span></header>
-          <h3>Clips en pixel art</h3>
-          <p>Transforme une chanson en clip façon RPG en pixel art. Les scènes sont dessinées en 320×180 puis agrandies en 1080p, et les paroles s'allument caractère par caractère dans une boîte de dialogue de jeu. Le premier : 任我行 d'Eason Chan, 4 min 39.</p>
+          <h3>Chaîne de clips en pixel art</h3>
+          <p>Transforme une chanson en clip façon RPG en pixel art. Les scènes sont dessinées en 320×180 puis agrandies en 1080p, et les paroles s'allument caractère par caractère dans une boîte de dialogue de jeu. Le premier dure 4 min 39.</p>
           <ul>
-            <li>Le moteur et la chaîne de production existent déjà. Le vrai travail, c'est de traduire parole → image → mécanique de jeu : l'agent écrit d'abord un storyboard et ne code qu'une fois que je l'ai validé.</li>
-            <li>Le style visuel doit naître de la chanson. Pour 任我行, c'était une histoire des consoles : les graphismes progressent au fil de la vie, tandis que la carte du monde rétrécit.</li>
-            <li>Mes 11 remarques sur ce clip sont consignées dans un journal de retours. La plus fréquente : « trop abstrait ». Elles sont devenues une liste d'autocontrôle : chaque image doit porter le vrai sens de la parole, et le sujet doit se lire d'un coup d'œil.</li>
+            <li>Le moteur et la chaîne de rendu sont figés : pour chaque nouvelle chanson, il ne reste qu'à écrire le storyboard et les scènes. Le code ne s'écrit qu'une fois le storyboard validé.</li>
+            <li>Mes 11 demandes de modification sur le premier clip sont consignées dans un journal de retours, devenu la liste d'autocontrôle avant chaque livraison.</li>
+          </ul>
+        </article>
+        <article class="skill">
+          <header><code>short-video-growth-director</code><span class="tag">2026.08 · 3 itérations</span></header>
+          <h3>Une Skill multi-projets qu'on peut mettre à jour</h3>
+          <p>Une Skill de processus, du choix du sujet au bilan après publication. Ce qui compte ici, c'est sa maintenance : comment les connaissances sont classées, et comment les mises à jour restent sûres.</p>
+          <ul>
+            <li>Les nouvelles connaissances sont classées en trois catégories : méthodes générales, infos de plateforme datées, spécificités d'un projet. Seules les méthodes générales entrent dans les règles globales.</li>
+            <li>Une mise à jour passe d'abord par <code>--check</code>, puis <code>--apply</code> ; refus immédiat si l'espace de travail est modifié ou si les versions divergent. Branchée sur cinq outils d'Agent.</li>
+          </ul>
+        </article>
+        <article class="skill">
+          <header><code>content-to-action</code> + <code>evidence-to-project-decision</code><span class="tag">2026.08</span></header>
+          <h3>Deux Skills de workflow qui coopèrent</h3>
+          <p>La première transforme les contenus sauvegardés en fiches d'usage et gère leur état. La seconde décide seulement si une preuve doit changer un projet : adopter, expérience minimale, reporter ou refuser.</p>
+          <ul>
+            <li>Au départ, leurs rôles se chevauchaient. J'ai redessiné la frontière : l'état appartient à l'amont seul, l'aval ne renvoie que son jugement, et le relais passe par l'accord de l'utilisateur.</li>
+            <li>Le jugement de valeur revient à l'Agent ; les scripts se limitent au scan, au hash, à l'index et aux contrôles de structure. Test réel sur 5 sources : tous les SHA-256 inchangés.</li>
           </ul>
         </article>
       </div>
@@ -1320,15 +1266,19 @@ section.blk.inverse .verdict.v-done{background:none}
         <p>Ce que je fais et ce que je ne fais pas, daté du jour de la décision. Les erreurs et les corrections restent ici aussi.</p>
       </div>
       <ol class="jl sheet">
-        <li><div class="date"><span class="edge">01A ▸</span>2026.06</div><div class="main"><h3>Pas de BossDirect</h3><p>Une app de recrutement pour mettre en relation directe talents tech en France et fondateurs de startups ; l'architecture technique était prête. L'étude de marché a montré que le matching par swipe existait déjà, sans différence suffisante. J'ai arrêté.</p></div><span class="verdict v-closed"><svg class="gp gp-x" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M7 6 C15 15 25 27 34 35"/><path d="M33 5 C25 14 14 25 6 34"/></svg><span class="gp-label">Abandonné</span></span></li>
-        <li><div class="date"><span class="edge">02A ▸</span>2026.07</div><div class="main"><h3>« L'heure bleue peut compter comme la nuit »</h3><p>C'était mon hypothèse de modélisation de départ. En la suivant, les exceptions se multipliaient. Le jour même, j'en ai fait une plage horaire à part, au lieu de rapiécer encore la « nuit ».</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">Corrigé</span></span></li>
-        <li><div class="date"><span class="edge">03A ▸</span>2026.07</div><div class="main"><h3>Repérer les œuvres une à une, puis trouver la direction</h3><p>Après trois essais, le modèle surinterprétait toujours des photos du quotidien comme des œuvres. Le jour même, j'ai abandonné le classement photo par photo pour analyser les liens entre plusieurs photos.</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">Corrigé</span></span></li>
-        <li><div class="date"><span class="edge">04A ▸</span>2026.08</div><div class="main"><h3>Sans Skill exposée ni sous-tâches, le Prompt v1 réussit au moins une fois sur trois essais valides</h3><p>Une hypothèse de faisabilité réfutable directement par un 0/3. Les trois essais valides n'ont pas encore été menés.</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">À vérifier</span></span></li>
-        <li><div class="date"><span class="edge">05A ▸</span>2026.08</div><div class="main"><h3>Terminer un exercice, c'est explorer sérieusement, pas choisir une belle photo</h3><p>C'est désormais le critère de fin de Wind On. Reste à savoir s'il améliore la rétention : seuls de vrais utilisateurs le diront.</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">À vérifier</span></span></li>
-        <li><div class="date"><span class="edge">06A ▸</span>2026.08</div><div class="main"><h3>Deux Skills qui se chevauchent : garder les deux, mais resserrer leur rôle</h3><p>content-to-action gère la boîte de réception et l'état, evidence-to-project-decision ne fait que juger le projet, et le relais passe par l'accord de l'utilisateur. Pas de fusion, et jamais le même état détenu des deux côtés.</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">Adopté</span></span></li>
-        <li><div class="date"><span class="edge">07A ▸</span>2026.10</div><div class="main"><h3>Avant qu'une Skill intègre du nouveau, vérifier la compatibilité</h3><p>Pour la mise à jour de la Skill de communication, je n'ai gardé que ce qui servait l'objectif, en refusant la manipulation et les généralisations non prouvées sur des groupes. Trois fichiers mis à jour ont passé les contrôles et ont été poussés.</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">Adopté</span></span></li>
-        <li><div class="date"><span class="edge">08A ▸</span>2026.10</div><div class="main"><h3>Toutes les tâches ne justifient pas une sortie photo entière</h3><p>Désormais, une même sortie permet d'enchaîner les exercices, mais un seul à la fois, et c'est l'utilisateur qui décide quand arrêter.</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">Adopté</span></span></li>
+        <li><div class="date"><span class="edge">01A ▸</span>2026.06</div><div class="main"><h3>Pas de BossDirect</h3><p>Une app de recrutement pour mettre en relation directe talents tech en France et fondateurs de startups ; l'architecture technique était prête. L'étude de marché a montré que le matching par swipe existait déjà, sans différence suffisante. J'ai arrêté avant d'écrire le code.</p></div><span class="verdict v-closed"><svg class="gp gp-x" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M7 6 C15 15 25 27 34 35"/><path d="M33 5 C25 14 14 25 6 34"/></svg><span class="gp-label">Abandonné</span></span></li>
+        <li><div class="date"><span class="edge">02A ▸</span>2026.07</div><div class="main"><h3>Repérer les œuvres une à une, puis trouver la direction</h3><p>Après trois essais, le modèle local surinterprétait toujours des photos du quotidien comme des œuvres. Le jour même, j'ai abandonné le classement photo par photo pour analyser les liens entre plusieurs photos, plutôt que de masquer le problème en retouchant le Prompt.</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">Corrigé</span></span></li>
+        <li><div class="date"><span class="edge">03A ▸</span>2026.08</div><div class="main"><h3>Sans Skill exposée ni sous-tâches, le Prompt v1 réussit au moins une fois sur trois essais valides</h3><p>Une hypothèse de faisabilité réfutable directement par un 0/3. Les trois essais valides n'ont pas encore été menés.</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">À vérifier</span></span></li>
+        <li><div class="date"><span class="edge">04A ▸</span>2026.08</div><div class="main"><h3>Deux Skills qui se chevauchent : garder les deux, mais resserrer leur rôle</h3><p>content-to-action gère la boîte de réception et l'état, evidence-to-project-decision ne fait que juger le projet, et le relais passe par l'accord de l'utilisateur. Pas de fusion, et jamais le même état détenu des deux côtés.</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">Adopté</span></span></li>
       </ol>
+      <details class="more-d more-block">
+        <summary>Décisions plus anciennes · 3</summary>
+        <ol class="jl sheet">
+          <li><div class="date"><span class="edge">05A ▸</span>2026.07</div><div class="main"><h3>« L'heure bleue peut compter comme la nuit »</h3><p>C'était mon hypothèse de modélisation de départ. En la suivant, les exceptions se multipliaient. Le jour même, j'en ai fait une plage horaire à part, au lieu de rapiécer encore la « nuit ».</p></div><span class="verdict v-fixed"><svg class="gp gp-strike" viewBox="0 0 44 40" aria-hidden="true" focusable="false"><path d="M4 22 C12 17 18 26 26 20 C31 16 35 21 40 19"/><path d="M33 13 L40 19 L33 25"/></svg><span class="gp-label">Corrigé</span></span></li>
+          <li><div class="date"><span class="edge">06A ▸</span>2026.08</div><div class="main"><h3>Terminer un exercice, c'est explorer sérieusement, pas choisir une belle photo</h3><p>C'est désormais le critère de fin de Wind On. Reste à savoir s'il améliore la rétention : seuls de vrais utilisateurs le diront.</p></div><span class="verdict v-open"><svg class="gp gp-q" viewBox="0 0 30 40" aria-hidden="true" focusable="false"><path d="M8 13 C9 4 24 3 24 13 C24 21 15 21 15 29"/><path d="M15 35.5 L15.6 36.5"/></svg><span class="gp-label">À vérifier</span></span></li>
+          <li><div class="date"><span class="edge">07A ▸</span>2026.10</div><div class="main"><h3>Toutes les tâches ne justifient pas une sortie photo entière</h3><p>Désormais, une même sortie permet d'enchaîner les exercices, mais un seul à la fois, et c'est l'utilisateur qui décide quand arrêter.</p></div><span class="verdict v-done"><svg class="gp gp-ring" viewBox="0 0 120 56" aria-hidden="true" focusable="false"><path d="M22 38 C10 26 30 9 62 8 C94 7 114 18 110 31 C106 45 80 51 56 50 C30 49 13 42 15 29 C17 20 33 13 48 11"/></svg><span class="gp-label">Adopté</span></span></li>
+        </ol>
+      </details>
     </div>
   </section>
 
@@ -1336,28 +1286,34 @@ section.blk.inverse .verdict.v-done{background:none}
     <div class="wrap">
       <div class="sec-head">
         <div><div class="eyebrow">Méthode</div><h2>Comment je fais de l'ingénierie avec l'IA</h2></div>
-        <p>Poser des contraintes à partir de vrais problèmes métier, rendre la sortie de l'IA vérifiable, puis valider à part le comportement, le processus et le domaine de validité. En cas d'échec, garder d'abord les preuves, corriger le modèle ou le processus, puis seulement décider d'aller plus loin.</p>
+        <p>Les agents pour la vitesse, mais chaque étape laisse des preuves vérifiables : des tâches qu'on peut juger, des runs reproductibles, des limites imposées par l'environnement, une validation rapportée par niveaux.</p>
       </div>
       <ol class="method">
-        <li><h3>Écrire une tâche vérifiable avant de la confier à l'Agent</h3><p>Objectif, contexte existant, contraintes fortes, périmètre modifiable et preuves de validation : chacun écrit à part, clairement.</p></li>
-        <li><h3>Lever l'ambiguïté par le modèle du domaine</h3><p>Une pratique courante n'est pas une condition nécessaire. Quand les exceptions s'accumulent, on redécoupe les catégories au lieu d'empiler des règles.</p></li>
-        <li><h3>Prouver que les entrées invalides sont refusées</h3><p>Que les exemples valides compilent ne suffit pas. En TDD, le « rouge » doit venir de l'assertion visée, pas d'une erreur d'environnement.</p></li>
+        <li><h3>Écrire une tâche vérifiable avant de la confier à l'Agent</h3><p>Objectif, contexte existant, contraintes fortes, périmètre modifiable et preuves de validation : chacun écrit à part, clairement.</p></li>
         <li><h3>Figer le point de départ, garder les échecs</h3><p>Même commit, même Prompt, même modèle, mêmes droits. On consigne d'abord le résultat brut, puis on corrige à la main.</p></li>
-        <li><h3>Juger à part le résultat et la validité de l'expérience</h3><p>Une fonctionnalité peut passer et l'attribution rester invalide. Un seul score ne remplace pas ces deux jugements.</p></li>
-        <li><h3>Laisser l'environnement faire respecter les limites</h3><p>Un interdit écrit dans le Prompt n'est pas un interdit dans l'environnement. Les limites se contrôlent au niveau des outils, et la fin d'une tâche se juge par une vérification indépendante.</p></li>
+        <li><h3>Laisser l'environnement faire respecter les limites</h3><p>Un interdit écrit dans le Prompt n'est pas un interdit dans l'environnement. Les limites se contrôlent au niveau des outils et des droits, et la fin d'une tâche se juge par une vérification indépendante.</p></li>
+        <li><h3>Valider par niveaux, rendre compte par niveaux</h3><p>Tests unitaires, modèle réel, navigateur, appareil, cloud, retours utilisateurs : chacun son verdict. Réussir en local ne veut pas dire être déployé.</p></li>
         <li><h3>Rendre chaque résultat généré traçable</h3><p>Conserver numéros de champs, versions, textes sources et hash. À la reprise, ne pas régénérer en silence les résultats passés.</p></li>
-        <li><h3>Valider par niveaux, rendre compte par niveaux</h3><p>Tests unitaires, modèle réel, navigateur, appareil, cloud, retours utilisateurs : chacun son verdict. Réussir en local ne veut pas dire être déployé.</p></li>
-      <li><h3>Juger si ça vaut une Skill avant d'en créer une</h3><p>Il faut que les mêmes entrées, jugements et validations reviennent souvent. Si une Skill existante peut s'étendre, on n'en crée pas une nouvelle.</p></li>
-        <li><h3>Avec plusieurs Skills, décider d'abord à qui appartient l'état</h3><p>L'amont gère le cycle de vie, l'aval ne renvoie que son jugement. Le relais ne transmet que le nécessaire et n'élargit pas les droits d'écriture.</p></li>
       </ol>
+      <details class="more-d more-block">
+        <summary>5 principes de plus</summary>
+        <ol class="method" start="6">
+          <li><h3>Lever l'ambiguïté par le modèle du domaine</h3><p>Une pratique courante n'est pas une condition nécessaire. Quand les exceptions s'accumulent, on redécoupe les catégories au lieu d'empiler des règles.</p></li>
+          <li><h3>Prouver que les entrées invalides sont refusées</h3><p>Que les exemples valides compilent ne suffit pas. En TDD, le « rouge » doit venir de l'assertion visée, pas d'une erreur d'environnement.</p></li>
+          <li><h3>Juger à part le résultat et la validité de l'expérience</h3><p>Une fonctionnalité peut passer et l'attribution rester invalide. Un seul score ne remplace pas ces deux jugements.</p></li>
+          <li><h3>Juger si ça vaut une Skill avant d'en créer une</h3><p>Il faut que les mêmes entrées, jugements et validations reviennent souvent. Si une Skill existante peut s'étendre, on n'en crée pas une nouvelle.</p></li>
+          <li><h3>Avec plusieurs Skills, décider d'abord à qui appartient l'état</h3><p>L'amont gère le cycle de vie, l'aval ne renvoie que son jugement. Le relais ne transmet que le nécessaire et n'élargit pas les droits d'écriture.</p></li>
+        </ol>
+      </details>
     </div>
   </section>
 
 <section class="close" id="contact-fr">
     <div class="wrap">
-      <h2>Envie de construire quelque chose ensemble ?</h2>
-      <p>Offre d'emploi, collaboration, ou envie de parler d'ingénierie IA, de photo ou de vidéo courte : écrivez-moi. J'échange volontiers en chinois, en anglais ou en français.</p>
+      <h2>Envie de construire quelque chose ensemble ?</h2>
+      <p>Offre d'emploi, collaboration, ou envie de parler d'ingénierie d'applications IA : écrivez-moi. J'échange volontiers en français, en anglais ou en chinois.</p>
       <div class="mail" data-u="hugo.xinyulin" data-d="gmail.com">hugo.xinyulin [at] gmail.com</div>
+      <p class="cv-line"><a href="cv/Yulin_XIN_CV_FR.pdf" target="_blank" rel="noopener">Télécharger mon CV (PDF) ↗</a></p>
     </div>
   </section>
 </main>
@@ -1457,6 +1413,31 @@ section.blk.inverse .verdict.v-done{background:none}
       return'M'+s.x+' '+s.y+' Q'+cx.toFixed(1)+' '+cy.toFixed(1)+' '+h.x.toFixed(1)+' '+h.y.toFixed(1);
     }
     var figs=[];
+    function printCard(fig){
+      var c=fig.querySelector('.polaroid');
+      if(!c||!c.hidden)return;
+      c.hidden=false;c.classList.remove('out');void c.offsetWidth;c.classList.add('out');
+    }
+    function mail(){var m=document.querySelector('.mail[data-u]');return m.dataset.u+'@'+m.dataset.d;}
+    [].forEach.call(document.querySelectorAll('.polaroid'),function(c){
+      var copy=c.querySelector('.pol-copy'),label=copy.textContent;
+      copy.addEventListener('click',function(){
+        var done=function(){copy.textContent=copy.dataset.done;setTimeout(function(){copy.textContent=label;},1600);};
+        if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(mail()).then(done,function(){location.href='mailto:'+mail();});
+        else location.href='mailto:'+mail();
+      });
+      c.querySelector('.pol-vcf').addEventListener('click',function(){
+        var site=location.origin+'/?lang='+c.dataset.l;
+        var v=['BEGIN:VCARD','VERSION:3.0','N:Xin;Yulin;;;','FN:Yulin Xin','TITLE:'+c.dataset.title,'EMAIL;TYPE=INTERNET:'+mail(),
+          'URL:'+site,'URL:https://www.linkedin.com/in/yulin-xin','URL:https://github.com/mushroom42','NOTE:'+c.dataset.note,'END:VCARD'].join('\r\n');
+        var a=document.createElement('a');
+        a.href=URL.createObjectURL(new Blob([v],{type:'text/vcard;charset=utf-8'}));a.download='Yulin_Xin.vcf';
+        document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(a.href);},1000);
+      });
+      c.querySelector('.pol-close').addEventListener('click',function(){
+        c.hidden=true;var svg=c.parentNode.querySelector('svg');if(svg)svg.focus();
+      });
+    });
     [].forEach.call(document.querySelectorAll('.snap'),function(fig,n){
       var stage=fig.querySelector('.snap-stage'),cap=fig.querySelector('figcaption');
       stage.innerHTML=tpl.innerHTML.replace(/SNAP-/g,'snap'+n+'-');
@@ -1466,7 +1447,7 @@ section.blk.inverse .verdict.v-done{background:none}
       var f={fig:fig,svg:svg,k:k,cap:cap,say:cap.textContent,shot:fig.getAttribute('data-shot'),
         goal:{x:0,y:0},face:{x:0,y:0},eye:{x:0,y:0},shotAt:-1e9,fired:true,smileUntil:0,blinkAt:0,blinkT:-1e9};
       function press(){
-        if(still){cap.textContent=f.shot;return;}
+        if(still){cap.textContent=f.shot;printCard(fig);return;}
         var now=performance.now();
         if(now-f.shotAt<RAISE+HOLD+LOWER)return;
         f.shotAt=now;f.fired=false;wake();
@@ -1525,6 +1506,7 @@ section.blk.inverse .verdict.v-done{background:none}
             f.fired=true;
             if(f.k.flash.animate)f.k.flash.animate([{opacity:1},{opacity:0}],{duration:380,easing:'ease-out'});
             f.cap.textContent=f.shot;
+            printCard(f.fig);
             f.smileUntil=now+HOLD+LOWER+900;
           }
         }else if(t<RAISE+HOLD+LOWER)r=1-(t-RAISE-HOLD)/LOWER;
@@ -1581,7 +1563,7 @@ section.blk.inverse .verdict.v-done{background:none}
   /* languages */
   var TITLES={zh:'辛禹林 Yulin Xin',en:'Yulin Xin',fr:'Yulin Xin'};
   var HTML_LANG={zh:'zh-CN',en:'en',fr:'fr'};
-  var blocks=document.querySelectorAll('.L'),current='zh';
+  var blocks=document.querySelectorAll('.L'),current='fr';
   var SECTIONS=['hero','path','now','work','skills','calls','notes','contact'];
   function sid(id,l){return l==='zh'?id:id+'-'+l;}
   function currentSection(){
@@ -1590,7 +1572,7 @@ section.blk.inverse .verdict.v-done{background:none}
     return best;
   }
   function setLang(l,keepPlace){
-    if(!TITLES[l])l='zh';
+    if(!TITLES[l])l='fr';
     var anchor=keepPlace&&window.scrollY>0?currentSection():null;
     [].forEach.call(blocks,function(b){b.hidden=b.dataset.l!==l;});
     [].forEach.call(document.querySelectorAll('.lang-btn'),function(b){b.setAttribute('aria-pressed',b.dataset.lang===l);});
@@ -1603,7 +1585,7 @@ section.blk.inverse .verdict.v-done{background:none}
   var start=null;
   try{start=new URLSearchParams(location.search).get('lang')}catch(e){}
   if(!TITLES[start]){start=null;try{start=localStorage.getItem('lang')}catch(e){}}
-  if(!start){var nl=(navigator.language||'').toLowerCase();start=nl.indexOf('zh')===0?'zh':nl.indexOf('fr')===0?'fr':'en';}
+  if(!start){var nl=(navigator.language||'').toLowerCase();start=nl.indexOf('zh')===0?'zh':'fr';}
   setLang(start,false);
 })();
 </script>

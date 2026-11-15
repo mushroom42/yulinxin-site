@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Deploy site/ to the Amplify app created by infra/amplify/template.yaml.
 #
-#   AWS_PROFILE=personal ./scripts/deploy-amplify.sh
+#   AWS_PROFILE=site-deploy ./scripts/deploy-amplify.sh
 #
 # Steps: read stack outputs -> fill __SITE_URL__ -> zip -> create-deployment
 #        -> upload zip -> start-deployment -> wait for the job.
