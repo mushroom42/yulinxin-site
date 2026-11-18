@@ -1,0 +1,41 @@
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - "scripts/deploy-s3.sh"
+      - ".github/workflows/deploy.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write # OIDC: short-lived AWS credentials, no stored keys
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # Repository variables (Settings > Secrets and variables > Actions > Variables),
+    # copied from the yulinxin-site-cdn stack outputs. None of them is secret.
+    env:
+      AWS_REGION: us-east-1
+      S3_BUCKET: ${{ vars.S3_BUCKET }}
+      CF_DISTRIBUTION_ID: ${{ vars.CF_DISTRIBUTION_ID }}
+      SITE_URL: ${{ vars.SITE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: us-east-1
+      - run: ./scripts/deploy-s3.sh
+      - name: Smoke test
+        run: |
+          sleep 20
+          curl -fsS -o /dev/null -w "%{http_code} %{url_effective}\n" "$SITE_URL/"
+          curl -fsSI "$SITE_URL/cv/Yulin_XIN_CV_FR.pdf" | grep -i '^content-type: application/pdf'
