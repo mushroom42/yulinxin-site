@@ -10,10 +10,8 @@ site/                    what gets deployed
   index.html             the page (CSS and JS inline)
   favicon.svg
   og.jpg                 social preview image
-infra/s3-cloudfront/     phase 2: S3 + CloudFront + ACM + Route 53 + GitHub OIDC role
-infra/amplify/           phase 1: AWS Amplify Hosting (kept until phase 2 is live)
+infra/s3-cloudfront/     S3 + CloudFront + ACM (+ optional Route 53) + GitHub OIDC role
 scripts/deploy-s3.sh     upload + invalidate (used by CI, also runs locally)
-scripts/deploy-amplify.sh
 .github/workflows/deploy.yml
 ```
 
@@ -28,7 +26,7 @@ The downloadable CV (`site/cv/Yulin_XIN_CV_FR.pdf`) is built from `cv/cv-fr.html
 SITE_URL=https://yulinxin.dev ./scripts/build-cv.sh
 ```
 
-## Deploy (phase 2: S3 + CloudFront at yulinxin.dev)
+## Deploy (S3 + CloudFront at yulinxin.dev)
 
 ```
 GitHub push to main ──OIDC──▶ IAM role (upload + invalidate only)
@@ -60,26 +58,6 @@ aws acm describe-certificate --region us-east-1 --certificate-arn "$ARN" \
 When the stack is done, point the domain at the `DistributionDomain` output in Cloudflare: CNAME `@` and CNAME `www`, both DNS only (grey cloud). CloudFront is the CDN; proxying through Cloudflare as well would put two CDNs and two TLS hops in front of the site.
 
 Then copy the stack outputs into repository variables (Settings → Secrets and variables → Actions → Variables): `AWS_DEPLOY_ROLE_ARN`, `S3_BUCKET`, `CF_DISTRIBUTION_ID`, `SITE_URL`. Every push to `main` that touches `site/` deploys. No AWS keys are stored in GitHub: the workflow gets one-hour credentials through OIDC, and the role only trusts the `main` branch of this repository.
-
-## Deploy (phase 1: Amplify Hosting)
-
-Requires the AWS CLI. Deploys use the `site-deploy` profile, which assumes the `siteDeploy` role from the `yulin` profile; if the session has expired, run `aws login --profile yulin` first.
-
-```sh
-# once: create the Amplify app and branch
-aws cloudformation deploy \
-  --stack-name yulinxin-site-amplify \
-  --template-file infra/amplify/template.yaml
-
-# every release
-AWS_PROFILE=site-deploy ./scripts/deploy-amplify.sh
-```
-
-The site is served at the `SiteUrl` output (`https://main.<id>.amplifyapp.com`).
-
-## Roadmap
-
-- Retire the Amplify app once yulinxin.dev is live.
 
 ## Preview locally
 
