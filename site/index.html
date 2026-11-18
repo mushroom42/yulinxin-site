@@ -365,6 +365,8 @@ section.blk.inverse .verdict.v-done{background:none}
 .more-block{margin-top:28px}
 .more-block .method{counter-reset:m 5}
 .card .case-link{align-self:flex-start}
+.skill .case-link{display:inline-block;margin-top:14px}
+.dec a{color:var(--green-text);border-bottom:1px solid currentColor}
 .cv-line{margin-top:18px}
 .cv-line a{border-bottom:1px solid currentColor}
 </style>
@@ -394,7 +396,7 @@ section.blk.inverse .verdict.v-done{background:none}
       <div>
         <p class="kicker rise">全栈 &amp; 云工程师 · AI 应用 · 巴黎</p>
         <h1 class="rise d2">把想法做成<br>上线的产品。</h1>
-        <p class="lede rise d3">我是<b>辛禹林</b>，在保险科技公司做了 3 年全栈：独立负责过内部 CRM、核心系统的 DevOps 和客户 App 重构，新前端把报价加载从几十秒降到 5 秒以内。最近一年专注 LLM 应用和 Coding Agent：用 Agent 提速，用测试、评估和基础设施即代码保证质量。</p>
+        <p class="lede rise d3">我是<b>辛禹林</b>，在保险科技公司做了 3 年全栈，担任 tech lead：独立负责过内部 CRM 和核心系统的 DevOps，并带领最多 5 名 freelance 开发者完成客户 App 重构，新前端把报价加载从几十秒降到 5 秒以内。最近一年专注 LLM 应用和 Coding Agent：用 Agent 提速，用测试、评估和基础设施即代码保证质量。</p>
         <p class="avail rise d3">正在巴黎寻找 AI 应用 / 全栈云工程师岗位 · 2027 年 1 月起可入职 · 有法国工作许可</p>
         <div class="btns rise d4">
           <a class="btn btn-ivory" href="#work">看我做的东西</a>
@@ -514,23 +516,25 @@ section.blk.inverse .verdict.v-done{background:none}
               <div><dt>时间</dt><dd>2026.07 – 08</dd></div>
               <div><dt>技术</dt><dd>TypeScript · TDD · Eval · Rubric</dd></div>
             </dl>
+            <a class="case-link" href="https://github.com/mushroom42/agentic-photo-lab" target="_blank" rel="noopener noreferrer">在 GitHub 上看代码 ↗</a>
           </aside>
           <div class="case-body">
             <p class="one">一个评估 Coding Agent 的测试平台：在可复现的条件下，衡量 Agent 能不能守住组合约束，以及会在哪里失败。</p>
             <ul class="facts">
-              <li><b>17/17</b>一次冻结条件的运行中测试全部通过，只改了允许改的两个文件，人工纠正 0 分钟</li>
-              <li><b>13</b>篇编号评估记录，配有 Prompt、Context 模板、评分标准和失败模式文档</li>
+              <li><b>17/17</b>第一次冻结条件的运行（07.28）测试全过，人工纠正 0 分钟。但运行中 Skill 自动触发，只能算一次成功，不能证明是 Prompt 的作用。该运行未合入 main，main 现有 15 个测试</li>
+              <li><b>1/3</b>之后 3 次有效的重复试验：成功、失败、失败。结论：这个 Prompt 有成功的可能，但还谈不上可靠</li>
+              <li><b>13</b>篇编号学习记录，另有实验方法、失败模式、Context 模板和评分标准文档，都在公开仓库里</li>
             </ul>
             <p>我关心的是怎么判断 Agent 的输出可不可靠，而不只是让它把代码写完。所以每次运行都冻结起点、隔离环境、结束前不人工修正，再把“任务通过”和“实验有效”分开判断。领域选了我熟悉的摄影训练，约束足够复杂，对错也容易核对。</p>
             <details class="more-d">
               <summary>关键取舍 · 3 条</summary>
               <ol class="dec">
-                <li><time>07.28</time><span>冻结 Prompt 和起始 commit，在隔离环境里运行，结束前不做人工纠正，保留原始结果。</span></li>
+                <li><time>07.28</time><span>冻结 <a href="https://github.com/mushroom42/agentic-photo-lab/blob/main/prompts/lighting-invalid-context.v1.md" target="_blank" rel="noopener noreferrer">Prompt</a> 和起始 commit，在隔离环境里运行，结束前不做人工纠正，保留原始结果。</span></li>
                 <li><time>07.28</time><span>第一次真实运行功能全部通过，但运行中自动用上了 Skill 和审查子任务，配置被改变了。我把它标为“结果有混杂”，不当作纯 Prompt 的基线。</span></li>
                 <li><time>08.03</time><span>写下一个可以被 0/3 推翻的假设，把“任务成功”和“实验有效”分开判断。</span></li>
               </ol>
             </details>
-            <p class="gap">还没证明：有效的重复试验、Context 和 Skill 的 A/B 对比、稳定的成功率。</p>
+            <p class="gap">还没证明：稳定的成功率、Context 和 Skill 的 A/B 对比。</p>
           </div>
         </article>
 
@@ -594,13 +598,14 @@ section.blk.inverse .verdict.v-done{background:none}
 
       <div class="skills">
         <article class="skill">
-          <header><code>pixel-mv</code><span class="tag">2026.10 · 从一支 MV 沉淀</span></header>
+          <header><code>pixel-mv</code><span class="tag">2026.10 · 开源 · 从一支 MV 沉淀</span></header>
           <h3>像素 MV 流水线</h3>
-          <p>把一首歌做成像素风 RPG 游戏画面的音乐 MV：画面在 320×180 绘制、放大到 1080p，歌词按逐字时间轴在游戏对话框里高亮。第一支 4 分 39 秒。</p>
+          <p>把一首歌做成像素风 RPG 游戏画面的音乐 MV。不用 AI 生图：Python + Pillow 逐帧在 320×180 绘制、放大到 1080p，ffmpeg 合成；5 种画风，歌词按逐字时间轴在游戏对话框里高亮。第一支 4 分 39 秒。</p>
           <ul>
             <li>引擎和渲染管线固定下来，每支新歌只需要写分镜和场景；分镜经我确认后才写代码。</li>
             <li>做第一支时我提的 11 条修改意见都记进了反馈日志，后来变成每次交付前的自查清单。</li>
           </ul>
+          <a class="case-link" href="https://github.com/mushroom42/pixel-mv" target="_blank" rel="noopener noreferrer">在 GitHub 上看代码 ↗</a>
         </article>
         <article class="skill">
           <header><code>short-video-growth-director</code><span class="tag">2026.08 · 已迭代 3 次</span></header>
@@ -711,7 +716,7 @@ section.blk.inverse .verdict.v-done{background:none}
       <div>
         <p class="kicker rise">Full-stack &amp; cloud engineer · AI applications · Paris</p>
         <h1 class="rise d2">I turn ideas into<br>products that ship.</h1>
-        <p class="lede rise d3">I'm <b>Yulin Xin</b>, a full-stack engineer with 3 years in insurtech. I owned an internal CRM, the DevOps of a core system and a client app rebuild, where the new front end cut quote loading from tens of seconds to under 5. For the past year I've focused on LLM applications and coding agents: agents for speed, tests, evals and infrastructure as code for quality.</p>
+        <p class="lede rise d3">I'm <b>Yulin Xin</b>, a full-stack engineer and tech lead with 3 years in insurtech. I owned an internal CRM and the DevOps of a core system, and led up to 5 freelance developers on a client app rebuild, where the new front end cut quote loading from tens of seconds to under 5. For the past year I've focused on LLM applications and coding agents: agents for speed, tests, evals and infrastructure as code for quality.</p>
         <p class="avail rise d3">Looking for an AI application or full-stack cloud role in Paris · available from January 2027 · authorised to work in France</p>
         <div class="btns rise d4">
           <a class="btn btn-ivory" href="#work-en">See my work</a>
@@ -831,23 +836,25 @@ section.blk.inverse .verdict.v-done{background:none}
               <div><dt>Period</dt><dd>2026.07 – 08</dd></div>
               <div><dt>Stack</dt><dd>TypeScript · TDD · Eval · Rubric</dd></div>
             </dl>
+            <a class="case-link" href="https://github.com/mushroom42/agentic-photo-lab" target="_blank" rel="noopener noreferrer">Code on GitHub ↗</a>
           </aside>
           <div class="case-body">
             <p class="one">A test bench for coding agents: under reproducible conditions, it measures whether an agent holds combined constraints, and where it fails.</p>
             <ul class="facts">
-              <li><b>17/17</b>tests passed in a frozen-condition run. Only the two allowed files changed. 0 minutes of manual fixes</li>
-              <li><b>13</b>numbered eval notes, with prompts, context templates, a scoring rubric and failure-mode docs</li>
+              <li><b>17/17</b>tests passing on the first frozen-condition run (28 Jul), 0 minutes of manual fixes. But a skill triggered on its own, so it counts as one success, not proof the prompt did it. The run isn't merged; main has 15 tests</li>
+              <li><b>1/3</b>in the three valid repeated trials that followed: success, failure, failure. Conclusion: the prompt can succeed, but it isn't reliable yet</li>
+              <li><b>13</b>numbered learning notes, plus docs on the experiment method, failure modes, context templates and the scoring rubric, all in the public repo</li>
             </ul>
             <p>What I care about is how to tell whether an agent's output can be trusted, not just getting it to finish the code. So every run freezes the starting point, runs in isolation and gets no manual fixes before the end. Then “task passed” and “experiment valid” are judged separately. The domain is photo training, which I know well: the constraints are rich and the answers are easy to check.</p>
             <details class="more-d">
               <summary>Key trade-offs · 3</summary>
               <ol class="dec">
-                <li><time>07.28</time><span>Freeze the prompt and the starting commit, run in an isolated environment, make no manual fixes before the end, and keep the raw output.</span></li>
+                <li><time>07.28</time><span>Freeze the <a href="https://github.com/mushroom42/agentic-photo-lab/blob/main/prompts/lighting-invalid-context.v1.md" target="_blank" rel="noopener noreferrer">prompt</a> and the starting commit, run in an isolated environment, make no manual fixes before the end, and keep the raw output.</span></li>
                 <li><time>07.28</time><span>The first real run passed every feature, but it pulled in a skill and review subtasks on its own, which changed the setup. I marked the result “confounded” and did not use it as a pure-prompt baseline.</span></li>
                 <li><time>08.03</time><span>I wrote down a hypothesis that a 0/3 result would disprove, and judged “task succeeded” and “experiment valid” separately.</span></li>
               </ol>
             </details>
-            <p class="gap">Not proven yet: valid repeated trials, A/B tests on context and skills, a stable success rate.</p>
+            <p class="gap">Not proven yet: a stable success rate, A/B tests on context and skills.</p>
           </div>
         </article>
 
@@ -911,13 +918,14 @@ section.blk.inverse .verdict.v-done{background:none}
 
       <div class="skills">
         <article class="skill">
-          <header><code>pixel-mv</code><span class="tag">2026.10 · distilled from a music video</span></header>
+          <header><code>pixel-mv</code><span class="tag">2026.10 · open source · distilled from a music video</span></header>
           <h3>Pixel music video pipeline</h3>
-          <p>Turns a song into a music video styled as a pixel-art RPG. Scenes are drawn at 320×180 and scaled to 1080p, and the lyrics light up character by character in a game dialogue box. The first one runs 4 min 39 s.</p>
+          <p>Turns a song into a music video styled as a pixel-art RPG. No image-generation model: Python and Pillow draw every frame at 320×180, scaled to 1080p and assembled with ffmpeg. Five visual styles, and the lyrics light up character by character in a game dialogue box. The first one runs 4 min 39 s.</p>
           <ul>
             <li>The engine and render pipeline are fixed, so each new song only needs a storyboard and scenes. Code is written only after I approve the storyboard.</li>
             <li>All 11 change requests I made on the first video went into a feedback log, which became the self-check list before every delivery.</li>
           </ul>
+          <a class="case-link" href="https://github.com/mushroom42/pixel-mv" target="_blank" rel="noopener noreferrer">Code on GitHub ↗</a>
         </article>
         <article class="skill">
           <header><code>short-video-growth-director</code><span class="tag">2026.08 · 3 iterations</span></header>
@@ -1029,7 +1037,7 @@ section.blk.inverse .verdict.v-done{background:none}
       <div>
         <p class="kicker rise">Ingénieur full-stack &amp; cloud · applications IA · Paris</p>
         <h1 class="rise d2">Je transforme une idée<br>en produit en ligne.</h1>
-        <p class="lede rise d3">Je suis <b>Yulin Xin</b>, ingénieur full-stack avec 3 ans d'expérience en insurtech. J'ai porté un CRM interne, le DevOps d'un système métier et la refonte d'une app client, dont le nouveau front-end a fait passer le chargement des devis de plusieurs dizaines de secondes à moins de 5. Depuis un an, je me concentre sur les applications LLM et les agents de code : vite grâce aux agents, solide grâce aux tests, aux évaluations et à l'infrastructure as code.</p>
+        <p class="lede rise d3">Je suis <b>Yulin Xin</b>, ingénieur full-stack et tech lead avec 3 ans d'expérience en insurtech. J'ai porté un CRM interne et le DevOps d'un système métier, et j'ai encadré jusqu'à 5 développeurs freelances sur la refonte d'une app client, dont le nouveau front-end a fait passer le chargement des devis de plusieurs dizaines de secondes à moins de 5. Depuis un an, je me concentre sur les applications LLM et les agents de code : vite grâce aux agents, solide grâce aux tests, aux évaluations et à l'infrastructure as code.</p>
         <p class="avail rise d3">En recherche d'un poste d'ingénieur IA applicative ou full-stack cloud à Paris · disponible à partir de janvier 2027 · autorisé à travailler en France</p>
         <div class="btns rise d4">
           <a class="btn btn-ivory" href="#work-fr">Voir mes projets</a>
@@ -1149,23 +1157,25 @@ section.blk.inverse .verdict.v-done{background:none}
               <div><dt>Période</dt><dd>2026.07 – 08</dd></div>
               <div><dt>Stack</dt><dd>TypeScript · TDD · Eval · Rubric</dd></div>
             </dl>
+            <a class="case-link" href="https://github.com/mushroom42/agentic-photo-lab" target="_blank" rel="noopener noreferrer">Code sur GitHub ↗</a>
           </aside>
           <div class="case-body">
             <p class="one">Un banc d'essai pour agents de code : dans des conditions reproductibles, il mesure si un agent respecte des contraintes combinées, et où il échoue.</p>
             <ul class="facts">
-              <li><b>17/17</b>tests au vert sur un run aux conditions figées, seuls les deux fichiers autorisés modifiés, 0 minute de correction manuelle</li>
-              <li><b>13</b>notes d'évaluation numérotées, avec Prompts, modèles de Context, grilles d'évaluation et fiches de modes d'échec</li>
+              <li><b>17/17</b>tests au vert au premier run aux conditions figées (28/07), 0 minute de correction. Mais une Skill s'est déclenchée d'elle-même : un succès, pas la preuve que le Prompt suffit. Run non fusionné ; main compte 15 tests</li>
+              <li><b>1/3</b>sur les trois essais répétés valides qui ont suivi : succès, échec, échec. Conclusion : le Prompt peut réussir, mais il n'est pas encore fiable</li>
+              <li><b>13</b>notes d'apprentissage numérotées, plus la méthode d'expérimentation, les modes d'échec, les modèles de Context et la grille d'évaluation, toutes dans le dépôt public</li>
             </ul>
             <p>Ce qui m'intéresse, c'est de savoir si la sortie d'un agent est fiable, pas seulement de lui faire finir le code. Chaque run fige donc le point de départ, s'exécute en isolation et ne reçoit aucune correction manuelle avant la fin ; « tâche réussie » et « expérience valide » sont ensuite jugés séparément. Le domaine choisi, l'entraînement photo, je le connais bien : les contraintes sont riches et les réponses faciles à vérifier.</p>
             <details class="more-d">
               <summary>Arbitrages clés · 3</summary>
               <ol class="dec">
-                <li><time>07.28</time><span>Prompt et commit de départ figés, exécution en environnement isolé, aucune correction manuelle avant la fin, résultats bruts conservés.</span></li>
+                <li><time>07.28</time><span><a href="https://github.com/mushroom42/agentic-photo-lab/blob/main/prompts/lighting-invalid-context.v1.md" target="_blank" rel="noopener noreferrer">Prompt</a> et commit de départ figés, exécution en environnement isolé, aucune correction manuelle avant la fin, résultats bruts conservés.</span></li>
                 <li><time>07.28</time><span>Au premier vrai run, tout passait, mais l'exécution avait activé d'elle-même une Skill et une sous-tâche de relecture : la configuration avait changé. Je l'ai classé « résultat contaminé », pas comme référence du Prompt seul.</span></li>
                 <li><time>08.03</time><span>Formuler une hypothèse réfutable par un 0/3, et juger séparément « tâche réussie » et « expérience valide ».</span></li>
               </ol>
             </details>
-            <p class="gap">Pas encore démontré : des essais répétés valides, un A/B entre Context et Skill, un taux de réussite stable.</p>
+            <p class="gap">Pas encore démontré : un taux de réussite stable, un A/B entre Context et Skill.</p>
           </div>
         </article>
 
@@ -1229,13 +1239,14 @@ section.blk.inverse .verdict.v-done{background:none}
 
       <div class="skills">
         <article class="skill">
-          <header><code>pixel-mv</code><span class="tag">2026.10 · tirée d'un clip</span></header>
+          <header><code>pixel-mv</code><span class="tag">2026.10 · open source · tirée d'un clip</span></header>
           <h3>Chaîne de clips en pixel art</h3>
-          <p>Transforme une chanson en clip façon RPG en pixel art. Les scènes sont dessinées en 320×180 puis agrandies en 1080p, et les paroles s'allument caractère par caractère dans une boîte de dialogue de jeu. Le premier dure 4 min 39.</p>
+          <p>Transforme une chanson en clip façon RPG en pixel art. Aucun modèle de génération d'images : Python et Pillow dessinent chaque image en 320×180, agrandie en 1080p et assemblée avec ffmpeg. Cinq styles visuels, et les paroles s'allument caractère par caractère dans une boîte de dialogue de jeu. Le premier dure 4 min 39.</p>
           <ul>
             <li>Le moteur et la chaîne de rendu sont figés : pour chaque nouvelle chanson, il ne reste qu'à écrire le storyboard et les scènes. Le code ne s'écrit qu'une fois le storyboard validé.</li>
             <li>Mes 11 demandes de modification sur le premier clip sont consignées dans un journal de retours, devenu la liste d'autocontrôle avant chaque livraison.</li>
           </ul>
+          <a class="case-link" href="https://github.com/mushroom42/pixel-mv" target="_blank" rel="noopener noreferrer">Code sur GitHub ↗</a>
         </article>
         <article class="skill">
           <header><code>short-video-growth-director</code><span class="tag">2026.08 · 3 itérations</span></header>
