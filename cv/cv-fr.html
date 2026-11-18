@@ -11,7 +11,7 @@
   body {
     width: 210mm; height: 296mm; overflow: hidden; padding: 11mm 14mm 8mm;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 9.2pt; line-height: 1.36; color: var(--ink);
+    font-size: 9pt; line-height: 1.35; color: var(--ink);
     -webkit-print-color-adjust: exact; print-color-adjust: exact;
   }
   header { display: flex; justify-content: space-between; align-items: flex-end; gap: 8mm; }
@@ -20,6 +20,7 @@
   .role { white-space: nowrap; margin-top: 2.2mm; font-size: 11pt; font-weight: 600; color: var(--accent); }
   .contact { text-align: right; font-size: 8.8pt; color: var(--muted); line-height: 1.55; }
   .contact a { color: var(--muted); text-decoration: none; }
+  .contact a[href^="https"] { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
   section { margin-top: 3.3mm; }
   h2 {
     font-size: 9.2pt; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase;
@@ -52,17 +53,16 @@
     <div class="role">Ingénieur Fullstack &amp; Cloud — Automatisation &amp; Agents IA</div>
   </div>
   <div class="contact">
-    <a href="__SITE_URL__/?lang=fr">__SITE_HOST__</a><br>
-    <a href="https://www.linkedin.com/in/yulin-xin">linkedin.com/in/yulin-xin</a><br>
-    <a href="https://github.com/mushroom42">github.com/mushroom42</a><br>
-    Paris · Autorisé à travailler en France
+    <a href="https://www.yulinxin.dev/?lang=fr">www.yulinxin.dev</a><br>
+    <a href="https://www.linkedin.com/in/yulin-xin">www.linkedin.com/in/yulin-xin</a><br>
+    <a href="https://github.com/mushroom42">www.github.com/mushroom42</a>
   </div>
 </header>
 
 <p class="summary">
-  Ingénieur diplômé (UTBM) avec 3 ans d'expérience en FinTech/Assurance. J'ai porté de bout en bout trois
-  produits sur AWS serverless et je transforme des processus manuels en outils automatisés. Je conçois et
-  évalue aujourd'hui des workflows avec des agents IA (LLM, skills, harness). Trilingue français, anglais, chinois.
+  Ingénieur diplômé (UTBM) avec 3 ans d'expérience en FinTech/Assurance. Tech lead, j'ai porté de bout en bout trois
+  produits sur AWS serverless en encadrant des développeurs freelances, et je transforme des processus manuels en outils automatisés. Je conçois et
+  évalue aujourd'hui des workflows avec des agents IA (LLM, skills, harness). Trilingue français, anglais, chinois ; autorisé à travailler en France.
 </p>
 
 <section>
@@ -70,7 +70,7 @@
 
   <div class="job">
     <div class="job-head">
-      <span class="job-title">Développeur Fullstack — Frontend, Backend, Cloud, DevOps</span>
+      <span class="job-title">Tech Lead &amp; Développeur Fullstack — Cloud, DevOps</span>
       <span class="date">08/2023 – 12/2026</span>
     </div>
     <div class="company">Assurly · FinTech / Assurance · Paris</div>
@@ -79,14 +79,14 @@
     <ul>
       <li>Conception et développement d'un CRM interne qui automatise et standardise des tâches auparavant manuelles des collaborateurs.</li>
       <li>Mise en place d'un système complet d'authentification et de gestion des droits (rôles, permissions) pour des données d'assurance sensibles.</li>
-      <li>Architecture modulaire et serverless, scalable ; prototypage rapide et itérations courtes à partir des retours utilisateurs.</li>
+      <li>Architecture modulaire et serverless ; prototypage rapide et itérations à partir des retours utilisateurs.</li>
     </ul>
 
     <div class="project">Responsable technique Assurly App <span class="stack">· React, Flutter, Vue.js, AWS Lambda (Python), Salesforce</span></div>
     <ul>
       <li>Pilotage technique, en autonomie, de la migration du contenu cœur vers une architecture moderne avec refonte front-end en React : temps de chargement des devis réduit de plusieurs dizaines de secondes à moins de 5 secondes.</li>
-      <li>Intégration avec Salesforce ; développement front-end et back-end au sein d'une équipe métier Agile (Scrum, Jira).</li>
-      <li>CI/CD complète via GitHub Actions, devenue le standard de développement et de déploiement sur AWS.</li>
+      <li>Encadrement technique de développeurs freelances : découpage et attribution des tâches, revues de code, standards de qualité.</li>
+      <li>Intégration Salesforce et CI/CD complète via GitHub Actions, devenue le standard de déploiement sur AWS ; équipe Agile (Scrum, Jira).</li>
     </ul>
 
     <div class="project">Responsable DevOps Assurly Reflex <span class="stack">· Docker, Docker Compose, Java/Tomcat, Redis, AWS EC2, GitHub Actions</span></div>
@@ -115,7 +115,7 @@
     <li><b>Agentic Photo Lab</b> · <span class="muted">évaluation d'agents</span> — Banc d'essai pour mesurer comment des agents de code respectent des contraintes combinées : tâches de benchmark, grille de notation, exécutions enregistrées, skills réutilisables. <span class="stack">TypeScript</span></li>
     <li><b>Wind On</b> · <span class="muted">application web, bêta privée</span> — Exercices de photographie : générateur de missions déterministe et testé, import de photos avec lecture des données de prise de vue, cartes de partage. Collecte de retours en serverless. <span class="stack">TypeScript, Vite, Vitest, AWS SAM (Lambda, HTTP API, DynamoDB), Amplify</span></li>
     <li><b>Médiathèque vidéo locale</b> · <span class="muted">pipeline IA</span> — Transcription et indexation de vidéos 100 % en local : whisper.cpp, classification thématique par LLM local (Ollama), recherche plein texte, export SRT. <span class="stack">Python</span></li>
-    <li><b>Agents IA pour des proches</b> — Installation et configuration d'agents de code et rédaction de skills sur mesure pour automatiser des tâches répétitives.</li>
+    <li><b>Agents IA pour des proches</b> — Installation d'agents de code et skills sur mesure pour automatiser des tâches répétitives.</li>
   </ul>
 </section>
 
