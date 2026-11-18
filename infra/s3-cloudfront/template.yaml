@@ -17,9 +17,14 @@ Parameters:
       Route 53 public hosted zone for the domain. Leave empty when DNS is hosted elsewhere
       (yulinxin.dev is on Cloudflare): the stack then waits while you add the ACM validation
       CNAMEs by hand, and creates no DNS records.
-  GitHubRepo:
+  GitHubSubjectPrefix:
     Type: String
-    Default: mushroom42/yulinxin-site
+    Default: repo:mushroom42@91336686/yulinxin-site@1419301330
+    Description: >
+      OIDC "sub" prefix of the repository. This repo uses GitHub's immutable subject
+      (owner@ownerId/repo@repoId), which survives renames and cannot be claimed by a
+      re-created repo of the same name. Check it with
+      gh api repos/OWNER/REPO/actions/oidc/customization/sub
   CreateGitHubOidcProvider:
     Type: String
     AllowedValues: ["true", "false"]
@@ -271,7 +276,7 @@ Resources:
             Condition:
               StringEquals:
                 token.actions.githubusercontent.com:aud: sts.amazonaws.com
-                token.actions.githubusercontent.com:sub: !Sub "repo:${GitHubRepo}:ref:refs/heads/main"
+                token.actions.githubusercontent.com:sub: !Sub "${GitHubSubjectPrefix}:ref:refs/heads/main"
       Policies:
         - PolicyName: deploy-site
           PolicyDocument:
